@@ -1,0 +1,19 @@
+{
+  "display": "DISPLAY2",
+  "exit_code": 0,
+  "pid": 53632,
+  "position_corrections": 0,
+  "saved_test_project": true,
+  "trusted_generated_scripts": false,
+  "windows": [
+    "AviUtl ExEdit2",
+    "movement-himawari-before.aup2",
+    "movement-himawari-before.aup2*"
+  ],
+  "work_area": [
+    0,
+    0,
+    3840,
+    2100
+  ]
+}

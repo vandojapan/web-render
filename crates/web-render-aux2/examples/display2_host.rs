@@ -443,7 +443,12 @@ fn main() -> anyhow::Result<()> {
     println!("Development host PID={}", s.pid);
     let deadline = std::time::Instant::now() + std::time::Duration::from_secs(600);
     let smoke = std::env::var("WEB_RENDER_GUI_SMOKE").as_deref() == Ok("1");
-    let smoke_close = std::time::Instant::now() + std::time::Duration::from_secs(10);
+    let smoke_seconds = std::env::var("WEB_RENDER_GUI_SMOKE_SECONDS")
+        .ok()
+        .and_then(|v| v.parse::<u64>().ok())
+        .unwrap_or(10)
+        .clamp(10, 120);
+    let smoke_close = std::time::Instant::now() + std::time::Duration::from_secs(smoke_seconds);
     let mut close_posted = false;
     let status = loop {
         if s.export.is_none() {

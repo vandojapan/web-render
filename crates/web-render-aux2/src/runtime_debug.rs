@@ -119,6 +119,9 @@ fn run(project_name: &str) -> anyhow::Result<serde_json::Value> {
     })??;
     // Save the copied project before rendering or requesting a normal host close.
     EDIT_HANDLE.save_project_file(&expected)?;
+    if std::env::var("WEB_RENDER_DEBUG_MODE").is_ok_and(|m| m.starts_with("movement")) {
+        return run_movement(&expected, &output);
+    }
     let mut images = std::collections::HashMap::new();
     let mut frames = Vec::new();
     for frame in [0u32, 90, 30, 90, 120, 1, 0] {
@@ -193,6 +196,126 @@ fn run(project_name: &str) -> anyhow::Result<serde_json::Value> {
     )
 }
 
+fn run_movement(
+    expected: &std::path::Path,
+    output: &std::path::Path,
+) -> anyhow::Result<serde_json::Value> {
+    let mut references = std::collections::HashMap::new();
+    for local in [0, 1, 30, 90, 120, 149] {
+        references.insert(local, capture_scene(local)?);
+    }
+    if std::env::var("WEB_RENDER_DEBUG_MODE").is_ok_and(|m| m.ends_with("movement-gui")) {
+        EDIT_HANDLE.call_edit_section(|section| -> anyhow::Result<()> {
+            section.set_cursor_layer_frame(0, 30)?;
+            section.set_display_layer_frame(0, 0)?;
+            Ok(())
+        })??;
+        std::fs::write(output.join("gui-ready.json"), "{}")?;
+        let deadline = std::time::Instant::now() + Duration::from_secs(180);
+        while !output.join("gui-continue.json").is_file() {
+            anyhow::ensure!(std::time::Instant::now() < deadline, "GUI move timed out");
+            std::thread::sleep(Duration::from_millis(100));
+        }
+        let start = EDIT_HANDLE.call_edit_section(|section| -> anyhow::Result<usize> {
+            let object = section
+                .find_object_after(0, 0)?
+                .ok_or_else(|| anyhow::anyhow!("GUI object missing"))?;
+            Ok(section.get_object_layer_frame(object)?.start)
+        })??;
+        let mut checks = Vec::new();
+        for local in [149, 0, 120, 30, 1, 90] {
+            let (w, h, rgba) = capture_scene(start as u32 + local)?;
+            let reference = &references[&local];
+            image::save_buffer(
+                output.join(format!("gui-local-{local}.png")),
+                &rgba,
+                w,
+                h,
+                image::ColorType::Rgba8,
+            )?;
+            checks.push(serde_json::json!({"start":start,"local":local,"matches_reference":rgba==reference.2}));
+        }
+        EDIT_HANDLE.save_project_file(expected)?;
+        return Ok(
+            serde_json::json!({"status":if start>0 && checks.iter().all(|c| c["matches_reference"]==true) {"passed"} else {"failed"},"checks":checks}),
+        );
+    }
+    let mut previous_layer = 0usize;
+    let mut previous_start = 0usize;
+    let mut checks = Vec::new();
+    for (layer, start) in [(0usize, 60usize), (0, 300), (0, 10), (2, 20), (0, 0)] {
+        EDIT_HANDLE.call_edit_section(move |section| -> anyhow::Result<()> {
+            let object = section
+                .find_object_after(previous_layer, previous_start)?
+                .ok_or_else(|| anyhow::anyhow!("Movement probe object missing"))?;
+            anyhow::ensure!(
+                section.get_object_name(object)?.as_deref() == Some("Web Render frame probe"),
+                "Refused another object"
+            );
+            section.move_object(object, layer, start)?;
+            section.set_cursor_layer_frame(layer, start)?;
+            Ok(())
+        })??;
+        for local in [149, 0, 120, 30, 1, 90] {
+            let frame = start as u32 + local;
+            let (w, h, rgba) = capture_scene(frame)?;
+            let reference = &references[&local];
+            let equal = (w, h) == (reference.0, reference.1) && rgba == reference.2;
+            image::save_buffer(
+                output.join(format!("layer-{layer}-start-{start}-local-{local}.png")),
+                &rgba,
+                w,
+                h,
+                image::ColorType::Rgba8,
+            )?;
+            checks.push(serde_json::json!({"layer":layer,"start":start,"local":local,"frame":frame,"matches_reference":equal}));
+        }
+        previous_layer = layer;
+        previous_start = start;
+    }
+    let (w, h, reference) = &references[&30];
+    for (x, y) in [(100i32, 0i32), (400, 240), (-400, -240), (0, 0)] {
+        EDIT_HANDLE.call_edit_section(move |section| -> anyhow::Result<()> {
+            let object = section
+                .find_object_after(0, 0)?
+                .ok_or_else(|| anyhow::anyhow!("Movement probe missing"))?;
+            section.set_object_effect_item(object, "標準描画", 0, "X", &x.to_string())?;
+            section.set_object_effect_item(object, "標準描画", 0, "Y", &y.to_string())?;
+            Ok(())
+        })??;
+        let (_, _, rgba) = capture_scene(30)?;
+        let mut translated = reference.clone();
+        for row in 0..*h as i32 {
+            for col in 0..*w as i32 {
+                let dest = ((row as u32 * w + col as u32) * 4) as usize;
+                let src_x = col - x;
+                let src_y = row - y;
+                let src = if (0..*w as i32).contains(&src_x) && (0..*h as i32).contains(&src_y) {
+                    ((src_y as u32 * w + src_x as u32) * 4) as usize
+                } else {
+                    0
+                };
+                translated[dest..dest + 4].copy_from_slice(&reference[src..src + 4]);
+            }
+        }
+        image::save_buffer(
+            output.join(format!("position-{x}-{y}.png")),
+            &rgba,
+            *w,
+            *h,
+            image::ColorType::Rgba8,
+        )?;
+        checks.push(
+            serde_json::json!({"x":x,"y":y,"frame":30,"matches_reference":rgba == translated}),
+        );
+    }
+    EDIT_HANDLE.save_project_file(expected)?;
+    let passed = checks.iter().all(|c| c["matches_reference"] == true);
+    Ok(
+        serde_json::json!({"status":if passed {"passed"} else {"failed"},"project":expected,"checks":checks}),
+    )
+}
+
 fn capture_scene(frame: u32) -> anyhow::Result<(u32, u32, Vec<u8>)> {
     let (sender, receiver) = std::sync::mpsc::sync_channel(1);
     EDIT_HANDLE.rendering_scene_video(frame, move |video| {
@@ -240,6 +363,17 @@ fn run_native(
             "Restart to register {}",
             object.label
         );
+    }
+    if mode == "native-movement-gui" {
+        EDIT_HANDLE.call_edit_section(|section| -> anyhow::Result<()> {
+            anyhow::ensure!(section.find_object_after(0,0)?.is_none(), "Use an empty native sample copy");
+            let alias = "[Object]\nframe=0,149\n[Object.0]\neffect.name=Native Image noSmooth\n[Object.1]\neffect.name=標準描画\n";
+            let object = section.create_object_from_alias(alias,0,0,150)?;
+            section.set_object_name(object,Some("Web Render frame probe"))?;
+            Ok(())
+        })??;
+        EDIT_HANDLE.save_project_file(expected)?;
+        return run_movement(expected, output);
     }
     if mode == "native-export" {
         let frame = 435u32;
@@ -652,6 +786,57 @@ fn run_himawari(
         std::thread::sleep(Duration::from_millis(500));
     }
     anyhow::ensure!(ready, "Three himawari previews did not become ready");
+    if std::env::var("WEB_RENDER_DEBUG_MODE").as_deref() == Ok("himawari-movement") {
+        let locals = [15u32, 63, 237, 432, 450];
+        let mut references = std::collections::HashMap::new();
+        for local in locals {
+            let (w, h, rgba) = capture_scene(local)?;
+            image::save_buffer(
+                output.join(format!("reference-{local}.png")),
+                &rgba,
+                w,
+                h,
+                image::ColorType::Rgba8,
+            )?;
+            references.insert(local, rgba);
+        }
+        let mut old_start = 0usize;
+        let mut checks = Vec::new();
+        for start in [120usize, 600, 30, 0] {
+            EDIT_HANDLE.call_edit_section(move |section| -> anyhow::Result<()> {
+                for layer in 0..3 {
+                    let object = section
+                        .find_object_after(layer, old_start)?
+                        .ok_or_else(|| anyhow::anyhow!("Himawari move object missing"))?;
+                    anyhow::ensure!(
+                        section
+                            .get_object_name(object)?
+                            .is_some_and(|n| n.ends_with(" himawari test")),
+                        "Refused another object"
+                    );
+                    section.move_object(object, layer, start)?;
+                }
+                section.set_cursor_layer_frame(0, start + 15)?;
+                Ok(())
+            })??;
+            for local in locals.into_iter().rev() {
+                let (w, h, rgba) = capture_scene(start as u32 + local)?;
+                image::save_buffer(
+                    output.join(format!("start-{start}-local-{local}.png")),
+                    &rgba,
+                    w,
+                    h,
+                    image::ColorType::Rgba8,
+                )?;
+                checks.push(serde_json::json!({"start":start,"local":local,"matches_reference":rgba==references[&local],"colored_pixels":coverage(&rgba)}));
+            }
+            old_start = start;
+        }
+        EDIT_HANDLE.save_project_file(expected)?;
+        return Ok(
+            serde_json::json!({"status":if checks.iter().all(|c|c["matches_reference"]==true) {"passed"} else {"failed"},"checks":checks}),
+        );
+    }
     let mut images = std::collections::HashMap::new();
     let mut frames = vec![];
     let mut differences = vec![];

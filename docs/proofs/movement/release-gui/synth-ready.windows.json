@@ -1,0 +1,134 @@
+[
+  {
+    "class": "tooltips_class32",
+    "hwnd": 1638752,
+    "rect": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "title": ""
+  },
+  {
+    "class": "WorkerW",
+    "hwnd": 6625380,
+    "rect": [
+      0,
+      0,
+      166,
+      47
+    ],
+    "title": ""
+  },
+  {
+    "class": "aviutl2Manager",
+    "hwnd": 4657442,
+    "rect": [
+      16,
+      16,
+      1616,
+      1016
+    ],
+    "title": "movement-himawari-release.aup2*"
+  },
+  {
+    "class": "MSCTFIME UI",
+    "hwnd": 5379278,
+    "rect": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "title": "MSCTFIME UI"
+  },
+  {
+    "class": "IME",
+    "hwnd": 1449550,
+    "rect": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "title": "Default IME"
+  },
+  {
+    "class": "ExplorerBrowserControl",
+    "hwnd": 5578244,
+    "rect": [
+      26,
+      114,
+      281,
+      704
+    ],
+    "title": "エクスプローラーのブラウザー コントロール"
+  },
+  {
+    "class": "SHELLDLL_DefView",
+    "hwnd": 4333128,
+    "rect": [
+      26,
+      114,
+      281,
+      704
+    ],
+    "title": ""
+  },
+  {
+    "class": "DirectUIHWND",
+    "hwnd": 6230506,
+    "rect": [
+      26,
+      114,
+      281,
+      704
+    ],
+    "title": ""
+  },
+  {
+    "class": "CtrlNotifySink",
+    "hwnd": 1903264,
+    "rect": [
+      26,
+      683,
+      260,
+      704
+    ],
+    "title": ""
+  },
+  {
+    "class": "ScrollBar",
+    "hwnd": 3740850,
+    "rect": [
+      26,
+      683,
+      260,
+      704
+    ],
+    "title": ""
+  },
+  {
+    "class": "CtrlNotifySink",
+    "hwnd": 1317116,
+    "rect": [
+      260,
+      114,
+      281,
+      683
+    ],
+    "title": ""
+  },
+  {
+    "class": "ScrollBar",
+    "hwnd": 4723822,
+    "rect": [
+      260,
+      114,
+      281,
+      683
+    ],
+    "title": ""
+  }
+]

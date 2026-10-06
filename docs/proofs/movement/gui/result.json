@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "local": 149,
+      "matches_reference": true,
+      "start": 90
+    },
+    {
+      "local": 0,
+      "matches_reference": true,
+      "start": 90
+    },
+    {
+      "local": 120,
+      "matches_reference": true,
+      "start": 90
+    },
+    {
+      "local": 30,
+      "matches_reference": true,
+      "start": 90
+    },
+    {
+      "local": 1,
+      "matches_reference": true,
+      "start": 90
+    },
+    {
+      "local": 90,
+      "matches_reference": true,
+      "start": 90
+    }
+  ],
+  "status": "passed"
+}

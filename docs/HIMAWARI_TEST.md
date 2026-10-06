@@ -1,5 +1,7 @@
 # himawari_receiver のMIDI描画テスト
 
+2026-10-07追記: サンプルのMIDI時刻をオブジェクト基準へ揃え、タイムライン移動後もノート表示が追従するようにしました。[修正と検証](TIMELINE_MOVEMENT.md)。以下の初期検証記録は変更前のシーン同期動作です。
+
 2026-10-06 (Asia/Tokyo)。指定された [src/objects](https://github.com/sevenc-nanashi/himawari_receiver/tree/378ea63dd998bb579f8d3ca74c19f9560584a6e3/src/objects) を含むリポジトリを `.local-tests/himawari-receiver-upstream` に shallow cloneしました。対象commitは `378ea63dd998bb579f8d3ca74c19f9560584a6e3` です。
 
 原本を保持し、`.local-tests/himawari-receiver` に `src` をコピーしました。3つのobjectとutilsのTypeScriptは変更していません。[ハッシュ記録](proofs/himawari/source-hashes.json) と [検証結果](proofs/himawari/midi-summary.json) で確認しています。

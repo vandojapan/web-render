@@ -24,10 +24,12 @@ $config = @'
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "web-render/config";
+import { himawariObjectClock } from "../../scripts/himawari-object-clock.mjs";
 export default defineConfig({
   name: "himawari-test",
   hookConsoleLog: true,
   vitePlugins: [
+    himawariObjectClock(),
     {name: "himawari-api", config: () => ({
       cacheDir: fileURLToPath(new URL("./.vite-cache-complete", import.meta.url)),
       optimizeDeps: {include: ["@tonejs/midi", "midi-file", "p5", "web-render > @datastructures-js/priority-queue"]},

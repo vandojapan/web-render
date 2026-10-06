@@ -1,0 +1,47 @@
+﻿{
+    "status":  "passed",
+    "cause":  "himawari MIDI consumers used scene time",
+    "time_base":  "object",
+    "before_failed":  15,
+    "after_checks":  20,
+    "after_failed":  0,
+    "upstream_source_comparison":  [
+                                       {
+                                           "file":  "src/utils/currentFrameInfo.ts",
+                                           "unchanged":  true
+                                       },
+                                       {
+                                           "file":  "src/objects/drum.object.ts",
+                                           "unchanged":  true
+                                       },
+                                       {
+                                           "file":  "src/objects/kaiwaiPhrase.object.ts",
+                                           "unchanged":  true
+                                       },
+                                       {
+                                           "file":  "src/objects/synthSolo.object.ts",
+                                           "unchanged":  true
+                                       }
+                                   ],
+    "release_gui":  {
+                        "display":  "DISPLAY2",
+                        "exit_code":  0,
+                        "pid":  22780,
+                        "position_corrections":  0,
+                        "saved_test_project":  true,
+                        "trusted_generated_scripts":  false,
+                        "windows":  [
+                                        "AviUtl ExEdit2",
+                                        "movement-himawari-release.aup2",
+                                        "movement-himawari-release.aup2*"
+                                    ],
+                        "work_area":  [
+                                          0,
+                                          0,
+                                          3840,
+                                          2100
+                                      ]
+                    },
+    "deployed_sha256":  "2CA51937F5C3117F9DEA9117B7E982B4B881FE66CEBDC19DDFAC79B96EC17442",
+    "original_sample_sha256":  "755EAC3A998655112A93971F3419F7423D613993E5BA5F3BB053A4E5360BD8D5"
+}

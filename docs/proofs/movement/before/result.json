@@ -1,0 +1,216 @@
+{
+  "checks": [
+    {
+      "frame": 209,
+      "layer": 0,
+      "local": 149,
+      "matches_reference": true,
+      "start": 60
+    },
+    {
+      "frame": 60,
+      "layer": 0,
+      "local": 0,
+      "matches_reference": true,
+      "start": 60
+    },
+    {
+      "frame": 180,
+      "layer": 0,
+      "local": 120,
+      "matches_reference": true,
+      "start": 60
+    },
+    {
+      "frame": 90,
+      "layer": 0,
+      "local": 30,
+      "matches_reference": true,
+      "start": 60
+    },
+    {
+      "frame": 61,
+      "layer": 0,
+      "local": 1,
+      "matches_reference": true,
+      "start": 60
+    },
+    {
+      "frame": 150,
+      "layer": 0,
+      "local": 90,
+      "matches_reference": true,
+      "start": 60
+    },
+    {
+      "frame": 449,
+      "layer": 0,
+      "local": 149,
+      "matches_reference": true,
+      "start": 300
+    },
+    {
+      "frame": 300,
+      "layer": 0,
+      "local": 0,
+      "matches_reference": true,
+      "start": 300
+    },
+    {
+      "frame": 420,
+      "layer": 0,
+      "local": 120,
+      "matches_reference": true,
+      "start": 300
+    },
+    {
+      "frame": 330,
+      "layer": 0,
+      "local": 30,
+      "matches_reference": true,
+      "start": 300
+    },
+    {
+      "frame": 301,
+      "layer": 0,
+      "local": 1,
+      "matches_reference": true,
+      "start": 300
+    },
+    {
+      "frame": 390,
+      "layer": 0,
+      "local": 90,
+      "matches_reference": true,
+      "start": 300
+    },
+    {
+      "frame": 159,
+      "layer": 0,
+      "local": 149,
+      "matches_reference": true,
+      "start": 10
+    },
+    {
+      "frame": 10,
+      "layer": 0,
+      "local": 0,
+      "matches_reference": true,
+      "start": 10
+    },
+    {
+      "frame": 130,
+      "layer": 0,
+      "local": 120,
+      "matches_reference": true,
+      "start": 10
+    },
+    {
+      "frame": 40,
+      "layer": 0,
+      "local": 30,
+      "matches_reference": true,
+      "start": 10
+    },
+    {
+      "frame": 11,
+      "layer": 0,
+      "local": 1,
+      "matches_reference": true,
+      "start": 10
+    },
+    {
+      "frame": 100,
+      "layer": 0,
+      "local": 90,
+      "matches_reference": true,
+      "start": 10
+    },
+    {
+      "frame": 169,
+      "layer": 2,
+      "local": 149,
+      "matches_reference": true,
+      "start": 20
+    },
+    {
+      "frame": 20,
+      "layer": 2,
+      "local": 0,
+      "matches_reference": true,
+      "start": 20
+    },
+    {
+      "frame": 140,
+      "layer": 2,
+      "local": 120,
+      "matches_reference": true,
+      "start": 20
+    },
+    {
+      "frame": 50,
+      "layer": 2,
+      "local": 30,
+      "matches_reference": true,
+      "start": 20
+    },
+    {
+      "frame": 21,
+      "layer": 2,
+      "local": 1,
+      "matches_reference": true,
+      "start": 20
+    },
+    {
+      "frame": 110,
+      "layer": 2,
+      "local": 90,
+      "matches_reference": true,
+      "start": 20
+    },
+    {
+      "frame": 149,
+      "layer": 0,
+      "local": 149,
+      "matches_reference": true,
+      "start": 0
+    },
+    {
+      "frame": 0,
+      "layer": 0,
+      "local": 0,
+      "matches_reference": true,
+      "start": 0
+    },
+    {
+      "frame": 120,
+      "layer": 0,
+      "local": 120,
+      "matches_reference": true,
+      "start": 0
+    },
+    {
+      "frame": 30,
+      "layer": 0,
+      "local": 30,
+      "matches_reference": true,
+      "start": 0
+    },
+    {
+      "frame": 1,
+      "layer": 0,
+      "local": 1,
+      "matches_reference": true,
+      "start": 0
+    },
+    {
+      "frame": 90,
+      "layer": 0,
+      "local": 90,
+      "matches_reference": true,
+      "start": 0
+    }
+  ],
+  "project": "E:\\Downloads\\web_render_aux2_prototype\\web-render/.local-tests/movement-html.aup2",
+  "status": "passed"
+}
