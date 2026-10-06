@@ -1,0 +1,160 @@
+{
+  "frames": [
+    {
+      "colored_pixels_per_object": [
+        378,
+        128,
+        5760
+      ],
+      "frame": 15,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        240,
+        128,
+        3840
+      ],
+      "frame": 0,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        642,
+        128,
+        7680
+      ],
+      "frame": 63,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        734,
+        192,
+        7680
+      ],
+      "frame": 54,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        734,
+        0,
+        7680
+      ],
+      "frame": 57,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        596,
+        128,
+        7680
+      ],
+      "frame": 60,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        590,
+        0,
+        7680
+      ],
+      "frame": 237,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        542,
+        128,
+        7680
+      ],
+      "frame": 240,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        681,
+        128,
+        7680
+      ],
+      "frame": 243,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        591,
+        192,
+        4320
+      ],
+      "frame": 429,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        542,
+        0,
+        3840
+      ],
+      "frame": 432,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        384,
+        0,
+        960
+      ],
+      "frame": 450,
+      "repeated": false
+    },
+    {
+      "colored_pixels_per_object": [
+        378,
+        128,
+        5760
+      ],
+      "frame": 15,
+      "repeated": true
+    },
+    {
+      "colored_pixels_per_object": [
+        642,
+        128,
+        7680
+      ],
+      "frame": 63,
+      "repeated": true
+    },
+    {
+      "colored_pixels_per_object": [
+        542,
+        128,
+        7680
+      ],
+      "frame": 240,
+      "repeated": true
+    },
+    {
+      "colored_pixels_per_object": [
+        240,
+        128,
+        3840
+      ],
+      "frame": 0,
+      "repeated": true
+    }
+  ],
+  "height": 1080,
+  "objects": [
+    "Drum",
+    "Kaiwai Phrase",
+    "Synth Solo"
+  ],
+  "project": "E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\aviutl2\\himawari-sample.aup2",
+  "repeated_differences": [],
+  "replay": true,
+  "reverse_seek_full_rgba": true,
+  "status": "passed",
+  "width": 1920
+}

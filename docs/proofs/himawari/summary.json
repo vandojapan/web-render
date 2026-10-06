@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-06",
+  "status": "passed",
+  "scope": "generated MIDI, three specified himawari_receiver objects",
+  "upstream_commit": "378ea63dd998bb579f8d3ca74c19f9560584a6e3",
+  "midi_sha256": "3121fb2c7a0c730a7a63f5279a54e7d9fe203627e88a47f90d006c2d4a7342b0",
+  "original_source_and_midi_unchanged": true,
+  "notes": 184,
+  "duration_seconds": 14.4,
+  "cef_image_requests": 285,
+  "aviutl_scene_captures": 32,
+  "results": {
+    "cef-debug": {
+      "status": "passed",
+      "image_requests": 95
+    },
+    "cef-release": {
+      "status": "passed",
+      "image_requests": 95
+    },
+    "cef-cold": {
+      "status": "passed",
+      "image_requests": 95
+    },
+    "aviutl-capture": {
+      "status": "passed",
+      "image_requests": 16
+    },
+    "aviutl-replay": {
+      "status": "passed",
+      "image_requests": 16
+    }
+  },
+  "initial_and_replayed_pngs_identical": 16,
+  "web_regressions": 5,
+  "rust_tests": 12,
+  "cold_start_after_explicit_preoptimization": true,
+  "default_runtime_debug": false
+}

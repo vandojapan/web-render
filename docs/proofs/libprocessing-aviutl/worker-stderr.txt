@@ -1,0 +1,2 @@
+2026-10-06T16:32:39.299305Z  WARN bevy_asset::io::source: Skip creating file watcher because path "E:\\Downloads\\web_render_aux2_prototype\\web-render\\native\\libprocessing\\target\\release\\assets" does not exist.
+2026-10-06T16:32:39.299347Z  WARN bevy_asset::io::source: AssetSourceId::Default does not have an AssetWatcher configured. Consider adding an "assets" directory.

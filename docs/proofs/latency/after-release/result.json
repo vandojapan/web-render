@@ -1,0 +1,3171 @@
+{
+  "graceful_shutdown": true,
+  "image_requests": 695,
+  "issues": [],
+  "objects": [
+    {
+      "checks": {
+        "flip_changes_image": true,
+        "reinitialization_full_rgba": true
+      },
+      "differences": [],
+      "frames": [
+        {
+          "alpha_sum": 15360,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 240,
+          "render_ms": 133.3685,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 40908,
+          "frame": 3,
+          "global_time": 0.1,
+          "painted_pixels": 366,
+          "render_ms": 106.39189999999999,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 46870,
+          "frame": 9,
+          "global_time": 0.3,
+          "painted_pixels": 378,
+          "render_ms": 32.148700000000005,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 51454,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 378,
+          "render_ms": 31.796900000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 83313,
+          "frame": 24,
+          "global_time": 0.8,
+          "painted_pixels": 490,
+          "render_ms": 67.02560000000001,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 87897,
+          "frame": 30,
+          "global_time": 1.0,
+          "painted_pixels": 490,
+          "render_ms": 27.3995,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 122941,
+          "frame": 45,
+          "global_time": 1.5,
+          "painted_pixels": 622,
+          "render_ms": 35.5337,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 150324,
+          "frame": 48,
+          "global_time": 1.6,
+          "painted_pixels": 734,
+          "render_ms": 30.862000000000002,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 152508,
+          "frame": 51,
+          "global_time": 1.7,
+          "painted_pixels": 734,
+          "render_ms": 32.7956,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 154800,
+          "frame": 54,
+          "global_time": 1.8,
+          "painted_pixels": 734,
+          "render_ms": 32.6076,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 157092,
+          "frame": 57,
+          "global_time": 1.9,
+          "painted_pixels": 734,
+          "render_ms": 32.6814,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 79822,
+          "frame": 60,
+          "global_time": 2.0,
+          "painted_pixels": 596,
+          "render_ms": 44.2584,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 66198,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 642,
+          "render_ms": 20.1866,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 118195,
+          "frame": 117,
+          "global_time": 3.9,
+          "painted_pixels": 590,
+          "render_ms": 18.7337,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 120,
+          "global_time": 4.0,
+          "painted_pixels": 542,
+          "render_ms": 29.8297,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 118195,
+          "frame": 237,
+          "global_time": 7.9,
+          "painted_pixels": 590,
+          "render_ms": 18.1621,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 542,
+          "render_ms": 15.1736,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 77163,
+          "frame": 243,
+          "global_time": 8.1,
+          "painted_pixels": 681,
+          "render_ms": 17.388299999999997,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 60906,
+          "frame": 252,
+          "global_time": 8.4,
+          "painted_pixels": 570,
+          "render_ms": 16.890700000000002,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 79822,
+          "frame": 288,
+          "global_time": 9.6,
+          "painted_pixels": 596,
+          "render_ms": 34.9778,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 336,
+          "global_time": 11.2,
+          "painted_pixels": 542,
+          "render_ms": 29.0791,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 117661,
+          "frame": 429,
+          "global_time": 14.3,
+          "painted_pixels": 591,
+          "render_ms": 19.841,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 432,
+          "global_time": 14.4,
+          "painted_pixels": 542,
+          "render_ms": 30.6332,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 39218,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 384,
+          "render_ms": 18.441599999999998,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 51454,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 378,
+          "render_ms": 31.5706,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 66198,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 642,
+          "render_ms": 28.2867,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 542,
+          "render_ms": 20.960800000000003,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 39218,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 384,
+          "render_ms": 35.3527,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 15360,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 240,
+          "render_ms": 32.3846,
+          "repeated": true
+        }
+      ],
+      "height": 184,
+      "object": "drum",
+      "reverse_seek_full_rgba": true,
+      "timing": {
+        "includes": "IPC + CEF paint and RGBA copy; excludes PNG encoding and first setup",
+        "median_ms": 30.862000000000002,
+        "p95_ms": 67.02560000000001,
+        "steady_samples": 28
+      },
+      "width": 64
+    },
+    {
+      "checks": {
+        "global_time_with_local_zero": true,
+        "phrase_fade": true,
+        "phrase_section_restart": true,
+        "reinitialization_full_rgba": true
+      },
+      "differences": [],
+      "frames": [
+        {
+          "alpha_sum": 16214,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 128,
+          "render_ms": 35.674200000000006,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 3,
+          "global_time": 0.1,
+          "painted_pixels": 128,
+          "render_ms": 29.0652,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 9,
+          "global_time": 0.3,
+          "painted_pixels": 128,
+          "render_ms": 21.1368,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 24618,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 128,
+          "render_ms": 33.486599999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 22308,
+          "frame": 24,
+          "global_time": 0.8,
+          "painted_pixels": 128,
+          "render_ms": 30.674400000000002,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 30330,
+          "frame": 30,
+          "global_time": 1.0,
+          "painted_pixels": 128,
+          "render_ms": 34.804899999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 27910,
+          "frame": 45,
+          "global_time": 1.5,
+          "painted_pixels": 128,
+          "render_ms": 32.811,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 25600,
+          "frame": 48,
+          "global_time": 1.6,
+          "painted_pixels": 128,
+          "render_ms": 30.5267,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 25600,
+          "frame": 51,
+          "global_time": 1.7,
+          "painted_pixels": 128,
+          "render_ms": 34.2,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 12672,
+          "frame": 54,
+          "global_time": 1.8,
+          "painted_pixels": 192,
+          "render_ms": 32.8994,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 57,
+          "global_time": 1.9,
+          "painted_pixels": 0,
+          "render_ms": 36.3761,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 60,
+          "global_time": 2.0,
+          "painted_pixels": 128,
+          "render_ms": 33.183299999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 128,
+          "render_ms": 29.6178,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 117,
+          "global_time": 3.9,
+          "painted_pixels": 0,
+          "render_ms": 33.500299999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 120,
+          "global_time": 4.0,
+          "painted_pixels": 128,
+          "render_ms": 37.461800000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 237,
+          "global_time": 7.9,
+          "painted_pixels": 0,
+          "render_ms": 28.252,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 128,
+          "render_ms": 31.7829,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 243,
+          "global_time": 8.1,
+          "painted_pixels": 128,
+          "render_ms": 40.8643,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 24618,
+          "frame": 252,
+          "global_time": 8.4,
+          "painted_pixels": 128,
+          "render_ms": 27.1459,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 288,
+          "global_time": 9.6,
+          "painted_pixels": 128,
+          "render_ms": 31.9039,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 336,
+          "global_time": 11.2,
+          "painted_pixels": 0,
+          "render_ms": 34.4739,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 12672,
+          "frame": 429,
+          "global_time": 14.3,
+          "painted_pixels": 192,
+          "render_ms": 30.504900000000003,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 432,
+          "global_time": 14.4,
+          "painted_pixels": 0,
+          "render_ms": 34.5499,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 0,
+          "render_ms": 30.7653,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 24618,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 128,
+          "render_ms": 37.674800000000005,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 128,
+          "render_ms": 29.6053,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 128,
+          "render_ms": 33.3847,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 0,
+          "render_ms": 32.799099999999996,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 128,
+          "render_ms": 32.864999999999995,
+          "repeated": true
+        }
+      ],
+      "height": 72,
+      "object": "kaiwai-phrase",
+      "reverse_seek_full_rgba": true,
+      "timing": {
+        "includes": "IPC + CEF paint and RGBA copy; excludes PNG encoding and first setup",
+        "median_ms": 32.864999999999995,
+        "p95_ms": 37.674800000000005,
+        "steady_samples": 28
+      },
+      "width": 64
+    },
+    {
+      "checks": {
+        "after_scroll_out_transparent": true,
+        "global_time_with_local_zero": true,
+        "past_notes_remain_until_scroll_out": true,
+        "pitch_bend_up_down_reset": true,
+        "playhead_x_changes_image": true,
+        "reinitialization_full_rgba": true
+      },
+      "differences": [],
+      "frames": [
+        {
+          "alpha_sum": 122880,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 3840,
+          "render_ms": 30.487199999999998,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 220800,
+          "frame": 3,
+          "global_time": 0.1,
+          "painted_pixels": 4224,
+          "render_ms": 21.828,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 416640,
+          "frame": 9,
+          "global_time": 0.3,
+          "painted_pixels": 4992,
+          "render_ms": 56.5069,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 612480,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 5760,
+          "render_ms": 32.543299999999995,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 906240,
+          "frame": 24,
+          "global_time": 0.8,
+          "painted_pixels": 6912,
+          "render_ms": 24.9752,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 30,
+          "global_time": 1.0,
+          "painted_pixels": 7680,
+          "render_ms": 37.661899999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 919680,
+          "frame": 45,
+          "global_time": 1.5,
+          "painted_pixels": 7680,
+          "render_ms": 34.9161,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 956160,
+          "frame": 48,
+          "global_time": 1.6,
+          "painted_pixels": 7680,
+          "render_ms": 29.6104,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 992640,
+          "frame": 51,
+          "global_time": 1.7,
+          "painted_pixels": 7680,
+          "render_ms": 35.9253,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1029120,
+          "frame": 54,
+          "global_time": 1.8,
+          "painted_pixels": 7680,
+          "render_ms": 28.038899999999998,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1065600,
+          "frame": 57,
+          "global_time": 1.9,
+          "painted_pixels": 7680,
+          "render_ms": 34.6613,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 60,
+          "global_time": 2.0,
+          "painted_pixels": 7680,
+          "render_ms": 37.720200000000006,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 773760,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 7680,
+          "render_ms": 25.502899999999997,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1065600,
+          "frame": 117,
+          "global_time": 3.9,
+          "painted_pixels": 7680,
+          "render_ms": 29.1529,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 120,
+          "global_time": 4.0,
+          "painted_pixels": 7680,
+          "render_ms": 29.4892,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1065600,
+          "frame": 237,
+          "global_time": 7.9,
+          "painted_pixels": 7680,
+          "render_ms": 32.096399999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 7680,
+          "render_ms": 22.5386,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 782880,
+          "frame": 243,
+          "global_time": 8.1,
+          "painted_pixels": 7680,
+          "render_ms": 42.2979,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 919680,
+          "frame": 252,
+          "global_time": 8.4,
+          "painted_pixels": 7680,
+          "render_ms": 34.133900000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 288,
+          "global_time": 9.6,
+          "painted_pixels": 7680,
+          "render_ms": 32.485600000000005,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 336,
+          "global_time": 11.2,
+          "painted_pixels": 7680,
+          "render_ms": 33.0441,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 948960,
+          "frame": 429,
+          "global_time": 14.3,
+          "painted_pixels": 4320,
+          "render_ms": 33.708099999999995,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 614400,
+          "frame": 432,
+          "global_time": 14.4,
+          "painted_pixels": 3840,
+          "render_ms": 32.014300000000006,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 153600,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 960,
+          "render_ms": 35.8506,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 612480,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 5760,
+          "render_ms": 31.931300000000004,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 773760,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 7680,
+          "render_ms": 33.715599999999995,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 7680,
+          "render_ms": 31.9749,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 153600,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 960,
+          "render_ms": 31.8675,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 122880,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 3840,
+          "render_ms": 22.4668,
+          "repeated": true
+        }
+      ],
+      "height": 144,
+      "object": "synth-solo",
+      "reverse_seek_full_rgba": true,
+      "timing": {
+        "includes": "IPC + CEF paint and RGBA copy; excludes PNG encoding and first setup",
+        "median_ms": 32.485600000000005,
+        "p95_ms": 42.2979,
+        "steady_samples": 28
+      },
+      "width": 640
+    }
+  ],
+  "p5_version": "2.3.2",
+  "status": "passed",
+  "stress": [
+    {
+      "frame": 15,
+      "render_ms": 35.1613
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.753600000000006
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9778
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.6777
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.1742
+    },
+    {
+      "frame": 240,
+      "render_ms": 37.123599999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 28.3149
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.1691
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.308699999999995
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.285300000000003
+    },
+    {
+      "frame": 450,
+      "render_ms": 373.5645
+    },
+    {
+      "frame": 0,
+      "render_ms": 25.9428
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.8842
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.0181
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.6004
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.3301
+    },
+    {
+      "frame": 15,
+      "render_ms": 29.8825
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.8166
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.3589
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.1392
+    },
+    {
+      "frame": 15,
+      "render_ms": 18.1752
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.2403
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.0486
+    },
+    {
+      "frame": 0,
+      "render_ms": 38.9016
+    },
+    {
+      "frame": 15,
+      "render_ms": 27.8826
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.889599999999998
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.4656
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.7762
+    },
+    {
+      "frame": 15,
+      "render_ms": 27.9331
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.9648
+    },
+    {
+      "frame": 450,
+      "render_ms": 21.0247
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.57
+    },
+    {
+      "frame": 15,
+      "render_ms": 23.121
+    },
+    {
+      "frame": 240,
+      "render_ms": 28.9528
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.1217
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.981
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.815499999999997
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.7956
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9719
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.628699999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 39.1043
+    },
+    {
+      "frame": 240,
+      "render_ms": 153.8776
+    },
+    {
+      "frame": 450,
+      "render_ms": 26.2775
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.662
+    },
+    {
+      "frame": 15,
+      "render_ms": 29.8608
+    },
+    {
+      "frame": 240,
+      "render_ms": 18.4455
+    },
+    {
+      "frame": 450,
+      "render_ms": 1918.7715
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.096000000000004
+    },
+    {
+      "frame": 15,
+      "render_ms": 45.159699999999994
+    },
+    {
+      "frame": 240,
+      "render_ms": 24.098000000000003
+    },
+    {
+      "frame": 450,
+      "render_ms": 26.6037
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.287
+    },
+    {
+      "frame": 15,
+      "render_ms": 40.8584
+    },
+    {
+      "frame": 240,
+      "render_ms": 28.9038
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.525
+    },
+    {
+      "frame": 0,
+      "render_ms": 42.0064
+    },
+    {
+      "frame": 15,
+      "render_ms": 715.7461000000001
+    },
+    {
+      "frame": 240,
+      "render_ms": 24.625600000000002
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.932399999999998
+    },
+    {
+      "frame": 0,
+      "render_ms": 20.468
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.914299999999997
+    },
+    {
+      "frame": 240,
+      "render_ms": 20.9441
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.3816
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.8504
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.632999999999996
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.644
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.9052
+    },
+    {
+      "frame": 0,
+      "render_ms": 38.3152
+    },
+    {
+      "frame": 15,
+      "render_ms": 29.5352
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.3654
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.348400000000005
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.5866
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.122699999999995
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.310100000000006
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.837399999999995
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.5022
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.3248
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.8887
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.4475
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.3905
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.117399999999996
+    },
+    {
+      "frame": 240,
+      "render_ms": 19.4055
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.094800000000003
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.9595
+    },
+    {
+      "frame": 15,
+      "render_ms": 50.0882
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.306400000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 89.6198
+    },
+    {
+      "frame": 0,
+      "render_ms": 24.933699999999998
+    },
+    {
+      "frame": 15,
+      "render_ms": 1003.1584
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.307700000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.3286
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.931200000000004
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.174200000000003
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.817
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.5741
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.3531
+    },
+    {
+      "frame": 15,
+      "render_ms": 784.2774999999999
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.1704
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.684
+    },
+    {
+      "frame": 0,
+      "render_ms": 36.8246
+    },
+    {
+      "frame": 15,
+      "render_ms": 28.6574
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.1402
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.6527
+    },
+    {
+      "frame": 0,
+      "render_ms": 30.3574
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.8097
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.194300000000002
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.5969
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.160599999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.0344
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.9001
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.201
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.4417
+    },
+    {
+      "frame": 15,
+      "render_ms": 37.3062
+    },
+    {
+      "frame": 240,
+      "render_ms": 36.611
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.1365
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.138399999999997
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.5088
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.8804
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.143
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.6014
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.7958
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.650999999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9508
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.5715
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.2907
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.915499999999998
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.5692
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.889
+    },
+    {
+      "frame": 15,
+      "render_ms": 35.4936
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.4014
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.8183
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.016200000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.031800000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 38.1567
+    },
+    {
+      "frame": 450,
+      "render_ms": 28.5142
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.933499999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 37.907999999999994
+    },
+    {
+      "frame": 240,
+      "render_ms": 27.7851
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9987
+    },
+    {
+      "frame": 0,
+      "render_ms": 39.4659
+    },
+    {
+      "frame": 15,
+      "render_ms": 27.017699999999998
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.120400000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.7782
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.0251
+    },
+    {
+      "frame": 15,
+      "render_ms": 40.145100000000006
+    },
+    {
+      "frame": 240,
+      "render_ms": 444.8036
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.260099999999998
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.0119
+    },
+    {
+      "frame": 15,
+      "render_ms": 29.9797
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.089
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.3192
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.5704
+    },
+    {
+      "frame": 15,
+      "render_ms": 19.216
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.7218
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.4757
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.132799999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.6717
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.139599999999994
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.4196
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.3067
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.4273
+    },
+    {
+      "frame": 240,
+      "render_ms": 543.6499
+    },
+    {
+      "frame": 450,
+      "render_ms": 23.1309
+    },
+    {
+      "frame": 0,
+      "render_ms": 997.5318
+    },
+    {
+      "frame": 15,
+      "render_ms": 20.43
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.774300000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.561700000000002
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.5199
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.6269
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.466
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.4113
+    },
+    {
+      "frame": 0,
+      "render_ms": 30.264499999999998
+    },
+    {
+      "frame": 15,
+      "render_ms": 20.4776
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.0121
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.4507
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.7915
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.0608
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.857
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.627700000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.131
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.993
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.013
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.3994
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.2086
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.0875
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.02
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.440400000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.484300000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.6148
+    },
+    {
+      "frame": 240,
+      "render_ms": 276.04859999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 22.4245
+    },
+    {
+      "frame": 0,
+      "render_ms": 39.572
+    },
+    {
+      "frame": 15,
+      "render_ms": 28.743000000000002
+    },
+    {
+      "frame": 240,
+      "render_ms": 43.4906
+    },
+    {
+      "frame": 450,
+      "render_ms": 23.4247
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.1558
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.5623
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.3855
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.5002
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.2775
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.9737
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.0804
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.5411
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.7494
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.826800000000006
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.0497
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.806799999999996
+    },
+    {
+      "frame": 0,
+      "render_ms": 41.031600000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 26.4298
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.0441
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.4958
+    },
+    {
+      "frame": 0,
+      "render_ms": 330.7431
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.9162
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.2736
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.396100000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 28.9637
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.805500000000002
+    },
+    {
+      "frame": 240,
+      "render_ms": 40.80050000000001
+    },
+    {
+      "frame": 450,
+      "render_ms": 26.575000000000003
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.5282
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.408899999999996
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.9374
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.3189
+    },
+    {
+      "frame": 0,
+      "render_ms": 42.323100000000004
+    },
+    {
+      "frame": 15,
+      "render_ms": 24.273200000000003
+    },
+    {
+      "frame": 240,
+      "render_ms": 37.2204
+    },
+    {
+      "frame": 450,
+      "render_ms": 1573.0585
+    },
+    {
+      "frame": 0,
+      "render_ms": 24.2018
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.3885
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.294200000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.6322
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.885999999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.743500000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.5112
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.989200000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.231700000000004
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.6604
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.422000000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 663.6809000000001
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.700700000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.260099999999998
+    },
+    {
+      "frame": 240,
+      "render_ms": 38.3067
+    },
+    {
+      "frame": 450,
+      "render_ms": 28.3998
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.3495
+    },
+    {
+      "frame": 15,
+      "render_ms": 40.788
+    },
+    {
+      "frame": 240,
+      "render_ms": 26.386300000000002
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.164500000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.8916
+    },
+    {
+      "frame": 15,
+      "render_ms": 35.6456
+    },
+    {
+      "frame": 240,
+      "render_ms": 29.5888
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.8871
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.258500000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 37.977900000000005
+    },
+    {
+      "frame": 240,
+      "render_ms": 27.881
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.503
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.6544
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.7159
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.9784
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9764
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.3588
+    },
+    {
+      "frame": 15,
+      "render_ms": 18.651
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.557700000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.1529
+    },
+    {
+      "frame": 0,
+      "render_ms": 38.7352
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.6183
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.7708
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.0538
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.9237
+    },
+    {
+      "frame": 15,
+      "render_ms": 29.9725
+    },
+    {
+      "frame": 240,
+      "render_ms": 18.1603
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.2091
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.124
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.7581
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.128299999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.2977
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.3744
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.7092
+    },
+    {
+      "frame": 240,
+      "render_ms": 798.9845
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.7551
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.4372
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.195
+    },
+    {
+      "frame": 240,
+      "render_ms": 932.0611
+    },
+    {
+      "frame": 450,
+      "render_ms": 16.356099999999998
+    },
+    {
+      "frame": 0,
+      "render_ms": 1004.1106
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.171
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.5038
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.2733
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.8362
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.4348
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.4287
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.3365
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.3641
+    },
+    {
+      "frame": 15,
+      "render_ms": 29.615099999999998
+    },
+    {
+      "frame": 240,
+      "render_ms": 22.1281
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.0121
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.878499999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.2321
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.455700000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.058299999999996
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.0894
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.748400000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.8992
+    },
+    {
+      "frame": 450,
+      "render_ms": 37.4309
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.9668
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.5269
+    },
+    {
+      "frame": 240,
+      "render_ms": 38.229800000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 29.905
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.8712
+    },
+    {
+      "frame": 15,
+      "render_ms": 39.2819
+    },
+    {
+      "frame": 240,
+      "render_ms": 27.548099999999998
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.2549
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.2708
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.929300000000005
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.751999999999995
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.961600000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.097899999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.7867
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.3032
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.247
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.8091
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.788
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.672199999999997
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.840799999999994
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.8515
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.174099999999996
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.778099999999995
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.6684
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.9576
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.5677
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.766200000000005
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.8979
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.1916
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.0306
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.9789
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.6263
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.4466
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.9052
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.368700000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.9681
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.0368
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.405199999999994
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.5208
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.2261
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.575899999999997
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.514700000000005
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.6283
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.696
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.890299999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.8967
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.2949
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.4345
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.5674
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.791
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.475100000000005
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.854599999999998
+    },
+    {
+      "frame": 0,
+      "render_ms": 36.693799999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.5672
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.4348
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.7524
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.071000000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.7416
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.8523
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.8848
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.026
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.7421
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.4681
+    },
+    {
+      "frame": 450,
+      "render_ms": 234.0224
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.803399999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.1192
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.6821
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.2723
+    },
+    {
+      "frame": 0,
+      "render_ms": 29.5517
+    },
+    {
+      "frame": 15,
+      "render_ms": 35.3475
+    },
+    {
+      "frame": 240,
+      "render_ms": 38.800399999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 25.756
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.005199999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.391400000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 39.2282
+    },
+    {
+      "frame": 450,
+      "render_ms": 27.4037
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.7802
+    },
+    {
+      "frame": 15,
+      "render_ms": 35.673700000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.375300000000003
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.0042
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.236799999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.318
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.8513
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.7617
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.6349
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.5987
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.7999
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.8512
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.1006
+    },
+    {
+      "frame": 15,
+      "render_ms": 1182.8034
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.544500000000003
+    },
+    {
+      "frame": 450,
+      "render_ms": 989.9788000000001
+    },
+    {
+      "frame": 0,
+      "render_ms": 37.0797
+    },
+    {
+      "frame": 15,
+      "render_ms": 24.357799999999997
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.5618
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.8824
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.001599999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 42.9416
+    },
+    {
+      "frame": 240,
+      "render_ms": 24.3779
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.759900000000002
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.2682
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.226
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.1812
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9775
+    },
+    {
+      "frame": 0,
+      "render_ms": 37.2275
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.4179
+    },
+    {
+      "frame": 240,
+      "render_ms": 29.8956
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.9
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.1628
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.4033
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.4981
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.5213
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.0548
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.9108
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.2803
+    },
+    {
+      "frame": 450,
+      "render_ms": 260.963
+    },
+    {
+      "frame": 0,
+      "render_ms": 22.2106
+    },
+    {
+      "frame": 15,
+      "render_ms": 35.776500000000006
+    },
+    {
+      "frame": 240,
+      "render_ms": 29.7438
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.5605
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.7759
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.0956
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.9831
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.8833
+    },
+    {
+      "frame": 0,
+      "render_ms": 30.5082
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.756099999999996
+    },
+    {
+      "frame": 240,
+      "render_ms": 41.6639
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.5203
+    },
+    {
+      "frame": 0,
+      "render_ms": 27.242700000000003
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.753600000000006
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.0195
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.5517
+    },
+    {
+      "frame": 0,
+      "render_ms": 30.4069
+    },
+    {
+      "frame": 15,
+      "render_ms": 20.3372
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.7019
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.8384
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.9493
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.429
+    },
+    {
+      "frame": 240,
+      "render_ms": 37.2965
+    },
+    {
+      "frame": 450,
+      "render_ms": 28.628
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.212199999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.5159
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.8675
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.3824
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.413399999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.8187
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.6113
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.5573
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.165000000000003
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.0544
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.6239
+    },
+    {
+      "frame": 450,
+      "render_ms": 41.5752
+    },
+    {
+      "frame": 0,
+      "render_ms": 28.6076
+    },
+    {
+      "frame": 15,
+      "render_ms": 28.890900000000002
+    },
+    {
+      "frame": 240,
+      "render_ms": 803.6459
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.9339
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.946299999999997
+    },
+    {
+      "frame": 15,
+      "render_ms": 39.8659
+    },
+    {
+      "frame": 240,
+      "render_ms": 27.3392
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.7486
+    },
+    {
+      "frame": 0,
+      "render_ms": 41.806999999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 24.8462
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.6631
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.332600000000006
+    },
+    {
+      "frame": 0,
+      "render_ms": 45.2381
+    },
+    {
+      "frame": 15,
+      "render_ms": 21.5461
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.5959
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.641999999999996
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.584700000000005
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.3957
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.2445
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.144600000000004
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.1541
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.603100000000005
+    },
+    {
+      "frame": 240,
+      "render_ms": 36.579100000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.0458
+    },
+    {
+      "frame": 0,
+      "render_ms": 324.291
+    },
+    {
+      "frame": 15,
+      "render_ms": 23.4181
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.129
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.3685
+    },
+    {
+      "frame": 0,
+      "render_ms": 1943.1110999999999
+    },
+    {
+      "frame": 15,
+      "render_ms": 38.1105
+    },
+    {
+      "frame": 240,
+      "render_ms": 991.8839
+    },
+    {
+      "frame": 450,
+      "render_ms": 21.0535
+    },
+    {
+      "frame": 0,
+      "render_ms": 24.7419
+    },
+    {
+      "frame": 15,
+      "render_ms": 28.8624
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.5649
+    },
+    {
+      "frame": 450,
+      "render_ms": 37.4521
+    },
+    {
+      "frame": 0,
+      "render_ms": 27.8973
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.7944
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.257200000000005
+    },
+    {
+      "frame": 450,
+      "render_ms": 39.7971
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.1948
+    },
+    {
+      "frame": 15,
+      "render_ms": 26.645100000000003
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.864200000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 38.6674
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.757799999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.308600000000002
+    },
+    {
+      "frame": 240,
+      "render_ms": 36.619699999999995
+    },
+    {
+      "frame": 450,
+      "render_ms": 30.1275
+    },
+    {
+      "frame": 0,
+      "render_ms": 36.1263
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.0445
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.1889
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.4533
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.6252
+    },
+    {
+      "frame": 15,
+      "render_ms": 36.5502
+    },
+    {
+      "frame": 240,
+      "render_ms": 30.012
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.1523
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.189699999999995
+    },
+    {
+      "frame": 15,
+      "render_ms": 31.3527
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.4717
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.507
+    },
+    {
+      "frame": 0,
+      "render_ms": 70.54090000000001
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.1143
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.54
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.498199999999997
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.706
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.4744
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.1239
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.466499999999996
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.562800000000003
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.7253
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.994099999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.2806
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.64
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.767900000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.989900000000006
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.656699999999994
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.4159
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.0472
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.731700000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.793499999999995
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.1915
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.9786
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.167500000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.6472
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.0849
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.8074
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.157
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.0817
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.8659
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.666399999999996
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.806200000000004
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.1115
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.8357
+    },
+    {
+      "frame": 15,
+      "render_ms": 932.547
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.2469
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.602199999999996
+    },
+    {
+      "frame": 0,
+      "render_ms": 1937.7134
+    },
+    {
+      "frame": 15,
+      "render_ms": 26.9212
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.55459999999999
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.8494
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.4814
+    },
+    {
+      "frame": 15,
+      "render_ms": 38.2633
+    },
+    {
+      "frame": 240,
+      "render_ms": 27.491000000000003
+    },
+    {
+      "frame": 450,
+      "render_ms": 35.7506
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.924099999999996
+    },
+    {
+      "frame": 15,
+      "render_ms": 30.5918
+    },
+    {
+      "frame": 240,
+      "render_ms": 34.5313
+    },
+    {
+      "frame": 450,
+      "render_ms": 38.1372
+    },
+    {
+      "frame": 0,
+      "render_ms": 26.8435
+    },
+    {
+      "frame": 15,
+      "render_ms": 34.0497
+    },
+    {
+      "frame": 240,
+      "render_ms": 38.245000000000005
+    },
+    {
+      "frame": 450,
+      "render_ms": 26.8157
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.170199999999994
+    },
+    {
+      "frame": 15,
+      "render_ms": 39.0689
+    },
+    {
+      "frame": 240,
+      "render_ms": 29.683600000000002
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.9456
+    },
+    {
+      "frame": 0,
+      "render_ms": 40.8509
+    },
+    {
+      "frame": 15,
+      "render_ms": 26.5216
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.8086
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.8174
+    },
+    {
+      "frame": 0,
+      "render_ms": 33.5821
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.44
+    },
+    {
+      "frame": 240,
+      "render_ms": 31.664699999999996
+    },
+    {
+      "frame": 450,
+      "render_ms": 36.0867
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.089
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.7807
+    },
+    {
+      "frame": 240,
+      "render_ms": 32.8598
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.470099999999995
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.536500000000004
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.1027
+    },
+    {
+      "frame": 240,
+      "render_ms": 33.8721
+    },
+    {
+      "frame": 450,
+      "render_ms": 34.069
+    },
+    {
+      "frame": 0,
+      "render_ms": 32.0388
+    },
+    {
+      "frame": 15,
+      "render_ms": 33.3333
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.8998
+    },
+    {
+      "frame": 450,
+      "render_ms": 31.134999999999998
+    },
+    {
+      "frame": 0,
+      "render_ms": 31.815900000000003
+    },
+    {
+      "frame": 15,
+      "render_ms": 32.8366
+    },
+    {
+      "frame": 240,
+      "render_ms": 35.3123
+    },
+    {
+      "frame": 450,
+      "render_ms": 32.6952
+    },
+    {
+      "frame": 0,
+      "render_ms": 34.120400000000004
+    },
+    {
+      "frame": 15,
+      "render_ms": 38.342800000000004
+    },
+    {
+      "frame": 240,
+      "render_ms": 26.7062
+    },
+    {
+      "frame": 450,
+      "render_ms": 33.0481
+    },
+    {
+      "frame": 0,
+      "render_ms": 35.0887
+    }
+  ],
+  "upstream_commit": "378ea63dd998bb579f8d3ca74c19f9560584a6e3"
+}

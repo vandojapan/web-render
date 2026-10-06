@@ -1,0 +1,18 @@
+#vi5-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4096px;
+  height: 2304px;
+}
+canvas:not(#vi5-canvas) {
+  display: none;
+}
+
+body,
+html {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

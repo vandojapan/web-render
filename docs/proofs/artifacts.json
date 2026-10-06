@@ -1,0 +1,30 @@
+[
+    {
+        "path":  "dist/windows-debug/Plugin/web-render/web-render.aux2",
+        "bytes":  21518336,
+        "sha256":  "6E1B8E313CA20F962472266940910702FC7DF1ED86CFFB9D61FF397B48771B20",
+        "built_at":  "2026-10-06T11:01:34.9451358+09:00",
+        "runtime_debug":  false
+    },
+    {
+        "path":  "dist/windows-debug/Plugin/web-render/web-render-cef-server.exe",
+        "bytes":  39394816,
+        "sha256":  "7F3ED0AFD999F4F7E78C8976D1C2BB2C2B1D6B868ED3BB298D2142889BE5AD75",
+        "built_at":  "2026-10-06T10:54:02.0959663+09:00",
+        "runtime_debug":  false
+    },
+    {
+        "path":  "dist/windows-release/Plugin/web-render/web-render.aux2",
+        "bytes":  9523712,
+        "sha256":  "4755C49DD0B37B359ABCD4C74EA0AFDD974EEEBDE06EAF45CC71B173936C46EE",
+        "built_at":  "2026-10-06T10:54:32.7221191+09:00",
+        "runtime_debug":  false
+    },
+    {
+        "path":  "dist/windows-release/Plugin/web-render/web-render-cef-server.exe",
+        "bytes":  16917504,
+        "sha256":  "ACFC7C783A7D5C753992B14517BAFD854677F563AFFFF577C0BDA01C1C8A68DB",
+        "built_at":  "2026-10-06T10:54:28.7412200+09:00",
+        "runtime_debug":  false
+    }
+]

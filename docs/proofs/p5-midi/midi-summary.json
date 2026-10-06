@@ -1,0 +1,20 @@
+{
+  "format": 0,
+  "ppq": 480,
+  "bytes": 256,
+  "tracks": 1,
+  "notes": 24,
+  "tempo_bpm": [
+    120,
+    150
+  ],
+  "duration_ticks": 5760,
+  "duration_seconds": 5.2,
+  "boundary": {
+    "seconds": 2.8,
+    "expected_eighth": 12,
+    "actual_eighth": 11.999999999999998,
+    "actual_step": 11,
+    "issue": true
+  }
+}

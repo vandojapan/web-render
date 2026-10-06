@@ -1,0 +1,3 @@
+﻿[10/05 22:59:33] [INFO] [Edit::EditService::loadProject] load project file : E:\Downloads\web_render_aux2_prototype\test.aup2
+[10/05 22:59:33] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded project directory from project file: E:\Downloads\web_render_aux2_prototype
+[10/05 22:59:37] [ERROR] [Plugin::web-render.aux2] [web_render_aux2] Failed to initialize project directory: web-render-cef クライアントの初期化に失敗しました: code: 'The system is not in a state required for the operation's execution', message: "Missing web-render runtime E:\\Downloads\\web_render_aux2_prototype\\node_modules\\web-render\\dist\\cli.mjs; run npm install in this project"

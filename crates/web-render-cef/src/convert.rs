@@ -1,0 +1,293 @@
+use crate::protocol;
+use crate::types::{
+    Color, FrameInfo, InitializeResponse, LogNotification, LogNotificationLevel, Notification,
+    ObjectInfo, ObjectInfosNotification, Parameter, ParameterDefinition, ParameterType,
+    ParameterValue, RenderRequest, RenderResponse, RenderResponseData,
+};
+
+use crate::types::NumberStep;
+
+#[derive(Debug, thiserror::Error)]
+pub enum ConversionError {
+    #[error("missing render response")]
+    MissingRenderResponse,
+    #[error("missing parameter value")]
+    MissingParameterValue,
+    #[error("missing parameter type")]
+    MissingParameterType,
+    #[error("missing parameter type kind")]
+    MissingParameterTypeKind,
+    #[error("invalid number step: {0}")]
+    InvalidNumberStep(i32),
+    #[error("invalid notification level: {0}")]
+    InvalidNotificationLevel(i32),
+    #[error("invalid rendered image: {0}")]
+    InvalidImage(#[from] crate::image::ImageError),
+}
+
+impl ConversionError {
+    pub(crate) fn into_status(self) -> tonic::Status {
+        tonic::Status::internal(self.to_string())
+    }
+}
+
+impl RenderRequest {
+    pub(crate) fn into_proto(self) -> protocol::common::RenderRequest {
+        protocol::common::RenderRequest {
+            render_nonce: self.render_nonce,
+            object: self.object,
+            object_id: self.object_id,
+            frame_info: Some(self.frame_info.into_proto()),
+            parameters: self
+                .parameters
+                .into_iter()
+                .map(Parameter::into_proto)
+                .collect(),
+            is_offline: self.is_offline,
+        }
+    }
+}
+
+impl FrameInfo {
+    fn into_proto(self) -> protocol::common::FrameInfo {
+        protocol::common::FrameInfo {
+            x: self.x,
+            y: self.y,
+            z: self.z,
+            screen_width: self.screen_width as _,
+            screen_height: self.screen_height as _,
+            current_frame: self.current_frame as _,
+            current_time: self.current_time,
+            total_frames: self.total_frames as _,
+            total_time: self.total_time,
+            framerate: self.framerate,
+            global_frame: self.global_frame as _,
+            global_time: self.global_time,
+        }
+    }
+}
+
+impl Parameter {
+    fn into_proto(self) -> protocol::common::Parameter {
+        protocol::common::Parameter {
+            key: self.key,
+            value: Some(self.value.into_proto()),
+        }
+    }
+}
+
+impl ParameterValue {
+    fn into_proto(self) -> protocol::common::parameter::Value {
+        match self {
+            Self::Str(value) => protocol::common::parameter::Value::StrValue(value),
+            Self::Text(value) => protocol::common::parameter::Value::TextValue(value),
+            Self::Number(value) => protocol::common::parameter::Value::NumberValue(value),
+            Self::Bool(value) => protocol::common::parameter::Value::BoolValue(value),
+            Self::Color(value) => {
+                protocol::common::parameter::Value::ColorValue(value.into_proto())
+            }
+        }
+    }
+}
+
+impl Color {
+    fn into_proto(self) -> protocol::common::Color {
+        protocol::common::Color {
+            r: self.r as _,
+            g: self.g as _,
+            b: self.b as _,
+            a: self.a as _,
+        }
+    }
+}
+
+impl TryFrom<protocol::libserver::InitializeResponse> for InitializeResponse {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::libserver::InitializeResponse) -> Result<Self, Self::Error> {
+        Ok(Self {
+            project_name: value.project_name,
+            renderer_version: value.renderer_version,
+        })
+    }
+}
+
+impl TryFrom<protocol::common::ObjectInfo> for ObjectInfo {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::common::ObjectInfo) -> Result<Self, Self::Error> {
+        let parameter_definitions = value
+            .parameter_definitions
+            .into_iter()
+            .map(ParameterDefinition::try_from)
+            .collect::<Result<Vec<_>, _>>()?;
+        Ok(Self {
+            id: value.id,
+            label: value.label,
+            parameter_definitions,
+        })
+    }
+}
+
+impl TryFrom<protocol::common::ParameterDefinition> for ParameterDefinition {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::common::ParameterDefinition) -> Result<Self, Self::Error> {
+        let parameter_type =
+            ParameterType::try_from(value.r#type.ok_or(ConversionError::MissingParameterType)?)?;
+        let default_value = match value.default_value {
+            Some(parameter) => Some(Parameter::try_from(parameter)?),
+            None => None,
+        };
+        Ok(Self {
+            key: value.key,
+            parameter_type,
+            label: value.label,
+            default_value,
+        })
+    }
+}
+
+impl TryFrom<protocol::common::ParameterType> for ParameterType {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::common::ParameterType) -> Result<Self, Self::Error> {
+        match value
+            .kind
+            .ok_or(ConversionError::MissingParameterTypeKind)?
+        {
+            protocol::common::parameter_type::Kind::String(_) => Ok(Self::String),
+            protocol::common::parameter_type::Kind::Text(_) => Ok(Self::Text),
+            protocol::common::parameter_type::Kind::Boolean(_) => Ok(Self::Boolean),
+            protocol::common::parameter_type::Kind::Number(number) => {
+                let step = match number.step {
+                    0 => NumberStep::One,
+                    1 => NumberStep::PointOne,
+                    2 => NumberStep::PointZeroOne,
+                    3 => NumberStep::PointZeroZeroOne,
+                    _ => {
+                        return Err(ConversionError::InvalidNumberStep(number.step));
+                    }
+                };
+                Ok(Self::Number {
+                    step,
+                    min: number.min,
+                    max: number.max,
+                })
+            }
+            protocol::common::parameter_type::Kind::Color(_) => Ok(Self::Color),
+        }
+    }
+}
+
+impl TryFrom<protocol::common::Parameter> for Parameter {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::common::Parameter) -> Result<Self, Self::Error> {
+        let key = value.key;
+        let value = value.value.ok_or(ConversionError::MissingParameterValue)?;
+        Ok(Self {
+            key,
+            value: ParameterValue::try_from(value)?,
+        })
+    }
+}
+
+impl TryFrom<protocol::common::parameter::Value> for ParameterValue {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::common::parameter::Value) -> Result<Self, Self::Error> {
+        Ok(match value {
+            protocol::common::parameter::Value::StrValue(value) => Self::Str(value),
+            protocol::common::parameter::Value::TextValue(value) => Self::Text(value),
+            protocol::common::parameter::Value::NumberValue(value) => Self::Number(value),
+            protocol::common::parameter::Value::BoolValue(value) => Self::Bool(value),
+            protocol::common::parameter::Value::ColorValue(value) => {
+                Self::Color(Color::from(value))
+            }
+        })
+    }
+}
+
+impl From<protocol::common::Color> for Color {
+    fn from(value: protocol::common::Color) -> Self {
+        Self {
+            r: value.r as _,
+            g: value.g as _,
+            b: value.b as _,
+            a: value.a as _,
+        }
+    }
+}
+
+impl TryFrom<protocol::libserver::RenderResponse> for RenderResponse {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::libserver::RenderResponse) -> Result<Self, Self::Error> {
+        let response = value
+            .response
+            .ok_or(ConversionError::MissingRenderResponse)?;
+        let response = match response {
+            protocol::libserver::render_response::Response::Success(success) => {
+                crate::image::validate_rgba(
+                    success.width as usize,
+                    success.height as usize,
+                    success.image_data.len(),
+                )?;
+                RenderResponseData::Success {
+                    width: success.width,
+                    height: success.height,
+                    image_data: success.image_data,
+                }
+            }
+            protocol::libserver::render_response::Response::ErrorMessage(message) => {
+                RenderResponseData::Error(message)
+            }
+        };
+        Ok(Self {
+            render_nonce: value.render_nonce,
+            response,
+        })
+    }
+}
+
+impl TryFrom<protocol::libserver::Notification> for Notification {
+    type Error = ConversionError;
+
+    fn try_from(value: protocol::libserver::Notification) -> Result<Self, Self::Error> {
+        Ok(match value.notification {
+            Some(protocol::libserver::notification::Notification::LogNotification(log)) => {
+                Notification::Log(LogNotification {
+                    level: LogNotificationLevel::try_from(log.level)?,
+                    message: log.message,
+                })
+            }
+            Some(protocol::libserver::notification::Notification::ObjectInfoNotification(
+                object_infos,
+            )) => {
+                let object_infos = object_infos
+                    .object_infos
+                    .into_iter()
+                    .map(ObjectInfo::try_from)
+                    .collect::<Result<Vec<_>, _>>()?;
+                Notification::ObjectInfos(ObjectInfosNotification { object_infos })
+            }
+            None => {
+                return Err(ConversionError::InvalidNotificationLevel(-1));
+            }
+        })
+    }
+}
+
+impl TryFrom<i32> for LogNotificationLevel {
+    type Error = ConversionError;
+
+    fn try_from(value: i32) -> Result<Self, ConversionError> {
+        match value {
+            0 => Ok(Self::Info),
+            1 => Ok(Self::Warn),
+            2 => Ok(Self::Error),
+            _ => Err(ConversionError::InvalidNotificationLevel(value)),
+        }
+    }
+}

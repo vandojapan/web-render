@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "animated": false,
+      "first_frame_ms": 16.847,
+      "median_host_ms": 26.581500000000002,
+      "no_smooth": false,
+      "object": "shapes-default",
+      "p95_host_ms": 33.0137,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": false,
+      "first_frame_ms": 36.7277,
+      "median_host_ms": 25.0149,
+      "no_smooth": true,
+      "object": "shapes-no-smooth",
+      "p95_host_ms": 32.4801,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": false,
+      "first_frame_ms": 44.0297,
+      "median_host_ms": 32.380199999999995,
+      "no_smooth": false,
+      "object": "text-default",
+      "p95_host_ms": 38.9233,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": false,
+      "first_frame_ms": 64.5294,
+      "median_host_ms": 32.673899999999996,
+      "no_smooth": true,
+      "object": "text-no-smooth",
+      "p95_host_ms": 38.616699999999994,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": false,
+      "first_frame_ms": 35.3925,
+      "median_host_ms": 19.0947,
+      "no_smooth": false,
+      "object": "image-default",
+      "p95_host_ms": 24.9666,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": false,
+      "first_frame_ms": 32.9919,
+      "median_host_ms": 20.171000000000003,
+      "no_smooth": true,
+      "object": "image-no-smooth",
+      "p95_host_ms": 23.141,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": false,
+      "first_frame_ms": 104.2327,
+      "median_host_ms": 95.0462,
+      "no_smooth": true,
+      "object": "alpha-no-smooth",
+      "p95_host_ms": 112.9691,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    },
+    {
+      "animated": true,
+      "first_frame_ms": 24.2063,
+      "median_host_ms": 25.028399999999998,
+      "no_smooth": true,
+      "object": "animated-no-smooth",
+      "p95_host_ms": 27.798099999999998,
+      "reverse_seek_rgba": true,
+      "steady_samples": 30
+    }
+  ],
+  "freeze_unfreeze": true
+}

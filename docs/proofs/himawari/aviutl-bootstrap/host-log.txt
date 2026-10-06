@@ -1,0 +1,635 @@
+[10/06 01:20:48] [INFO] [wWinMain] Application Start: AviUtl ExEdit2 2.1.12 (2011200)
+[10/06 01:20:48] [INFO] [wWinMain] CPU: AMD Ryzen 7 7700 8-Core Processor              
+[10/06 01:20:48] [INFO] [wWinMain] Memory: 32768MB
+[10/06 01:20:48] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/06 01:20:48] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/06 01:20:48] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/06 01:20:48] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\module.ini (section=4)
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Arial] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Arial Narrow] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Arial Black] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift Light Condensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift Light SemiCondensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiLight Condensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiLight SemiCondensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift Condensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiCondensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiBold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiBold Condensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bahnschrift SemiBold SemiCondensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Calibri Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Calibri] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cambria] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cambria Math] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Candara Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Candara] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Comic Sans MS] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Consolas] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Constantia] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Corbel Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Corbel] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Courier New] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Ebrima] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Franklin Gothic Medium] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Gabriola] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Gadugi] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Georgia] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Impact] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Ink Free] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Javanese Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Leelawadee UI Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Leelawadee UI] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lucida Console] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lucida Sans Unicode] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Malgun Gothic Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Malgun Gothic] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft Himalaya] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft JhengHei Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft JhengHei] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft JhengHei UI Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft JhengHei UI] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft New Tai Lue] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft PhagsPa] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft Sans Serif] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft Tai Le] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft YaHei Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft YaHei] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft YaHei UI Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft YaHei UI] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft Yi Baiti] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MingLiU-ExtB] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [PMingLiU-ExtB] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MingLiU_HKSCS-ExtB] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MingLiU_MSCS-ExtB] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Mongolian Baiti] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [ＭＳ ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MS UI Gothic]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [ＭＳ Ｐゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MV Boli] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Myanmar Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Nirmala UI Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Nirmala UI] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Nirmala Text Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Nirmala Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Palatino Linotype] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sans Serif Collection] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe Fluent Icons] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe MDL2 Assets] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe Print] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe Script] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Black] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Emoji] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Historic] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Symbol] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Small Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Small Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Small] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Small Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Text Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Text Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Text Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Display Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Display Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Display] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe UI Variable Display Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [SimSun] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [NSimSun] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [SimSun-ExtB] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Small] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Small Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Text Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Subheading] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Subheading Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Heading] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Heading Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Display] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Display Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Banner] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sitka Banner Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Sylfaen] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Symbol] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Tahoma] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Times New Roman] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Trebuchet MS] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Verdana] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Webdings] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Wingdings] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [游ゴシック Light]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [游ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [游ゴシック Medium]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Yu Gothic UI Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Yu Gothic UI Semilight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Yu Gothic UI] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Yu Gothic UI Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [BIZ UDゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [BIZ UDPゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [BIZ UD明朝 Medium]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [BIZ UDP明朝 Medium]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [メイリオ]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Meiryo UI]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [ＭＳ 明朝]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [ＭＳ Ｐ明朝]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [UD デジタル 教科書体 N]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [UD デジタル 教科書体 NP]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [UD デジタル 教科書体 NK]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [游明朝 Light]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [游明朝]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [游明朝 Demibold]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [ZWAdobeF] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Source Code Pro ExtraLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Source Code Pro Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Source Code Pro] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Source Code Pro Medium] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Source Code Pro Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Source Code Pro Black] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [源ノ角ゴシック Code JP EL]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [源ノ角ゴシック Code JP L]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [源ノ角ゴシック Code JP N]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [源ノ角ゴシック Code JP R]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [源ノ角ゴシック Code JP M]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [源ノ角ゴシック Code JP H]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Book Antiqua] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bookman Old Style] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bradley Hand ITC] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bookshelf Symbol 7] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Century] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Dubai Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Dubai] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Dubai Medium] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Freestyle Script] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [French Script MT] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Garamond] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Century Gothic] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG正楷書体-PRO]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG丸ｺﾞｼｯｸM-PRO]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Kristen ITC] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Juice ITC] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Leelawadee] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lucida Handwriting] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Mistral] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Microsoft Uighur] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Monotype Corsiva] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MT Extra] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [OCRB] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MS Outlook] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Papyrus] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Pristina] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MS Reference Sans Serif] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [MS Reference Specialty] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Tempus Sans ITC] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Wingdings 2] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Wingdings 3] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGｺﾞｼｯｸE]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGPｺﾞｼｯｸE]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGSｺﾞｼｯｸE]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGｺﾞｼｯｸM]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGPｺﾞｼｯｸM]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGSｺﾞｼｯｸM]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG行書体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP行書体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS行書体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG教科書体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP教科書体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS教科書体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG明朝B]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP明朝B]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS明朝B]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG明朝E]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP明朝E]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS明朝E]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG創英角ﾎﾟｯﾌﾟ体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP創英角ﾎﾟｯﾌﾟ体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS創英角ﾎﾟｯﾌﾟ体]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG創英ﾌﾟﾚｾﾞﾝｽEB]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP創英ﾌﾟﾚｾﾞﾝｽEB]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS創英ﾌﾟﾚｾﾞﾝｽEB]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HG創英角ｺﾞｼｯｸUB]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGP創英角ｺﾞｼｯｸUB]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [HGS創英角ｺﾞｼｯｸUB]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [SimSun-ExtG] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [EPSON ゴシック W6]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [EPSON Pゴシック W6]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [EPSON ゴシック W7]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [EPSON Pゴシック W7]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [EPSON 太角ゴシック体Ｂ]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [EPSON 太丸ゴシック体Ｂ]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP Thin] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP DemiLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP Regular] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP Medium] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP Bold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Sans JP Black] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Serif JP ExtraLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Serif JP Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Serif JP] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Serif JP Medium] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Serif JP SemiBold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Noto Serif JP Black] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [AniMe Vision - MB_EN] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Tera Special] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [ROG Fonts] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Windows TV 丸ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Windows TV P丸ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Windows TV 太丸ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Windows TV P太丸ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Windows TV ゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Windows TV Pゴシック]*
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [NEXON Football Gothic B] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [NEXON Football Gothic L] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Caladea] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [DejaVu Serif] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [DejaVu Serif Condensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [DejaVu Sans Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [DejaVu Sans] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [DejaVu Sans Condensed] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Gentium Book Basic] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [DejaVu Sans Mono] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Gentium Basic] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Carlito] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [OpenSymbol] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [TtsNote] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Code ExtraLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Code Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Code SemiLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Code] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Code SemiBold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Mono ExtraLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Mono Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Mono SemiLight] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Mono] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Cascadia Mono SemiBold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bravura] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Bravura Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Petaluma] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Petaluma Script] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Petaluma Text] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Academico] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Thin] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Light] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Medium] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Semibold] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Heavy] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Black] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Lato Hairline] 
+[10/06 01:20:48] [INFO] [Media::FontManager::registerFontCollection] register font [Marlett] 
+[10/06 01:20:48] [INFO] [Media::Direct3DService::getHighPerformanceAdapter] Found Performance GPU : NVIDIA GeForce RTX 4070 Ti SUPER
+[10/06 01:20:48] [INFO] [Media::Direct3DService::createDevice] D3D feature level : 0x0000b100
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] GPU : NVIDIA GeForce RTX 4070 Ti SUPER
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] GPU Memory : 16061MB
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D ROVsSupported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_R8G8B8A8_UNORM Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_B8G8R8A8_UNORM Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_A8_UNORM Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_R16G16B16A16_FLOAT Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_G8R8_G8B8_UNORM Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_R16G16B16A16_UNORM Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::Direct3DService::Direct3DService] D3D DXGI_FORMAT_R16G16B16A16_SNORM Texture2D Supported : 1
+[10/06 01:20:48] [INFO] [Media::YUVformat::InitializeColorTable] [YUV2RGB] 0: BT.601
+[10/06 01:20:48] [INFO] [Media::YUVformat::InitializeColorTable] [YUV2RGB] 1: BT.709
+[10/06 01:20:48] [INFO] [Media::YUVformat::InitializeColorTable] [YUV2RGB] 2: BT.2020
+[10/06 01:20:48] [INFO] [Media::YUVformat::InitializeColorTable] [RGB2YUV] 0: BT.601
+[10/06 01:20:48] [INFO] [Media::YUVformat::InitializeColorTable] [RGB2YUV] 1: BT.709
+[10/06 01:20:48] [INFO] [Media::YUVformat::InitializeColorTable] [RGB2YUV] 2: BT.2020
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [Uncompressed Image File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [AVI/AVI2 File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [Wave File Reader]
+[10/06 01:20:49] [INFO] [Plugin::OutputService::registerPlugin] register output plugin [AVIファイル出力]
+[10/06 01:20:49] [INFO] [Plugin::OutputService::registerPlugin] register output plugin [PNGファイル出力]
+[10/06 01:20:49] [INFO] [Plugin::OutputService::registerPlugin] register output plugin [JPEGファイル出力]
+[10/06 01:20:49] [INFO] [Plugin::OutputService::registerPlugin] register output plugin [連番ファイル出力]
+[10/06 01:20:49] [INFO] [Plugin::ScriptService::registerPlugin] register script plugin [Lua5.1.4]
+[10/06 01:20:49] [INFO] [Plugin::ScriptService::registerPlugin] register script plugin [LuaJIT2.1]
+[10/06 01:20:49] [INFO] [Plugin::CommonPlugin::CommonPlugin] LoadLibrary: \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2
+[10/06 01:20:49] [INFO] [Plugin::web-render.aux2] [aviutl2::generic::__bridge] Creating plugin table for plugin: web_render_aux2::Vi5Aux2
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: web-render.aux2
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: web-render.aux2 / https://github.com/sevenc-nanashi/vi5.aux2 / v0.1.0
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerPlugin] register common plugin [\\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2]
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: [web-render.aux2] プロジェクトフォルダの設定
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerConfigMenu] register config menu [[web-render.aux2] プロジェクトフォルダの設定]
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: get_batch_size
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: call_object
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: free_image
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking value vector of type aviutl2_sys::module2::SCRIPT_MODULE_FUNCTION
+[10/06 01:20:49] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking wide string: web-render.aux2 Internal Module
+[10/06 01:20:49] [INFO] [Plugin::ScriptModuleService::registerPlugin] register script module [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::createEditHandle] create edit handle [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerProjectLoadHandler] register project load handler [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerProjectSaveHandler] register project save handler [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerClearCacheHandler] register cache clear handler [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerEventListener] register event listener (event=1) [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerEventListener] register event listener (event=2) [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerEventListener] register event listener (event=3) [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerEventListener] register event listener (event=4) [web-render]
+[10/06 01:20:49] [INFO] [Plugin::CommonPluginService::registerEventListener] register event listener (event=5) [web-render]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [移動無し]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [再生範囲]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [直線移動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [直線移動(時間制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [直線移動(回転)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [補間移動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [補間移動(時間制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [補間移動(回転)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [ランダム移動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [瞬間移動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [移動量指定]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [動画ファイル]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [画像ファイル]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [音声ファイル]
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [モデルオブジェクト]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [モデルファイル]
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [テキストオブジェクト]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [テキスト]
+[10/06 01:20:49] [INFO] [Plugin::InputService::registerPlugin] register input plugin [図形オブジェクト]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [図形]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [シーン]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [フレームバッファ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [オーディオバッファ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [直前オブジェクト]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [標準描画]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [音声再生]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [映像再生]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [基本出力]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [パーティクル出力]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [パーティクル出力(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [仮想バッファ出力]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [グループ制御]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [グループ制御(音声)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [カメラ制御]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [時間制御(オブジェクト)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [画像合成(オブジェクト)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [部分フィルタ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [音声波形表示]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [色調補正]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [グラデーション]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [グラデーションマップ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [単色化]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [拡張色調補正]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [特定色域変換]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [拡張色設定]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [クリッピング]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [斜めクリッピング]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [扇クリッピング]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [マスク]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ぼかし]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [レンズブラー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [放射ブラー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [方向ブラー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [モーションブラー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [境界ぼかし]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [グロー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [発光]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [閃光]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [拡散光]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ライト]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [色ずれ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [縁取り]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [枠線]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ドロップシャドウ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [凸エッジ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [クロマキー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ルミナンスキー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [カラーキー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [エッジ抽出]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [波紋]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ラスター]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [極座標変換]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ディスプレイスメントマップ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [リサイズ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [画像合成]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [シャープ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ノイズ除去]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [インターレース解除]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ノイズ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [モザイク]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [オフスクリーン描画]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [画像ループ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [オブジェクト分割]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [フェード]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ワイプ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [シーンチェンジ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [振動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ノイズ(仮想バッファ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [スクリプト制御]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [平行光源(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [スポット光源(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [点光源(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [環境光(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ライトブルーム(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [材質設定(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [カメラ制御オプション]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [座標]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [拡大率]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [透明度]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [回転]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [領域拡張]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ローテーション]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [反転]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [音量フェード]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [モノラル化]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [音量調整]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [フィルタオブジェクト]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [集中線]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [走査線]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [カウンター]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [レンズフレア]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [雲]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [星]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [雪]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [雨]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ランダム小物配置(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ライン(移動軌跡)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [扇型]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [多角形]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [周辺ボケ光量]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [フレア]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [水面]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [震える]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [振り子]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [弾む]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [座標の拡大縮小(個別オブジェクト)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [画面外から登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ランダム方向から登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [拡大縮小して登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ランダム間隔で落ちながら登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [弾んで登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [広がって登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [起き上がって登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [何処からともなく登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [反復移動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [座標の回転(個別オブジェクト)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [立方体(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [球体(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [砕け散る]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [点滅]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [点滅して登場]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [簡易変形]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [簡易変形(カメラ制御)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [リール回転]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [万華鏡]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [円形配置]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ランダム配置]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ミラー]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [粒子化]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [メッシュ変形]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [揺らぎ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [手ぶれ]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [目標中心回転]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [目標サイズ固定視野角]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [発光(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [レンズブラー(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ドア(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [起き上がる(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [リール回転(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [図形ワイプ(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [図形で隠す(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [図形で隠す(放射)(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [砕け散る(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [ページめくり(シーンチェンジ)]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [反復移動]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerMovement] register movement [回転]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [HTMLタイトル]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [フレーム検証]
+[10/06 01:20:49] [INFO] [Effect::EffectService::registerEffect] register effect [MIDI Pattern Grid]
+[10/06 01:20:49] [INFO] [Effect::MovementParamsManager::registerMovementParams] register movement params [等速移動]
+[10/06 01:20:49] [INFO] [Effect::MovementParamsManager::registerMovementParams] register movement params [加速移動]
+[10/06 01:20:49] [INFO] [Effect::MovementParamsManager::registerMovementParams] register movement params [減速移動]
+[10/06 01:20:49] [INFO] [Effect::MovementParamsManager::registerMovementParams] register movement params [加減速移動]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::registerPalette] register palette [default]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [white]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [red]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [yellow]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [green]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [aqua]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [blue]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [magenta]
+[10/06 01:20:49] [INFO] [Effect::PaletteManager::reloadPresetColor] register preset color [black]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] bmp -> [Uncompressed Image File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Image] bmp -> [Uncompressed Image File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] tga -> [Uncompressed Image File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Image] tga -> [Uncompressed Image File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] png -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Image] png -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] jpg -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Image] jpg -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] bmp -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Image] bmp -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] gif -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Image] gif -> [WIC image file reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Video] avi -> [AVI/AVI2 File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Audio] avi -> [AVI/AVI2 File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [Audio] wav -> [Wave File Reader]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [FileDrop] obj -> [モデルオブジェクト]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [FileDrop] txt -> [テキストオブジェクト]
+[10/06 01:20:49] [INFO] [Plugin::InputService::updateExtTypeList] [FileDrop] svg -> [図形オブジェクト]
+[10/06 01:20:49] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\history.ini (section=1)
+[10/06 01:20:49] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\explorer.ini (section=0)
+[10/06 01:20:50] [INFO] [Edit::EditService::parseCommandLine] project : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\himawari-sample.aup2
+[10/06 01:20:50] [INFO] [Plugin::web-render.aux2] [web_render_aux2] No web project configured in this project file.
+[10/06 01:20:50] [INFO] [Edit::EditService::updateScene] set current scnene [Root](0)
+[10/06 01:20:50] [INFO] [Edit::EditService::loadProject] load project file : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\himawari-sample.aup2
+[10/06 01:20:50] [VERBOSE] [Render::RenderVideoWorker::requestRenderingFrame::<lambda_cce0aaad57625da48ea49cdf35315a3f>::operator ()] rendered video frame [0](0) 12.938 ms
+[10/06 01:20:50] [VERBOSE] [System::IniFile::loadFile] load ini file : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\himawari-sample.aup2 (section=3)
+[10/06 01:20:50] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded project directory from project file: E:\Downloads\web_render_aux2_prototype\web-render\.local-tests\himawari-receiver
+[10/06 01:20:50] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Setting project directory to: E:\Downloads\web_render_aux2_prototype\web-render\.local-tests\himawari-receiver
+[10/06 01:20:50] [INFO] [Edit::EditService::updateScene] set current scnene [Root](0)
+[10/06 01:20:50] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Starting web-render-cef server on port 54474
+[10/06 01:20:50] [VERBOSE] [Render::RenderVideoWorker::requestRenderingFrame::<lambda_cce0aaad57625da48ea49cdf35315a3f>::operator ()] rendered video frame [0](0) 1.679 ms
+[10/06 01:20:50] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Launching web-render-cef server: Command { std: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Plugin\\web-render\\web-render-cef-server.exe" "--port" "54474" "--parent-process" "33316", kill_on_drop: true }
+[10/06 01:20:50] [VERBOSE] [Plugin::web-render.aux2] [hyper_util::client::legacy::connect::http] connecting to [::1]:54474
+[10/06 01:20:52] [VERBOSE] [Plugin::web-render.aux2] [hyper_util::client::legacy::connect::http] connecting to [::1]:54474
+[10/06 01:20:53] [VERBOSE] [Plugin::web-render.aux2] [hyper_util::client::legacy::connect::http] connecting to [::1]:54474
+[10/06 01:20:53] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:20:53.746476Z  INFO main ThreadId(01) web_render_cef_server::cef_app: launch browser process 54256
+[10/06 01:20:54] [ERROR] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stderr] [54256:34456:1006/012054.077:ERROR:chrome\installer\util\google_update_settings.cc:265] Failed opening key Software\Chromium to set usagestats; result: 5
+[10/06 01:20:54] [ERROR] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stderr] [54256:17272:1006/012054.099:ERROR:services\device\public\cpp\geolocation\system_geolocation_source_win.cc:92] Failed to create IAppCapability: アクセスが拒否されました。 (0x80070005)
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [hyper_util::client::legacy::connect::http] connecting to [::1]:54474
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:20:54.170236Z  INFO main ThreadId(01) web_render_cef_server: Starting gRPC server on [::1]:54474
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [hyper_util::client::legacy::connect::http] connected to [::1]:54474
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::client] binding client connection
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::client] client connection bound
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384, max_header_list_size: 16384 }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [tower::buffer::worker] service.ready=true processing request
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Data { stream_id: StreamId(1) }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Data { stream_id: StreamId(1), flags: (0x1: END_STREAM) }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:20:54.675777Z  INFO main ThreadId(01) web_render_cef_server::server: Received initialize request: InitializeRequest { root_path: "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver" }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Settings { flags: (0x0), initial_window_size: 229376, max_frame_size: 16777215, max_header_list_size: 16384 }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Settings { flags: (0x1: ACK) }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 163841 }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Settings { flags: (0x1: ACK) }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [h2::proto::settings] received settings ACK; applying Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384, max_header_list_size: 16384 }
+[10/06 01:20:54] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:20:54.683200Z  INFO main ThreadId(01) web_render_cef_server::server: Started vi5 process with PID: 45956
+[10/06 01:20:55] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:20:55.206540Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Loading URL for initialization: http://localhost:55916/vi5
+[10/06 01:21:02] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 1:21:02 [vite] (client) page reload E:/Downloads/web_render_aux2_prototype/web-render/packages/vi5/dist/client.mjs
+[10/06 01:21:03] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 1:21:03 [vite] (client) page reload E:/Downloads/web_render_aux2_prototype/web-render/packages/vi5/dist/context-BmtDCMcB.mjs
+[10/06 01:21:07] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:07.241308Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/06 01:21:07] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:07.241357Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/06 01:21:07] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:07.895359Z TRACE main ThreadId(01) web_render_cef_server::render_loop: Invalid paint buffer header: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[10/06 01:21:07] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:07.952043Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/06 01:21:07] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:07.952078Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:08.624023Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 0, 0, 0, 255, 0, 22, 0, 255, 0, 0, 10, 255, 13, 104, 105, 255]
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:08.624131Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Page initialization complete
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:08.624197Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 0 completed and removed
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:08.678852Z  INFO main ThreadId(01) web_render_cef_server::server: Initialization completed: InitializeResponse { project_name: "himawari-test", renderer_version: "1.0.0" }
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Data { stream_id: StreamId(1) }
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Headers { stream_id: StreamId(1), flags: (0x5: END_HEADERS | END_STREAM) }
+[10/06 01:21:08] [INFO] [Plugin::web-render.aux2] [web_render_aux2] web-render-cef initialized successfully.
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:08.912572Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:08.912610Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [tower::buffer::worker] service.ready=true processing request
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Headers { stream_id: StreamId(3), flags: (0x4: END_HEADERS) }
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Data { stream_id: StreamId(3) }
+[10/06 01:21:08] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Data { stream_id: StreamId(3), flags: (0x1: END_STREAM) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:09.581072Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 1, 0, 0, 255, 0, 248, 0, 255, 0, 0, 10, 255, 163, 1, 18, 255]
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:09.581222Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 1 processed frame, waiting for more frames
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Headers { stream_id: StreamId(3), flags: (0x4: END_HEADERS) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Data { stream_id: StreamId(3) }
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Started notification listener task
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Received object infos notification with 3 objects
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Project script directory: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'kaiwai-phrase': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test\\Kaiwai Phrase.obj2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Created script file for object 'kaiwai-phrase': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test\\Kaiwai Phrase.obj2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'drum': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test\\Drum.obj2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Created script file for object 'drum': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test\\Drum.obj2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'synth-solo': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test\\Synth Solo.obj2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Created script file for object 'synth-solo': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test\\Synth Solo.obj2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Debug bootstrap: script update restart=true, reload=false
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] vi5 notification: 2026-10-05 16:21:07.252 +00:00 [info] [vi5]: Vi5 Client Runtime initialized.
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2::runtime_debug] AviUtl2 SDK sample probe: {"scripts":"\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_himawari-test","status":"bootstrap"}
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2::runtime_debug] Debug close: current=Some("E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\aviutl2\\himawari-sample.aup2"), expected="E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\aviutl2\\himawari-sample.aup2"
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2::runtime_debug] Debug WM_CLOSE hwnd=5575352, pid=33316, posted=1
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Reset { stream_id: StreamId(3), error_code: CANCEL }
+[10/06 01:21:09] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Shutting down web-render-cef server...
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [tower::buffer::worker] service.ready=true processing request
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Headers { stream_id: StreamId(5), flags: (0x4: END_HEADERS) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Data { stream_id: StreamId(5) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=Data { stream_id: StreamId(5), flags: (0x1: END_STREAM) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:09.787009Z  INFO main ThreadId(01) web_render_cef_server::server: Received shutdown request
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:09.787327Z  INFO main ThreadId(01) web_render_cef_server: Received shutdown request
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Headers { stream_id: StreamId(5), flags: (0x4: END_HEADERS) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Data { stream_id: StreamId(5) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=Headers { stream_id: StreamId(5), flags: (0x5: END_HEADERS | END_STREAM) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_read] received frame=GoAway { error_code: NO_ERROR, last_stream_id: StreamId(2147483647) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::codec::framed_write] send frame=GoAway { error_code: NO_ERROR, last_stream_id: StreamId(0) }
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [h2::proto::connection] Connection::poll; connection error error=GoAway(b"", NO_ERROR, Library)
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:09.810450Z  INFO main ThreadId(01) web_render_cef_server::server: Successfully killed vi5 process with PID: 0
+[10/06 01:21:09] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T16:21:09.810795Z  INFO main ThreadId(01) web_render_cef_server::handlers: Shutting down CEF
+[10/06 01:21:10] [INFO] [Plugin::web-render.aux2] [web_render_aux2] CEF stopped: exit code: 0
+[10/06 01:21:10] [INFO] [Plugin::web-render.aux2] [web_render_aux2] web-render-cef server has exited normally.
+[10/06 01:21:10] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Shutting down Tokio runtime...
+[10/06 01:21:10] [VERBOSE] [System::IniFile::Save::Save] saveFile : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\explorer.ini
+[10/06 01:21:10] [VERBOSE] [System::IniFile::Save::Save] saveFile : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\history.ini

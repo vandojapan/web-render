@@ -1,0 +1,2 @@
+width,height,scene,samples,init_ms,median_total_readback_ms,p95_total_readback_ms
+1920,1080,image,60,2138.1437,6.1024,7.1017

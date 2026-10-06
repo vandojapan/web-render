@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8">
+<style>html,body{margin:0;overflow:hidden;background:transparent}canvas{display:block}</style>
+<canvas id="scene" width="320" height="180"></canvas>
+<script>
+window.aviutl = {
+  async render(frame, params) {
+    await Promise.resolve();
+    const f = frame.currentFrame;
+    const ctx = document.querySelector('#scene').getContext('2d');
+    ctx.clearRect(0, 0, 320, 180);
+    ctx.fillStyle = `rgb(${f % 251},${f * 7 % 251},${f * 13 % 251})`;
+    ctx.fillRect(0, 0, 320, 180);
+    for(let bit = 0; bit < 8; bit++) {
+      ctx.fillStyle = f & (1 << bit) ? '#fff' : '#000';
+      ctx.fillRect(0, bit * 16, 16, 16);
+      ctx.fillRect(304, bit * 16, 16, 16);
+    }
+    ctx.fillStyle = '#fff';ctx.font = '14px sans-serif';
+    ctx.fillText(`frame=${f} time=${frame.currentTime}`, 24, 24);
+    ctx.fillText(params.caption, 24, 48);
+  }
+};
+</script></html>

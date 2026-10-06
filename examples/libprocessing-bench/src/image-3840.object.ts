@@ -1,0 +1,2 @@
+import { defineHtmlObject } from 'web-render';
+export default defineHtmlObject({id: 'image-3840', label: 'image 3840', source: '/pages/scene.html', width: 3840, height: 2160, parameters: {scene: {type: 'string', label: 'scene', default: 'image'}}});

@@ -1,0 +1,8 @@
+CEF IPC RGBA: 15 frame requests passed
+frames: [0, 1, 30, 90, 120, 120, 90, 30, 1, 0, 90, 1, 120, 30, 0]
+fps: 30000/1001
+320x180; full-color pixels + both edge barcodes + full RGBA equality
+Correlated scene error: PASS
+Frame after error: PASS
+Project reinitialization: PASS
+Graceful shutdown (exit 0, within 10s): PASS

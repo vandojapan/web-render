@@ -1,0 +1,9 @@
+﻿[10/05 21:13:00] [INFO] [wWinMain] Application Start: AviUtl ExEdit2 2.1.12 (2011200)
+[10/05 21:13:00] [INFO] [wWinMain] CPU: AMD Ryzen 7 7700 8-Core Processor              
+[10/05 21:13:00] [INFO] [wWinMain] Memory: 32768MB
+[10/05 21:13:01] [INFO] [Media::Direct3DService::getHighPerformanceAdapter] Found Performance GPU : NVIDIA GeForce RTX 4070 Ti SUPER
+[10/05 21:13:02] [INFO] [Media::Direct3DService::Direct3DService] GPU : NVIDIA GeForce RTX 4070 Ti SUPER
+[10/05 21:13:02] [INFO] [Plugin::CommonPlugin::CommonPlugin] LoadLibrary: \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2
+[10/05 21:13:02] [INFO] [Plugin::CommonPluginService::registerPlugin] register common plugin [\\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2]
+[10/05 21:13:02] [INFO] [Plugin::ScriptModuleService::registerPlugin] register script module [web-render]
+[10/05 21:13:03] [INFO] [Plugin::web-render.aux2] [web_render_aux2] No web project configured in this project file.

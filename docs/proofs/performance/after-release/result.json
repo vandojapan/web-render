@@ -1,0 +1,769 @@
+{
+  "graceful_shutdown": true,
+  "image_requests": 95,
+  "issues": [],
+  "objects": [
+    {
+      "checks": {
+        "flip_changes_image": true,
+        "reinitialization_full_rgba": true
+      },
+      "differences": [],
+      "frames": [
+        {
+          "alpha_sum": 15360,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 240,
+          "render_ms": 169.40830000000003,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 40908,
+          "frame": 3,
+          "global_time": 0.1,
+          "painted_pixels": 366,
+          "render_ms": 144.96890000000002,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 46870,
+          "frame": 9,
+          "global_time": 0.3,
+          "painted_pixels": 378,
+          "render_ms": 27.5226,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 51454,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 378,
+          "render_ms": 32.7551,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 83313,
+          "frame": 24,
+          "global_time": 0.8,
+          "painted_pixels": 490,
+          "render_ms": 70.70909999999999,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 87897,
+          "frame": 30,
+          "global_time": 1.0,
+          "painted_pixels": 490,
+          "render_ms": 31.7587,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 122941,
+          "frame": 45,
+          "global_time": 1.5,
+          "painted_pixels": 622,
+          "render_ms": 28.1947,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 150324,
+          "frame": 48,
+          "global_time": 1.6,
+          "painted_pixels": 734,
+          "render_ms": 28.5771,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 152508,
+          "frame": 51,
+          "global_time": 1.7,
+          "painted_pixels": 734,
+          "render_ms": 32.9988,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 154800,
+          "frame": 54,
+          "global_time": 1.8,
+          "painted_pixels": 734,
+          "render_ms": 32.7674,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 157092,
+          "frame": 57,
+          "global_time": 1.9,
+          "painted_pixels": 734,
+          "render_ms": 37.9758,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 79822,
+          "frame": 60,
+          "global_time": 2.0,
+          "painted_pixels": 596,
+          "render_ms": 73.37689999999999,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 66198,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 642,
+          "render_ms": 21.7058,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 118195,
+          "frame": 117,
+          "global_time": 3.9,
+          "painted_pixels": 590,
+          "render_ms": 45.487899999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 120,
+          "global_time": 4.0,
+          "painted_pixels": 542,
+          "render_ms": 48.0755,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 118195,
+          "frame": 237,
+          "global_time": 7.9,
+          "painted_pixels": 590,
+          "render_ms": 32.7024,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 542,
+          "render_ms": 34.0365,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 77163,
+          "frame": 243,
+          "global_time": 8.1,
+          "painted_pixels": 681,
+          "render_ms": 40.8244,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 60906,
+          "frame": 252,
+          "global_time": 8.4,
+          "painted_pixels": 570,
+          "render_ms": 28.8014,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 79822,
+          "frame": 288,
+          "global_time": 9.6,
+          "painted_pixels": 596,
+          "render_ms": 32.3824,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 336,
+          "global_time": 11.2,
+          "painted_pixels": 542,
+          "render_ms": 31.295700000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 117661,
+          "frame": 429,
+          "global_time": 14.3,
+          "painted_pixels": 591,
+          "render_ms": 37.625699999999995,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 432,
+          "global_time": 14.4,
+          "painted_pixels": 542,
+          "render_ms": 30.4306,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 39218,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 384,
+          "render_ms": 32.777100000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 51454,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 378,
+          "render_ms": 33.6061,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 66198,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 642,
+          "render_ms": 32.5225,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 74626,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 542,
+          "render_ms": 34.2353,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 39218,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 384,
+          "render_ms": 36.6862,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 15360,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 240,
+          "render_ms": 34.486200000000004,
+          "repeated": true
+        }
+      ],
+      "height": 184,
+      "object": "drum",
+      "reverse_seek_full_rgba": true,
+      "timing": {
+        "includes": "IPC + CEF paint and RGBA copy; excludes PNG encoding and first setup",
+        "median_ms": 32.9988,
+        "p95_ms": 73.37689999999999,
+        "steady_samples": 28
+      },
+      "width": 64
+    },
+    {
+      "checks": {
+        "global_time_with_local_zero": true,
+        "phrase_fade": true,
+        "phrase_section_restart": true,
+        "reinitialization_full_rgba": true
+      },
+      "differences": [],
+      "frames": [
+        {
+          "alpha_sum": 16214,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 128,
+          "render_ms": 56.544200000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 3,
+          "global_time": 0.1,
+          "painted_pixels": 128,
+          "render_ms": 37.394200000000005,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 9,
+          "global_time": 0.3,
+          "painted_pixels": 128,
+          "render_ms": 39.1273,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 24618,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 128,
+          "render_ms": 32.4246,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 22308,
+          "frame": 24,
+          "global_time": 0.8,
+          "painted_pixels": 128,
+          "render_ms": 40.6158,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 30330,
+          "frame": 30,
+          "global_time": 1.0,
+          "painted_pixels": 128,
+          "render_ms": 24.1788,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 27910,
+          "frame": 45,
+          "global_time": 1.5,
+          "painted_pixels": 128,
+          "render_ms": 36.2442,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 25600,
+          "frame": 48,
+          "global_time": 1.6,
+          "painted_pixels": 128,
+          "render_ms": 58.799,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 25600,
+          "frame": 51,
+          "global_time": 1.7,
+          "painted_pixels": 128,
+          "render_ms": 37.5568,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 12672,
+          "frame": 54,
+          "global_time": 1.8,
+          "painted_pixels": 192,
+          "render_ms": 34.879599999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 57,
+          "global_time": 1.9,
+          "painted_pixels": 0,
+          "render_ms": 27.5432,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 60,
+          "global_time": 2.0,
+          "painted_pixels": 128,
+          "render_ms": 34.6089,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 128,
+          "render_ms": 35.3614,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 117,
+          "global_time": 3.9,
+          "painted_pixels": 0,
+          "render_ms": 31.061600000000002,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 120,
+          "global_time": 4.0,
+          "painted_pixels": 128,
+          "render_ms": 34.557900000000004,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 237,
+          "global_time": 7.9,
+          "painted_pixels": 0,
+          "render_ms": 34.565,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 128,
+          "render_ms": 31.729899999999997,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 243,
+          "global_time": 8.1,
+          "painted_pixels": 128,
+          "render_ms": 31.796,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 24618,
+          "frame": 252,
+          "global_time": 8.4,
+          "painted_pixels": 128,
+          "render_ms": 32.126599999999996,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 288,
+          "global_time": 9.6,
+          "painted_pixels": 128,
+          "render_ms": 32.2305,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 336,
+          "global_time": 11.2,
+          "painted_pixels": 0,
+          "render_ms": 34.9872,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 12672,
+          "frame": 429,
+          "global_time": 14.3,
+          "painted_pixels": 192,
+          "render_ms": 31.017200000000003,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 432,
+          "global_time": 14.4,
+          "painted_pixels": 0,
+          "render_ms": 32.0582,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 0,
+          "render_ms": 29.4789,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 24618,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 128,
+          "render_ms": 36.106100000000005,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 128,
+          "render_ms": 35.0098,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 128,
+          "render_ms": 33.0601,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 0,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 0,
+          "render_ms": 34.6166,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 16214,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 128,
+          "render_ms": 31.0862,
+          "repeated": true
+        }
+      ],
+      "height": 72,
+      "object": "kaiwai-phrase",
+      "reverse_seek_full_rgba": true,
+      "timing": {
+        "includes": "IPC + CEF paint and RGBA copy; excludes PNG encoding and first setup",
+        "median_ms": 34.565,
+        "p95_ms": 40.6158,
+        "steady_samples": 28
+      },
+      "width": 64
+    },
+    {
+      "checks": {
+        "after_scroll_out_transparent": true,
+        "global_time_with_local_zero": true,
+        "past_notes_remain_until_scroll_out": true,
+        "pitch_bend_up_down_reset": true,
+        "playhead_x_changes_image": true,
+        "reinitialization_full_rgba": true
+      },
+      "differences": [],
+      "frames": [
+        {
+          "alpha_sum": 122880,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 3840,
+          "render_ms": 395.893,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 220800,
+          "frame": 3,
+          "global_time": 0.1,
+          "painted_pixels": 4224,
+          "render_ms": 55.013,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 416640,
+          "frame": 9,
+          "global_time": 0.3,
+          "painted_pixels": 4992,
+          "render_ms": 50.812000000000005,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 612480,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 5760,
+          "render_ms": 35.0496,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 906240,
+          "frame": 24,
+          "global_time": 0.8,
+          "painted_pixels": 6912,
+          "render_ms": 869.0807000000001,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 30,
+          "global_time": 1.0,
+          "painted_pixels": 7680,
+          "render_ms": 89.6613,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 919680,
+          "frame": 45,
+          "global_time": 1.5,
+          "painted_pixels": 7680,
+          "render_ms": 51.6623,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 956160,
+          "frame": 48,
+          "global_time": 1.6,
+          "painted_pixels": 7680,
+          "render_ms": 56.4473,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 992640,
+          "frame": 51,
+          "global_time": 1.7,
+          "painted_pixels": 7680,
+          "render_ms": 898.3584,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1029120,
+          "frame": 54,
+          "global_time": 1.8,
+          "painted_pixels": 7680,
+          "render_ms": 26.9105,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1065600,
+          "frame": 57,
+          "global_time": 1.9,
+          "painted_pixels": 7680,
+          "render_ms": 37.2234,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 60,
+          "global_time": 2.0,
+          "painted_pixels": 7680,
+          "render_ms": 33.0557,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 773760,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 7680,
+          "render_ms": 30.0621,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1065600,
+          "frame": 117,
+          "global_time": 3.9,
+          "painted_pixels": 7680,
+          "render_ms": 38.0546,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 120,
+          "global_time": 4.0,
+          "painted_pixels": 7680,
+          "render_ms": 27.1857,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 1065600,
+          "frame": 237,
+          "global_time": 7.9,
+          "painted_pixels": 7680,
+          "render_ms": 33.6385,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 7680,
+          "render_ms": 33.094,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 782880,
+          "frame": 243,
+          "global_time": 8.1,
+          "painted_pixels": 7680,
+          "render_ms": 34.3065,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 919680,
+          "frame": 252,
+          "global_time": 8.4,
+          "painted_pixels": 7680,
+          "render_ms": 34.3129,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 288,
+          "global_time": 9.6,
+          "painted_pixels": 7680,
+          "render_ms": 40.9654,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 336,
+          "global_time": 11.2,
+          "painted_pixels": 7680,
+          "render_ms": 54.0782,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 948960,
+          "frame": 429,
+          "global_time": 14.3,
+          "painted_pixels": 4320,
+          "render_ms": 36.4158,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 614400,
+          "frame": 432,
+          "global_time": 14.4,
+          "painted_pixels": 3840,
+          "render_ms": 30.5279,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 153600,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 960,
+          "render_ms": 35.4839,
+          "repeated": false
+        },
+        {
+          "alpha_sum": 612480,
+          "frame": 15,
+          "global_time": 0.5,
+          "painted_pixels": 5760,
+          "render_ms": 34.33,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 773760,
+          "frame": 63,
+          "global_time": 2.1,
+          "painted_pixels": 7680,
+          "render_ms": 32.2793,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 737280,
+          "frame": 240,
+          "global_time": 8.0,
+          "painted_pixels": 7680,
+          "render_ms": 31.5567,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 153600,
+          "frame": 450,
+          "global_time": 15.0,
+          "painted_pixels": 960,
+          "render_ms": 37.773399999999995,
+          "repeated": true
+        },
+        {
+          "alpha_sum": 122880,
+          "frame": 0,
+          "global_time": 0.0,
+          "painted_pixels": 3840,
+          "render_ms": 27.3246,
+          "repeated": true
+        }
+      ],
+      "height": 144,
+      "object": "synth-solo",
+      "reverse_seek_full_rgba": true,
+      "timing": {
+        "includes": "IPC + CEF paint and RGBA copy; excludes PNG encoding and first setup",
+        "median_ms": 35.4839,
+        "p95_ms": 869.0807000000001,
+        "steady_samples": 28
+      },
+      "width": 640
+    }
+  ],
+  "p5_version": "2.3.2",
+  "status": "passed",
+  "upstream_commit": "378ea63dd998bb579f8d3ca74c19f9560584a6e3"
+}

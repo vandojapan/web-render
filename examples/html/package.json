@@ -1,0 +1,7 @@
+{
+  "name": "web-render-example-html",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "web-render start" },
+  "dependencies": { "web-render": "file:../../packages/vi5" }
+}

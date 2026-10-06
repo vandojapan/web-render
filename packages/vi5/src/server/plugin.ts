@@ -1,0 +1,119 @@
+import type { Plugin } from "vite";
+import fs from "node:fs/promises";
+import index from "./index.html?raw";
+import { dedent } from "../helpers/dedent";
+import type { Config } from "../config";
+import picomatch from "picomatch";
+
+export function createVi5Plugin(config: Config, restartServer: () => Promise<void>): Plugin {
+  const isObjectFile = picomatch("**/*.object.ts");
+  const buildObjectList = async () =>
+    Array.fromAsync(fs.glob("./src/**/*.object.ts")).then((files) =>
+      files.map((f) => "/" + f.replace(/\\/g, "/")),
+    );
+
+  return {
+    name: "vi5",
+    configureServer(server) {
+      server.watcher.on("add", (file) => {
+        if (!isObjectFile(file)) {
+          return;
+        }
+        void buildObjectList().then((list) => {
+          server.ws.send({
+            type: "custom",
+            event: "vi5:on-object-list-changed",
+            data: list,
+          });
+        });
+      });
+      server.watcher.on("unlink", (file) => {
+        if (!isObjectFile(file)) {
+          return;
+        }
+        void buildObjectList().then((list) => {
+          server.ws.send({
+            type: "custom",
+            event: "vi5:on-object-list-changed",
+            data: list,
+          });
+        });
+      });
+      server.middlewares.use((req, res, next) => {
+        if (req.url === "/vi5") {
+          res.statusCode = 200;
+          res.setHeader("Content-Type", "text/html");
+          res.end(index.replace("!DIRNAME!", import.meta.dirname));
+          server.watcher.add("./src/**/*.object.ts");
+          return;
+        }
+        next();
+      });
+    },
+    async config() {
+      return {
+        server: {
+          fs: {
+            allow: [import.meta.dirname, process.cwd()],
+          },
+          hmr: {
+            overlay: false,
+          },
+        },
+        optimizeDeps: {
+          include: [
+            "web-render/client",
+            "web-render > @logtape/logtape",
+            "web-render > fast-base64",
+            "web-render > @bufbuild/protobuf",
+            "web-render > @bufbuild/protobuf/codegenv2",
+          ],
+        },
+        define: {
+          __vi5_data__: {
+            projectName: config.name,
+            objectList: await buildObjectList(),
+            hookConsoleLog: config.hookConsoleLog ?? true,
+          },
+        },
+        // resolve: {
+        //   alias: {
+        //     p5: "./node_modules/p5/lib/p5.min.js",
+        //   },
+        // },
+      };
+    },
+    transform: {
+      filter: {
+        id: /.*\.object\.ts$/,
+      },
+      async handler(code, _id) {
+        return (
+          code +
+          "\n" +
+          dedent(`
+        let __vi5_objectId = null;
+        export const __vi5_setObjectId = (id) => (__vi5_objectId = id);
+        if (import.meta.hot) {
+          import.meta.hot.accept((newModule) => {
+            if (newModule?.default) {
+              window.__vi5__.register(newModule.default);
+              newModule.__vi5_setObjectId(newModule.default.id);
+            }
+          });
+          import.meta.hot.prune(() => {
+            window.__vi5__.unregister(__vi5_objectId);
+          });
+        }
+        `)
+        );
+      },
+    },
+    hotUpdate({ file }) {
+      if (file === "web-render.config.ts") {
+        this.info("web-render.config.ts changed. restarting server...");
+        void restartServer();
+      }
+    },
+  };
+}

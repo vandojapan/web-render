@@ -1,0 +1,19 @@
+{
+  "display": "DISPLAY2",
+  "exit_code": 0,
+  "pid": 41832,
+  "position_corrections": 0,
+  "saved_test_project": false,
+  "trusted_generated_scripts": false,
+  "windows": [
+    "AviUtl ExEdit2",
+    "libprocessing-sample.aup2",
+    "PNGファイル出力"
+  ],
+  "work_area": [
+    0,
+    0,
+    3840,
+    2100
+  ]
+}

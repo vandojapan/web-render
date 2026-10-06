@@ -1,0 +1,5 @@
+{
+  "name": "web-render-libprocessing-comparison", "private": true, "type": "module",
+  "scripts": { "start": "web-render start" },
+  "dependencies": { "web-render": "file:../../packages/vi5" }
+}

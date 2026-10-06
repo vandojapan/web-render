@@ -1,0 +1,46 @@
+﻿[
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\src\\vi5-client-entry.ts",
+        "sha256":  "C0782F3E9EBA1E7A1B2A3EED30F3D7BA0A1CEF5EDDF9216FDA2513F9A69D9521"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\src\\midi\\smf.ts",
+        "sha256":  "F9875F2CCAD98C4802A873B980021D4B6A50E5E63A33260131C2A0517F5E5B8B"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\src\\objects\\midi-pattern-grid.object.ts",
+        "sha256":  "13CE763BB64163EFD0C6E37C39D98A5F66C158167533B519D2A1149CEAEBFED2"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\src\\render\\dither.ts",
+        "sha256":  "AEEB7831EC53B066641BCE891F19BA84F41F747330B0AE05989234FC81BD6647"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\src\\render\\layout.ts",
+        "sha256":  "2704BD24770509F3B06E3403BF729F2163269D8E7C8CF58638DE15F595BB5927"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\src\\render\\patterns.ts",
+        "sha256":  "F75AFE27FD5E8B2ECCE1CFBEC932E47B1C35FF1D0B820605816C3B3D6220D34A"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\tests\\dither.test.ts",
+        "sha256":  "E9DFEFDF33C5E04E0AAB0FCF65A60CB24C37ECAE2E2807BF766360E1E8B72179"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\tests\\layout.test.ts",
+        "sha256":  "5F14737E18640D4F30641E3196354BBFE5EE6A12E725214A0F88DE19C391025F"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\tests\\midi.test.ts",
+        "sha256":  "951023B07A6F70CDAEFAB04A7B30DA962949AE45D292BF8ACE9742A914E50203"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\scripts\\create-demo-midi.mjs",
+        "sha256":  "5B3A5519646875C9A8AAAC30CA71C1A3DBDED65949346AE51890CE0C150EBC02"
+    },
+    {
+        "path":  "E:\\Downloads\\toybox\\p5js\\public\\song.mid",
+        "sha256":  "FB31D56571F294E033136CA5A2335FCD49CF81F3AC3D454224181EDFA8EF3B34"
+    }
+]

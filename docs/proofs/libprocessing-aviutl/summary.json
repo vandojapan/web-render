@@ -1,0 +1,190 @@
+{
+  "status": "preview_verified_export_unverified",
+  "backend": "libprocessing",
+  "display": "DISPLAY2",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "measurement": "debug plugin + release native worker; SDK scene capture including IPC and host composition; 30 steady frames per case",
+  "preview": {
+    "status": "passed",
+    "cases": [
+      {
+        "animated": false,
+        "first_frame_ms": 8.9436,
+        "median_host_ms": 21.9045,
+        "no_smooth": false,
+        "object": "shapes-default",
+        "p95_host_ms": 25.209,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": false,
+        "first_frame_ms": 32.5361,
+        "median_host_ms": 20.5091,
+        "no_smooth": true,
+        "object": "shapes-no-smooth",
+        "p95_host_ms": 25.3049,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": false,
+        "first_frame_ms": 38.4397,
+        "median_host_ms": 31.2739,
+        "no_smooth": false,
+        "object": "text-default",
+        "p95_host_ms": 32.0178,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": false,
+        "first_frame_ms": 57.492599999999996,
+        "median_host_ms": 31.9334,
+        "no_smooth": true,
+        "object": "text-no-smooth",
+        "p95_host_ms": 36.572399999999995,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": false,
+        "first_frame_ms": 33.796,
+        "median_host_ms": 17.000999999999998,
+        "no_smooth": false,
+        "object": "image-default",
+        "p95_host_ms": 26.369500000000002,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": false,
+        "first_frame_ms": 45.8247,
+        "median_host_ms": 18.5186,
+        "no_smooth": true,
+        "object": "image-no-smooth",
+        "p95_host_ms": 27.3093,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": false,
+        "first_frame_ms": 29.7838,
+        "median_host_ms": 16.9386,
+        "no_smooth": true,
+        "object": "alpha-no-smooth",
+        "p95_host_ms": 23.4063,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      },
+      {
+        "animated": true,
+        "first_frame_ms": 19.814999999999998,
+        "median_host_ms": 20.9699,
+        "no_smooth": true,
+        "object": "animated-no-smooth",
+        "p95_host_ms": 25.095599999999997,
+        "reverse_seek_rgba": true,
+        "steady_samples": 30
+      }
+    ],
+    "freeze_unfreeze": true,
+    "pixel_reference": {
+      "host_matches_independent_gpu": [
+        {
+          "bytes": 8294400,
+          "different_bytes": 0,
+          "mode": "default",
+          "scene": "shapes"
+        },
+        {
+          "bytes": 8294400,
+          "different_bytes": 0,
+          "mode": "default",
+          "scene": "text"
+        },
+        {
+          "bytes": 8294400,
+          "different_bytes": 0,
+          "mode": "default",
+          "scene": "image"
+        },
+        {
+          "bytes": 8294400,
+          "different_bytes": 0,
+          "mode": "no-smooth",
+          "scene": "shapes"
+        },
+        {
+          "bytes": 8294400,
+          "different_bytes": 0,
+          "mode": "no-smooth",
+          "scene": "text"
+        },
+        {
+          "bytes": 8294400,
+          "different_bytes": 0,
+          "mode": "no-smooth",
+          "scene": "image"
+        }
+      ],
+      "status": "passed"
+    }
+  },
+  "alpha_conversion": {
+    "before_host_median_ms": 95.0462,
+    "after_host_median_ms": 16.9386,
+    "improvement_percent": 82.17856158373506
+  },
+  "standard_png_export": {
+    "status": "unverified",
+    "sdk": "CommonEditSection::output_file reports not supported",
+    "gui": "Save dialog opened on DISPLAY2; foreground/hit-test remained a different window; no completed output",
+    "last_attempt": {
+      "error": "Native PNG export timed out",
+      "status": "error"
+    }
+  },
+  "cef_regression": {
+    "himawari": "passed",
+    "p5_all_nine_pngs_match_previous_capture": true,
+    "p5_known_repeated_frame_differences": [
+      85,
+      60
+    ]
+  },
+  "unit_tests": {
+    "passed": 18,
+    "ignored_child_fixture": 1
+  },
+  "release_smoke": {
+    "display": "DISPLAY2",
+    "exit_code": 0,
+    "pid": 44332,
+    "position_corrections": 0,
+    "saved_test_project": false,
+    "trusted_generated_scripts": false,
+    "windows": [
+      "AviUtl ExEdit2",
+      "libprocessing-sample.aup2"
+    ],
+    "work_area": [
+      0,
+      0,
+      3840,
+      2100
+    ]
+  },
+  "artifacts": {
+    "target/release/web_render_aux2.dll": "2ca51937f5c3117f9dea9117b7e982b4b881fe66cebdc19ddfac79b96ec17442",
+    "native/libprocessing/target/release/web-render-processing-server.exe": "4d5184130ed39c8f449e43bbeed56986e4895129b6b32ee2b739c3e191752637",
+    ".aviutl2-cli/development/data/Plugin/web-render/web-render.aux2": "2ca51937f5c3117f9dea9117b7e982b4b881fe66cebdc19ddfac79b96ec17442",
+    ".aviutl2-cli/development/data/Plugin/web-render/web-render-processing-server.exe": "4d5184130ed39c8f449e43bbeed56986e4895129b6b32ee2b739c3e191752637",
+    "examples/processing/web-render.processing.json": "a0d8264d2105c2ac7434d70c291d61cbea58a86c71d79f97bef2b62f898cb4ca",
+    "Cargo.lock": "96e287817afc687086a3d4d7d6f3e3fa60631f046e6dabd7051524fc9e8efb69",
+    "native/web-render-processing-server/Cargo.lock": "1cbd03054a8285b646df193282bdede49071f7191713737b57052b918ae62c8c"
+  }
+}

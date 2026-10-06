@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "libprocessing-test",
+  "objects": [
+    {"id":"shapes-default","label":"Native Shapes Default","scene":"shapes","count":1000},
+    {"id":"shapes-no-smooth","label":"Native Shapes noSmooth","scene":"shapes","count":1000,"no_smooth":true},
+    {"id":"text-default","label":"Native Text Default","scene":"text","count":100},
+    {"id":"text-no-smooth","label":"Native Text noSmooth","scene":"text","count":100,"no_smooth":true},
+    {"id":"image-default","label":"Native Image Default","scene":"image","count":1},
+    {"id":"image-no-smooth","label":"Native Image noSmooth","scene":"image","count":1,"no_smooth":true},
+    {"id":"alpha-no-smooth","label":"Native Alpha noSmooth","scene":"alpha","count":1,"no_smooth":true},
+    {"id":"animated-no-smooth","label":"Native Animated noSmooth","scene":"shapes","count":1000,"no_smooth":true,"animated":true,"seed":7}
+  ]
+}

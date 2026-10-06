@@ -1,0 +1,2 @@
+width,height,scene,samples,init_ms,graphics_create_ms,first_frame_ms,median_total_readback_ms,p95_total_readback_ms
+3840,2160,shapes,120,2346.4130999999998,872.4612000000001,171.843,17.1696,20.925800000000002

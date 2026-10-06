@@ -1,0 +1,42 @@
+﻿[10/05 23:09:37] [INFO] [wWinMain] Application Start: AviUtl ExEdit2 2.1.12 (2011200)
+[10/05 23:09:39] [INFO] [Plugin::web-render.aux2] [web_render_aux2] No web project configured in this project file.
+[10/05 23:09:39] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded project directory from project file: E:\Downloads\web_render_aux2_prototype\web-render\examples\html
+[10/05 23:09:39] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Setting project directory to: E:\Downloads\web_render_aux2_prototype\web-render\examples\html
+[10/05 23:09:39] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Starting web-render-cef server on port 58346
+[10/05 23:09:39] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Launching web-render-cef server: Command { std: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Plugin\\web-render\\web-render-cef-server.exe" "--port" "58346" "--parent-process" "38444", kill_on_drop: true }
+[10/05 23:09:41] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:41.310159Z  INFO main ThreadId(01) web_render_cef_server::cef_app: launch browser process 40664
+[10/05 23:09:41] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:41.823474Z  INFO main ThreadId(01) web_render_cef_server: Starting gRPC server on [::1]:58346
+[10/05 23:09:43] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:43.252003Z  INFO main ThreadId(01) web_render_cef_server::server: Received initialize request: InitializeRequest { root_path: "E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\html" }
+[10/05 23:09:43] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:43.263109Z  INFO main ThreadId(01) web_render_cef_server::server: Started vi5 process with PID: 43220
+[10/05 23:09:44] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:44.587006Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:09:44] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:44.587066Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:09:45] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:45.250920Z TRACE main ThreadId(01) web_render_cef_server::render_loop: Invalid paint buffer header: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[10/05 23:09:45] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:45.275864Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Loading URL for initialization: http://localhost:49978/vi5
+[10/05 23:09:47] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:47.514473Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:09:47] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:47.514507Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.177161Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 0, 0, 0, 255, 0, 18, 0, 255, 0, 0, 10, 255, 9, 72, 84, 255]
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.177265Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Page initialization complete
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.177279Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 0 completed and removed
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.182988Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.183027Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.880068Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 1, 0, 0, 255, 0, 54, 1, 255, 0, 0, 10, 255, 225, 1, 18, 255]
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.880245Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 1 processed frame, waiting for more frames
+[10/05 23:09:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:48.883638Z  INFO main ThreadId(01) web_render_cef_server::server: Initialization completed: InitializeResponse { project_name: "HTML Demo", renderer_version: "1.0.0" }
+[10/05 23:09:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] web-render-cef initialized successfully.
+[10/05 23:09:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Started notification listener task
+[10/05 23:09:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Received object infos notification with 2 objects
+[10/05 23:09:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Project script directory: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo"
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'html-title': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\HTMLタイトル.obj2"
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Created script file for object 'html-title': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\HTMLタイトル.obj2"
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'frame-proof': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\フレーム検証.obj2"
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Created script file for object 'frame-proof': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\フレーム検証.obj2"
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Debug bootstrap: script update restart=true, reload=false
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] vi5 notification: 2026-10-05 14:09:47.125 +00:00 [info] [vi5]: Vi5 Client Runtime initialized.
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Shutting down web-render-cef server...
+[10/05 23:09:49] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:49.144196Z  INFO main ThreadId(01) web_render_cef_server::server: Received shutdown request
+[10/05 23:09:49] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:49.144472Z  INFO main ThreadId(01) web_render_cef_server: Received shutdown request
+[10/05 23:09:49] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:49.158103Z  INFO main ThreadId(01) web_render_cef_server::server: Successfully killed vi5 process with PID: 0
+[10/05 23:09:49] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:09:49.158522Z  INFO main ThreadId(01) web_render_cef_server::handlers: Shutting down CEF
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] web-render-cef server has exited normally.
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] CEF stopped: exit code: 0
+[10/05 23:09:49] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Shutting down Tokio runtime...

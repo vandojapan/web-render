@@ -1,0 +1,42 @@
+﻿[
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\20260608_himawari_receiver.mid",
+        "sha256":  "DC3873910220D52BC859A5A87FA58EC1161F3CD47F08BCE7610120547387AD12"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\vite-env.d.ts",
+        "sha256":  "617F432F26299AFB9E72D56696FB827DB5755A6C3570FBBE99613FA4C7E3A6B5"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\objects\\drum.object.ts",
+        "sha256":  "C41C6F39D1A9FB75830DF077296F0EE1230E0B452A37A7A001623B4F05399EDD"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\objects\\kaiwaiPhrase.object.ts",
+        "sha256":  "872B82B2BB136A9B7210A1F9E5C0A9B106E4F09D8C5513D25DBE7CC821C35ED4"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\objects\\synthSolo.object.ts",
+        "sha256":  "54BB9544791215A08EBF84037B753A76FAECF3C19709C3466A9F470F06C07676"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\utils\\currentFrameInfo.ts",
+        "sha256":  "9138447FEBB7DB8B0F7E3DA8931E42B2EEB73A9B0DBDD7BA155BA6A7D3351256"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\utils\\ease.ts",
+        "sha256":  "B4E11308161964B9EF1E7257ED473DE4CE45AA94407886D711097A35DDF9DAE9"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\utils\\midi.ts",
+        "sha256":  "EE5E968C5BDE5A4B9C9CB0B5322627DAABFA738BAF35C998CB7B877D673FE9BE"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\utils\\shape.ts",
+        "sha256":  "3CCA16336687B940F6D0E22BD00C11814D717A57DD351EA2679DD7C57510B718"
+    },
+    {
+        "path":  "E:\\Downloads\\web_render_aux2_prototype\\web-render\\.local-tests\\himawari-receiver-upstream\\src\\utils\\useRenderingContext.ts",
+        "sha256":  "E8D2576368C7CDAC47014F77D2D73E90D4F9B32E0019639FF61D913112F40C78"
+    }
+]

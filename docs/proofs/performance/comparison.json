@@ -1,0 +1,1081 @@
+{
+  "date": "2026-10-06",
+  "status": "passed",
+  "timing": [
+    {
+      "profile": "debug",
+      "object": "drum",
+      "before_median_ms": 701.6183,
+      "after_median_ms": 30.153200000000002,
+      "before_p95_ms": 891.3725000000001,
+      "after_p95_ms": 95.5549,
+      "steady_samples": 28,
+      "speedup": 23.268452436225672,
+      "reduction_percent": 95.70233558617271
+    },
+    {
+      "profile": "debug",
+      "object": "kaiwai-phrase",
+      "before_median_ms": 730.8694999999999,
+      "after_median_ms": 32.268100000000004,
+      "before_p95_ms": 833.3526999999999,
+      "after_p95_ms": 41.882999999999996,
+      "steady_samples": 28,
+      "speedup": 22.64990811358586,
+      "reduction_percent": 95.5849710516036
+    },
+    {
+      "profile": "debug",
+      "object": "synth-solo",
+      "before_median_ms": 695.913,
+      "after_median_ms": 37.3316,
+      "before_p95_ms": 776.417,
+      "after_p95_ms": 53.3002,
+      "steady_samples": 28,
+      "speedup": 18.641392278927235,
+      "reduction_percent": 94.63559381704322
+    },
+    {
+      "profile": "release",
+      "object": "drum",
+      "before_median_ms": 84.16709999999999,
+      "after_median_ms": 32.9575,
+      "before_p95_ms": 162.3664,
+      "after_p95_ms": 68.8879,
+      "steady_samples": 28,
+      "speedup": 2.5538071759083665,
+      "reduction_percent": 60.84277585897577
+    },
+    {
+      "profile": "release",
+      "object": "kaiwai-phrase",
+      "before_median_ms": 63.3008,
+      "after_median_ms": 28.7123,
+      "before_p95_ms": 95.91510000000001,
+      "after_p95_ms": 45.9923,
+      "steady_samples": 28,
+      "speedup": 2.2046579340561365,
+      "reduction_percent": 54.6414895230392
+    },
+    {
+      "profile": "release",
+      "object": "synth-solo",
+      "before_median_ms": 66.293,
+      "after_median_ms": 33.573899999999995,
+      "before_p95_ms": 169.5145,
+      "after_p95_ms": 920.6206999999999,
+      "steady_samples": 28,
+      "speedup": 1.9745397466484387,
+      "reduction_percent": 49.35528638016081
+    }
+  ],
+  "protocol_image_comparisons": [
+    {
+      "profile": "debug",
+      "file": "drum-flipped.png",
+      "sha256": "bedb46e16cba9beb90a2357921c740110a7e4f135b0c8f2bcac15fc7b6d5f0ee",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0000.png",
+      "sha256": "a7f6380304372a6e38a54557a27c668bb90bf9709df496a07f4f3b3d26e5a19d",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0003.png",
+      "sha256": "c656c9ecb8180cd32d13b5a9c25c71abfb4151411796d74f3440fb112af672ac",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0009.png",
+      "sha256": "7832df20da9145771dfe1e4456dc471148396622c0d05408304291c429a66898",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0015.png",
+      "sha256": "5421015653db2fc817e4ee1106e1f792f12a25f3e6f5005338d1c4f2e18eca9b",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0024.png",
+      "sha256": "e0013106edc11f5c72aa5ffff782fed6d1d808ceb21f22f7b7e2b0ec8509ded2",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0030.png",
+      "sha256": "d451d7fe2619bff2c239baa0c862af677ee4797c07c28854c7191b1ccb6332f4",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0045.png",
+      "sha256": "bc06153a9e42d86c67c5bc4bc30a3dcfed74e90a98e9b31a013d86217a73ef4d",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0048.png",
+      "sha256": "3bb34d1ef6ca9de70d2904b9273ea94387b3447da211016fb85e0bf118f7decb",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0051.png",
+      "sha256": "f46fed6d1d573fee9894a3a61b8d0c37c5d852fced6c3b9822b337dd8e6d13fe",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0054.png",
+      "sha256": "712d46c87fac25154be12e20c5dfa15121edb041b3cbf02fb2013fd3a6e8ca43",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0057.png",
+      "sha256": "3ed36ffea08af1220587ce7216bbc6fe0b965f2f13f7bfc6df2ec4b534d8a80d",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0060.png",
+      "sha256": "08f0777b59a7c4c6915967e1d7602d272375b8bb727e16d26a10761ca3133ba7",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0063.png",
+      "sha256": "596bc7ed1d6a5f32873c09e5bbbe7b552ff9b5344316379870b51102ca569333",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0117.png",
+      "sha256": "45e43d25bd47c4699e45450c981166c73b4d7f611428892428b6393c5a0dec25",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0120.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0237.png",
+      "sha256": "45e43d25bd47c4699e45450c981166c73b4d7f611428892428b6393c5a0dec25",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0240.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0243.png",
+      "sha256": "a4115daa5a8ee2b5254ca9572c3cee352405a4f7da2caf16e8c284cd928e13ea",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0252.png",
+      "sha256": "7c1686fc5b6984c130b823b4efdd5285e7b9691e0c342f40d33fcdaed702c59e",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0288.png",
+      "sha256": "08f0777b59a7c4c6915967e1d7602d272375b8bb727e16d26a10761ca3133ba7",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0336.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0429.png",
+      "sha256": "0c59db5194c312d5a214e026a8e4fc7649c989af3957504d00f953ccf3330d3c",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0432.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "drum-frame-0450.png",
+      "sha256": "514292f9e7747809c0ca9c54267f720feec45ded4cc153a76d555edd4165c2e6",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0000.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0003.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0009.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0015.png",
+      "sha256": "f56c09f341b051c5b0e1ab5a71688f8886ce64e05082edd4adafd12466b34886",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0024.png",
+      "sha256": "6e9346c18f0d740b1fffea16d145e73f72e922753323946934dba2c47ff48d27",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0030.png",
+      "sha256": "779fe12aa6cc50c4b032701d10a64005d7bec8fb38d8576767eb26fe347ddc69",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0045.png",
+      "sha256": "c42a8dbf947979defc4c030d0716b249d0f3898d843869f1033155578a240fa5",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0048.png",
+      "sha256": "98607aa3c44bd624c110489139aafe73e8900099f0243b15c7ba4be700c11667",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0051.png",
+      "sha256": "98607aa3c44bd624c110489139aafe73e8900099f0243b15c7ba4be700c11667",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0054.png",
+      "sha256": "1c7bb276d7f56787617e65f1d20f262de74eb4bc246634af54e6c7f8866aca8a",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0057.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0060.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0063.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0117.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0120.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0237.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0240.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0243.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0252.png",
+      "sha256": "f56c09f341b051c5b0e1ab5a71688f8886ce64e05082edd4adafd12466b34886",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0288.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0336.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0429.png",
+      "sha256": "1c7bb276d7f56787617e65f1d20f262de74eb4bc246634af54e6c7f8866aca8a",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0432.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "kaiwai-phrase-frame-0450.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-moved-playhead.png",
+      "sha256": "bf6afa65365ea23a09c0368d6ef1bd943ff82d8a98414c44e8623c94da869544",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0000.png",
+      "sha256": "a9dd3906916cc72eddf2a2951399fd8d914f9dca8581442c773ac1af0de2cae0",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0003.png",
+      "sha256": "44856a14de0a590aa8c96e58410cf3758c5f303af0b8cd62944b11defdef2835",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0009.png",
+      "sha256": "09f0ab06708af488e15e7f96ee438b814856e04cbd2e92c99e489b8b2e6b18fe",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0015.png",
+      "sha256": "904df673200e8129bc849c4295ec5625c68f1ec626f73d58287a375b07b6cd1e",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0024.png",
+      "sha256": "2445a050afda83f3c66e82f243d865e0da039d0540605d417c87d6309fe5fc01",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0030.png",
+      "sha256": "5e71e4d9e6d9769487455e60c406efbb35d424cedecb43eb44570f603270d4bb",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0045.png",
+      "sha256": "027649e5dbdfb6f988c9517d178c05a75c54bc5b889372e819c4b0dabfa3c12e",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0048.png",
+      "sha256": "2f33b5c9eb3640214190d86fc28ebf0492ae7b42e53c681198b2dc540ed66fa5",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0051.png",
+      "sha256": "c6068f4e614a009d71125f4264074349a1cd209bc3ce7bc4d7392a332c58aa23",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0054.png",
+      "sha256": "1c870ac4a9fbb35d26eab501d316d12d2653aa7b35af268d9168c1bd4f570436",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0057.png",
+      "sha256": "2a1f1fa47cb1c88b006928871b8f34471fe954ea5fa033dbdd8af0bfd75fa2e8",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0060.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0063.png",
+      "sha256": "ac0eed8f6e014c9816c44d87ccc574657a3cf12ef7623d1ab1572bcca102d5bf",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0117.png",
+      "sha256": "2a1f1fa47cb1c88b006928871b8f34471fe954ea5fa033dbdd8af0bfd75fa2e8",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0120.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0237.png",
+      "sha256": "2a1f1fa47cb1c88b006928871b8f34471fe954ea5fa033dbdd8af0bfd75fa2e8",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0240.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0243.png",
+      "sha256": "0f722d10ba20bdd143252cc647e13d1124ffbf49efcfdbd5267bf8979811655d",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0252.png",
+      "sha256": "ea71774d75b3d271e6cbe1d51855856650ac9a9e76b4685f4bb5019d65c0f966",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0288.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0336.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0429.png",
+      "sha256": "e48bad937b460f368973e8b17ca5d39edc52887250286b5463b09ad7750ed640",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0432.png",
+      "sha256": "73a57c689de196cba81d1528d1c423379a899c51eed856990e4e431aadb25520",
+      "identical": true
+    },
+    {
+      "profile": "debug",
+      "file": "synth-solo-frame-0450.png",
+      "sha256": "feaf436af862346b1293044b6c5c1a57a84bdddcaa31a75962930575b8840f0b",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-flipped.png",
+      "sha256": "bedb46e16cba9beb90a2357921c740110a7e4f135b0c8f2bcac15fc7b6d5f0ee",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0000.png",
+      "sha256": "a7f6380304372a6e38a54557a27c668bb90bf9709df496a07f4f3b3d26e5a19d",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0003.png",
+      "sha256": "c656c9ecb8180cd32d13b5a9c25c71abfb4151411796d74f3440fb112af672ac",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0009.png",
+      "sha256": "7832df20da9145771dfe1e4456dc471148396622c0d05408304291c429a66898",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0015.png",
+      "sha256": "5421015653db2fc817e4ee1106e1f792f12a25f3e6f5005338d1c4f2e18eca9b",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0024.png",
+      "sha256": "e0013106edc11f5c72aa5ffff782fed6d1d808ceb21f22f7b7e2b0ec8509ded2",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0030.png",
+      "sha256": "d451d7fe2619bff2c239baa0c862af677ee4797c07c28854c7191b1ccb6332f4",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0045.png",
+      "sha256": "bc06153a9e42d86c67c5bc4bc30a3dcfed74e90a98e9b31a013d86217a73ef4d",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0048.png",
+      "sha256": "3bb34d1ef6ca9de70d2904b9273ea94387b3447da211016fb85e0bf118f7decb",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0051.png",
+      "sha256": "f46fed6d1d573fee9894a3a61b8d0c37c5d852fced6c3b9822b337dd8e6d13fe",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0054.png",
+      "sha256": "712d46c87fac25154be12e20c5dfa15121edb041b3cbf02fb2013fd3a6e8ca43",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0057.png",
+      "sha256": "3ed36ffea08af1220587ce7216bbc6fe0b965f2f13f7bfc6df2ec4b534d8a80d",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0060.png",
+      "sha256": "08f0777b59a7c4c6915967e1d7602d272375b8bb727e16d26a10761ca3133ba7",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0063.png",
+      "sha256": "596bc7ed1d6a5f32873c09e5bbbe7b552ff9b5344316379870b51102ca569333",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0117.png",
+      "sha256": "45e43d25bd47c4699e45450c981166c73b4d7f611428892428b6393c5a0dec25",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0120.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0237.png",
+      "sha256": "45e43d25bd47c4699e45450c981166c73b4d7f611428892428b6393c5a0dec25",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0240.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0243.png",
+      "sha256": "a4115daa5a8ee2b5254ca9572c3cee352405a4f7da2caf16e8c284cd928e13ea",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0252.png",
+      "sha256": "7c1686fc5b6984c130b823b4efdd5285e7b9691e0c342f40d33fcdaed702c59e",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0288.png",
+      "sha256": "08f0777b59a7c4c6915967e1d7602d272375b8bb727e16d26a10761ca3133ba7",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0336.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0429.png",
+      "sha256": "0c59db5194c312d5a214e026a8e4fc7649c989af3957504d00f953ccf3330d3c",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0432.png",
+      "sha256": "5808c76b61be6af1c3835300eebd2137556854f8304e0611bc28aedef2736326",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "drum-frame-0450.png",
+      "sha256": "514292f9e7747809c0ca9c54267f720feec45ded4cc153a76d555edd4165c2e6",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0000.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0003.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0009.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0015.png",
+      "sha256": "f56c09f341b051c5b0e1ab5a71688f8886ce64e05082edd4adafd12466b34886",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0024.png",
+      "sha256": "6e9346c18f0d740b1fffea16d145e73f72e922753323946934dba2c47ff48d27",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0030.png",
+      "sha256": "779fe12aa6cc50c4b032701d10a64005d7bec8fb38d8576767eb26fe347ddc69",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0045.png",
+      "sha256": "c42a8dbf947979defc4c030d0716b249d0f3898d843869f1033155578a240fa5",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0048.png",
+      "sha256": "98607aa3c44bd624c110489139aafe73e8900099f0243b15c7ba4be700c11667",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0051.png",
+      "sha256": "98607aa3c44bd624c110489139aafe73e8900099f0243b15c7ba4be700c11667",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0054.png",
+      "sha256": "1c7bb276d7f56787617e65f1d20f262de74eb4bc246634af54e6c7f8866aca8a",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0057.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0060.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0063.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0117.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0120.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0237.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0240.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0243.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0252.png",
+      "sha256": "f56c09f341b051c5b0e1ab5a71688f8886ce64e05082edd4adafd12466b34886",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0288.png",
+      "sha256": "83b576a89070a162625b755d5f0b5508043c6b43e5437902d7b1682cf01fe636",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0336.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0429.png",
+      "sha256": "1c7bb276d7f56787617e65f1d20f262de74eb4bc246634af54e6c7f8866aca8a",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0432.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "kaiwai-phrase-frame-0450.png",
+      "sha256": "18547eafcc66c7c876ad46aa3b05f99b76cde78181d1da11143c058e5a25ea6f",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-moved-playhead.png",
+      "sha256": "bf6afa65365ea23a09c0368d6ef1bd943ff82d8a98414c44e8623c94da869544",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0000.png",
+      "sha256": "a9dd3906916cc72eddf2a2951399fd8d914f9dca8581442c773ac1af0de2cae0",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0003.png",
+      "sha256": "44856a14de0a590aa8c96e58410cf3758c5f303af0b8cd62944b11defdef2835",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0009.png",
+      "sha256": "09f0ab06708af488e15e7f96ee438b814856e04cbd2e92c99e489b8b2e6b18fe",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0015.png",
+      "sha256": "904df673200e8129bc849c4295ec5625c68f1ec626f73d58287a375b07b6cd1e",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0024.png",
+      "sha256": "2445a050afda83f3c66e82f243d865e0da039d0540605d417c87d6309fe5fc01",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0030.png",
+      "sha256": "5e71e4d9e6d9769487455e60c406efbb35d424cedecb43eb44570f603270d4bb",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0045.png",
+      "sha256": "027649e5dbdfb6f988c9517d178c05a75c54bc5b889372e819c4b0dabfa3c12e",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0048.png",
+      "sha256": "2f33b5c9eb3640214190d86fc28ebf0492ae7b42e53c681198b2dc540ed66fa5",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0051.png",
+      "sha256": "c6068f4e614a009d71125f4264074349a1cd209bc3ce7bc4d7392a332c58aa23",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0054.png",
+      "sha256": "1c870ac4a9fbb35d26eab501d316d12d2653aa7b35af268d9168c1bd4f570436",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0057.png",
+      "sha256": "2a1f1fa47cb1c88b006928871b8f34471fe954ea5fa033dbdd8af0bfd75fa2e8",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0060.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0063.png",
+      "sha256": "ac0eed8f6e014c9816c44d87ccc574657a3cf12ef7623d1ab1572bcca102d5bf",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0117.png",
+      "sha256": "2a1f1fa47cb1c88b006928871b8f34471fe954ea5fa033dbdd8af0bfd75fa2e8",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0120.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0237.png",
+      "sha256": "2a1f1fa47cb1c88b006928871b8f34471fe954ea5fa033dbdd8af0bfd75fa2e8",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0240.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0243.png",
+      "sha256": "0f722d10ba20bdd143252cc647e13d1124ffbf49efcfdbd5267bf8979811655d",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0252.png",
+      "sha256": "ea71774d75b3d271e6cbe1d51855856650ac9a9e76b4685f4bb5019d65c0f966",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0288.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0336.png",
+      "sha256": "d4c0815b0672b27bb79e8614e9e4e6bcad05bd42764ebe433351c0515fbf2414",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0429.png",
+      "sha256": "e48bad937b460f368973e8b17ca5d39edc52887250286b5463b09ad7750ed640",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0432.png",
+      "sha256": "73a57c689de196cba81d1528d1c423379a899c51eed856990e4e431aadb25520",
+      "identical": true
+    },
+    {
+      "profile": "release",
+      "file": "synth-solo-frame-0450.png",
+      "sha256": "feaf436af862346b1293044b6c5c1a57a84bdddcaa31a75962930575b8840f0b",
+      "identical": true
+    }
+  ],
+  "host_image_comparisons": [
+    {
+      "file": "aviutl-himawari-frame-0000.png",
+      "sha256": "1e690ec2908a971b44e95abd92e0d5284e279be5458acd396a85f08df6d03900",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0015.png",
+      "sha256": "b02c546e5626826a1d4e9d8b056317c6fdc91f7bf430ba31924c5b389ead0f9f",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0054.png",
+      "sha256": "094750574e385c1cd80802fbd8769386a4394471e9c05a85f5d5b6763101b85d",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0057.png",
+      "sha256": "032002cd5d15ed2901555923e3d7b6c2efad94eda2b833f2c2d9db7a8a114f0f",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0060.png",
+      "sha256": "def27a8c522e1059f74d0220f4bb4274adaf071f136c78279d9d712d01f4945c",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0063.png",
+      "sha256": "02bbfb52614f6f91c8886319dff75679d0cf4a28cd9af84b900b1b31a97a90ba",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0237.png",
+      "sha256": "94f2cf94b7fef1ea189a5c254ff88f888e185993e50f1edf1dfd856aa7392674",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0240.png",
+      "sha256": "ac97a3dc0aa2890ffa4e85fa97328e12fc9301b7c1a2b58572cce1bde97060c9",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0243.png",
+      "sha256": "80b3f6917250a166d8824b2dbf3208913f6804f7225ece4fbcc37f341be0f82d",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0429.png",
+      "sha256": "49b7c03c4cb567926ee63ba334b955d79061847bcb6ed9a51f939aae2d70508d",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0432.png",
+      "sha256": "974d08d9546aa89e87c3fa1443a1ffe01d5f6bc267a94e3aa4adf45cd61230e3",
+      "identical": true
+    },
+    {
+      "file": "aviutl-himawari-frame-0450.png",
+      "sha256": "52dc3c6b1b72f036f50af774f36309f2aac278d2211ec4b27521a50fe6943303",
+      "identical": true
+    },
+    {
+      "file": "repeat-himawari-frame-0000.png",
+      "sha256": "1e690ec2908a971b44e95abd92e0d5284e279be5458acd396a85f08df6d03900",
+      "identical": true
+    },
+    {
+      "file": "repeat-himawari-frame-0015.png",
+      "sha256": "b02c546e5626826a1d4e9d8b056317c6fdc91f7bf430ba31924c5b389ead0f9f",
+      "identical": true
+    },
+    {
+      "file": "repeat-himawari-frame-0063.png",
+      "sha256": "02bbfb52614f6f91c8886319dff75679d0cf4a28cd9af84b900b1b31a97a90ba",
+      "identical": true
+    },
+    {
+      "file": "repeat-himawari-frame-0240.png",
+      "sha256": "ac97a3dc0aa2890ffa4e85fa97328e12fc9301b7c1a2b58572cce1bde97060c9",
+      "identical": true
+    }
+  ],
+  "html_image_comparisons": [
+    {
+      "file": "cef-frame-0000.png",
+      "sha256": "3d4cbd149f22661a9cd0dc0907aa54fd97a526e7b87a6154b042e5287074a690",
+      "identical": true
+    },
+    {
+      "file": "cef-frame-0001.png",
+      "sha256": "65d80e56127eabbd2ba7eaa84708a343d5514382f508062b2742cdfbdda56781",
+      "identical": true
+    },
+    {
+      "file": "cef-frame-0030.png",
+      "sha256": "00adc7a0b9ed67acdbd5eb2aeda8e2ae68f4687eec204fe0a8edbe60c5f20df7",
+      "identical": true
+    },
+    {
+      "file": "cef-frame-0090.png",
+      "sha256": "4a02a1bfc0f37a8b754cf7306dc9d3a876ae6020a0d123f892ec3def977d9ff9",
+      "identical": true
+    },
+    {
+      "file": "cef-frame-0120.png",
+      "sha256": "ee2a495746d09a8b0b8469ccc1ecc9a9802c5bd2133aca5df5f13da6d05a4271",
+      "identical": true
+    }
+  ],
+  "aviutl_scene": {
+    "objects": 3,
+    "captures": 16,
+    "median_ms": 115.1092,
+    "p95_ms": 230.9206,
+    "includes": "SDK rendering and copying 1920x1080 RGBA; excludes warmup, PNG encoding, pixel validation"
+  },
+  "cef_measurement": "IPC + actual CEF CPU paint; first setup and PNG encoding excluded; no frame-cache shortcut",
+  "concurrent_work": "Before-release ran during the new debug build. Initial after runs overlapped build/tests or HTML verification; isolated after runs are sequential without other test/build processes.",
+  "latency_limitations": "Release Synth Solo still has occasional IPC round-trip outliers (isolated p95 920.6 ms). Diagnostic render-loop batches complete in about 15–42 ms while some round trips exceed 1 s. Exact cause outside that phase is unresolved; image-validation passed does not mean every latency percentile improved."
+}

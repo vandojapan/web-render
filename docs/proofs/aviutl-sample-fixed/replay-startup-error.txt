@@ -1,0 +1,46 @@
+﻿[10/05 23:27:46] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/05 23:27:46] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/05 23:27:46] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/05 23:27:46] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\module.ini (section=3)
+[10/05 23:27:46] [INFO] [Media::FontManager::registerFontCollection] register font [Segoe Script] 
+[10/05 23:27:46] [INFO] [Media::FontManager::registerFontCollection] register font [Freestyle Script] 
+[10/05 23:27:46] [INFO] [Media::FontManager::registerFontCollection] register font [French Script MT] 
+[10/05 23:27:46] [INFO] [Media::FontManager::registerFontCollection] register font [Petaluma Script] 
+[10/05 23:27:46] [INFO] [Media::FontManager::registerFontCollection] register font [Pinyon Script] 
+[10/05 23:27:47] [INFO] [Plugin::ScriptService::registerPlugin] register script plugin [Lua5.1.4]
+[10/05 23:27:47] [INFO] [Plugin::ScriptService::registerPlugin] register script plugin [LuaJIT2.1]
+[10/05 23:27:47] [INFO] [Plugin::CommonPlugin::CommonPlugin] LoadLibrary: \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2
+[10/05 23:27:48] [INFO] [Plugin::web-render.aux2] [aviutl2::generic::__bridge] Creating plugin table for plugin: web_render_aux2::Vi5Aux2
+[10/05 23:27:48] [INFO] [Plugin::CommonPluginService::registerPlugin] register common plugin [\\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2]
+[10/05 23:27:48] [VERBOSE] [Plugin::web-render.aux2] [aviutl2::common] Leaking value vector of type aviutl2_sys::module2::SCRIPT_MODULE_FUNCTION
+[10/05 23:27:48] [INFO] [Plugin::ScriptModuleService::registerPlugin] register script module [web-render]
+[10/05 23:27:48] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\history.ini (section=1)
+[10/05 23:27:48] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\explorer.ini (section=0)
+[10/05 23:27:48] [INFO] [Edit::EditService::parseCommandLine] project : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\html-sample.aup2
+[10/05 23:27:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] No web project configured in this project file.
+[10/05 23:27:48] [INFO] [Edit::EditService::loadProject] load project file : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\html-sample.aup2
+[10/05 23:27:48] [VERBOSE] [System::IniFile::loadFile] load ini file : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\html-sample.aup2 (section=6)
+[10/05 23:27:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded project directory from project file: E:\Downloads\web_render_aux2_prototype\web-render\examples\html
+[10/05 23:27:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Setting project directory to: E:\Downloads\web_render_aux2_prototype\web-render\examples\html
+[10/05 23:27:48] [INFO] [Plugin::LuaModule::loadModule] load script module [luaJIT.dll]
+[10/05 23:27:48] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2::module] Rendering 1 uncached requests for effect_id 153
+[10/05 23:27:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Starting web-render-cef server on port 61902
+[10/05 23:27:48] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Launching web-render-cef server: Command { std: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Plugin\\web-render\\web-render-cef-server.exe" "--port" "61902" "--parent-process" "50128", kill_on_drop: true }
+[10/05 23:27:51] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:51.072458Z  INFO main ThreadId(01) web_render_cef_server::cef_app: launch browser process 56796
+[10/05 23:27:51] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:51.553628Z  INFO main ThreadId(01) web_render_cef_server: Starting gRPC server on [::1]:61902
+[10/05 23:27:52] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:52.106741Z  INFO main ThreadId(01) web_render_cef_server::server: Received initialize request: InitializeRequest { root_path: "E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\html" }
+[10/05 23:27:52] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:52.114443Z  INFO main ThreadId(01) web_render_cef_server::server: Started vi5 process with PID: 52596
+[10/05 23:27:52] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:52.638358Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Loading URL for initialization: http://localhost:61930/vi5
+[10/05 23:27:54] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:54.833292Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:27:54] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:54.833345Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:27:55] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:55.487068Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 1, 0, 0, 255, 0, 54, 1, 255, 0, 0, 10, 255, 225, 1, 18, 255]
+[10/05 23:27:55] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:27:55.487217Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 1 processed frame, waiting for more frames
+[10/05 23:27:56] [ERROR] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stderr] [56796:43804:1005/232756.288:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+[10/05 23:28:23] [ERROR] [Plugin::web-render.aux2] [web_render_aux2] Failed to initialize project directory: web-render-cef クライアントの初期化に失敗しました: code: 'Internal error', message: "Initialization failed: Timeout waiting for initialization"
+[10/05 23:28:23] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:28:23.168371Z  INFO main ThreadId(01) web_render_cef_server::server: Received batch render request: BatchRenderRequest { render_requests: [RenderRequest { render_nonce: 1, object: "frame-proof", object_id: 153, frame_info: Some(FrameInfo { x: 0.0, y: 0.0, z: 0.0, screen_width: 1920, screen_height: 1080, current_frame: 0, current_time: 0.0, total_frames: 150, total_time: 5.0, framerate: 30.0, global_frame: 0, global_time: 0.0 }), parameters: [Parameter { key: "caption", value: Some(TextValue("Frame proof")) }], is_offline: false }] }
+[10/05 23:28:23] [SCRIPT] [フレーム検証] Batch render failed: code: 'Internal error', message: "Frame render failed: RenderLoop is not initialized"
+[10/05 23:28:23] [WARN] [Effect::ScriptInput::inputVideo] script exception: [string "local WEB_RENDER_AUX2_caption="Frame proof";l..."]:120: Batch render failed: code: 'Internal error', message: "Frame render failed: RenderLoop is not initialized"
+[10/05 23:28:23] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:28:23.416571Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:28:23] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:28:23.416609Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:28:24] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:28:24.055441Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 1, 0, 0, 255, 0, 59, 0, 255, 0, 0, 10, 255, 57, 10, 55, 255]
+[10/05 23:28:24] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:28:24.055525Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 1 processed frame, waiting for more frames

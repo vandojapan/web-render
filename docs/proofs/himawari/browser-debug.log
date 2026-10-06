@@ -1,0 +1,25 @@
+CONSOLE debug [vite] connecting...
+CONSOLE info 2026-10-05 16:15:00.576 +00:00 [info] [vi5]: Vi5 Client Runtime initializing...
+CONSOLE info 2026-10-05 16:15:00.577 +00:00 [info] [vi5]: Loading object module: /src/objects/drum.object.ts
+CONSOLE info 2026-10-05 16:15:00.578 +00:00 [info] [vi5]: Loading object module: /src/objects/kaiwaiPhrase.object.ts
+CONSOLE info 2026-10-05 16:15:00.578 +00:00 [info] [vi5]: Loading object module: /src/objects/synthSolo.object.ts
+CONSOLE debug [vite] connected.
+CONSOLE error Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED
+CONSOLE info 2026-10-05 16:15:00.657 +00:00 [info] [vi5][Vi5Runtime]: Registering object: "drum" ("Drum")
+CONSOLE info 2026-10-05 16:15:00.657 +00:00 [info] [vi5][Vi5Runtime]: Purging context cache (0 contexts)
+CONSOLE info 2026-10-05 16:15:00.657 +00:00 [info] [vi5][Vi5Runtime]: Registering object: "synth-solo" ("Synth Solo")
+CONSOLE info 2026-10-05 16:15:00.657 +00:00 [info] [vi5][Vi5Runtime]: Purging context cache (0 contexts)
+CONSOLE info 2026-10-05 16:15:00.657 +00:00 [info] [vi5][Vi5Runtime]: Registering object: "kaiwai-phrase" ("Kaiwai Phrase")
+CONSOLE info 2026-10-05 16:15:00.657 +00:00 [info] [vi5][Vi5Runtime]: Purging context cache (0 contexts)
+CONSOLE info 2026-10-05 16:15:00.658 +00:00 [info] [vi5]: Vi5 Client Runtime initialized.
+CONSOLE debug 2026-10-05 16:15:00.675 +00:00 [debug] [vi5][Vi5Runtime]: Sending message with nonce 0 and length 22
+CONSOLE debug 2026-10-05 16:15:00.689 +00:00 [debug] [vi5][disposableCounter]: Created counter, total count: 1
+CONSOLE debug 2026-10-05 16:15:00.690 +00:00 [debug] [vi5][Vi5Runtime]: Sending message with nonce 1 and length 248
+CONSOLE debug 2026-10-05 16:15:00.690 +00:00 [debug] [vi5][disposableCounter]: Disposed counter, total count: 0
+CONSOLE warning 2026-10-05 16:15:00.836 +00:00 [warning] [vi5][Vi5Runtime]: Unknown parameter value case: undefined
+CONSOLE debug 2026-10-05 16:15:00.849 +00:00 [debug] [vi5][Vi5Runtime]: Adding new temporary canvas (pool size: 1)
+CONSOLE debug 2026-10-05 16:15:00.849 +00:00 [debug] [vi5][Vi5Runtime]: Resizing temporary canvas to height 184
+CONSOLE debug 2026-10-05 16:15:00.852 +00:00 [debug] [vi5][Vi5Runtime]: Sending message with nonce 123 and length 15
+CONSOLE debug 2026-10-05 16:15:00.852 +00:00 [debug] [vi5][Vi5Runtime]: Rendered object 21 at (0, 64) with size 64x184
+RESULT completed
+{"canvases":[[4096,2304],[64,184]],"p5":"undefined"}

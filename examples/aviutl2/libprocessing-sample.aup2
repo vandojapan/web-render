@@ -1,0 +1,256 @@
+[project]
+version=2011200
+file=\\?\E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\libprocessing-sample.aup2
+display.scene=0
+preview.scene=0
+display.scene.list.label=
+[scene.0]
+scene=0
+name=Root
+label=
+video.width=1920
+video.height=1080
+video.rate=30
+video.scale=1
+audio.rate=44100
+output.audio=0
+select.start=435
+select.end=435
+cursor.frame=435
+cursor.layer=0
+preview.frame=0
+display.frame=0
+display.layer=0
+display.zoom=10000
+display.order=0
+display.camera=
+display.grid.x=16,-16
+display.grid.y=16,-16
+display.grid.width=200
+display.grid.height=200
+display.grid.step=200.000000
+display.grid.range=10000.000000
+display.tempo.bpm=120.000000
+display.tempo.beat=4
+display.tempo.start=0.000000
+display.tempo.offset=0.000000
+[0]
+layer=0
+frame=0,59
+name=Native Shapes Default native test
+[0.0]
+effect.name=Native Shapes Default
+個数=1000
+Batch Size=1
+Freeze=0
+[0.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[1]
+layer=0
+frame=60,119
+name=Native Shapes noSmooth native test
+[1.0]
+effect.name=Native Shapes noSmooth
+個数=1000
+Batch Size=1
+Freeze=0
+[1.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[2]
+layer=0
+frame=120,179
+name=Native Text Default native test
+[2.0]
+effect.name=Native Text Default
+個数=100
+Batch Size=1
+Freeze=0
+[2.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[3]
+layer=0
+frame=180,239
+name=Native Text noSmooth native test
+[3.0]
+effect.name=Native Text noSmooth
+個数=100
+Batch Size=1
+Freeze=0
+[3.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[4]
+layer=0
+frame=240,299
+name=Native Image Default native test
+[4.0]
+effect.name=Native Image Default
+個数=1
+Batch Size=1
+Freeze=0
+[4.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[5]
+layer=0
+frame=300,359
+name=Native Image noSmooth native test
+[5.0]
+effect.name=Native Image noSmooth
+個数=1
+Batch Size=1
+Freeze=0
+[5.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[6]
+layer=0
+frame=360,419
+name=Native Alpha noSmooth native test
+[6.0]
+effect.name=Native Alpha noSmooth
+個数=1
+Batch Size=1
+Freeze=0
+[6.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[7]
+layer=0
+frame=420,479
+name=Native Animated noSmooth native test
+[7.0]
+effect.name=Native Animated noSmooth
+個数=1000
+Batch Size=1
+Freeze=0
+[7.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+Group3=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+Group2=1
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[plugin.0]
+plugin.name=web-render
+project_dir=--aviutl2-rs:serde-rmp-base64-v1:71
+--aviutl2-rs:serde-base64-chunk:project_dir:0=2UVFOlxEb3dubG9hZHNcd2ViX3JlbmRlcl9hdXgyX3Byb3RvdHlwZVx3ZWItcmVuZGVyXGV4YW1wbGVzXHByb2Nlc3Npbmc=

@@ -1,0 +1,24 @@
+[package]
+name = "web-render-cef"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+prost = "0.14.3"
+tonic = { version = "0.14.3", features = ["transport", "gzip"] }
+thiserror = "2.0.18"
+tonic-prost = "0.14.3"
+tokio = { version = "1.49.0", features = ["time"] }
+tracing = "0.1.44"
+tap = "1.0.1"
+
+[build-dependencies]
+prost-build = "0.14.3"
+tonic-prost-build = "0.14.3"
+protoc-bin-vendored = "3.2.0"
+
+[dev-dependencies]
+anyhow = "1.0.100"
+serde_json = "1.0.149"
+tokio = { version = "1.49.0", features = ["rt", "process", "macros"] }
+image = { version = "0.25.9", default-features = false, features = ["png"] }

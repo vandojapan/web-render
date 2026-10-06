@@ -1,0 +1,94 @@
+// common
+
+syntax = "proto3";
+
+package common;
+
+message Void {}
+
+message RenderRequest {
+  int32 render_nonce = 1;
+  string object = 2;
+  int64 object_id = 3;
+  FrameInfo frame_info = 4;
+  repeated Parameter parameters = 5;
+  bool is_offline = 6;
+}
+
+message FrameInfo {
+  double x = 1;
+  double y = 2;
+  double z = 3;
+  int32 screen_width = 4;
+  int32 screen_height = 5;
+  int32 current_frame = 6;
+  double current_time = 7;
+  int32 total_frames = 8;
+  double total_time = 9;
+  double framerate = 10;
+  int32 global_frame = 11;
+  double global_time = 12;
+}
+
+message Parameter {
+  string key = 1;
+  oneof value {
+    string str_value = 2;
+    string text_value = 3;
+    double number_value = 4;
+    bool bool_value = 5;
+    Color color_value = 6;
+  }
+}
+
+message Color {
+  uint32 r = 1;
+  uint32 g = 2;
+  uint32 b = 3;
+  uint32 a = 4;
+}
+
+message ObjectInfo {
+  string id = 1;
+  string label = 2;
+  repeated ParameterDefinition parameter_definitions = 3;
+}
+
+message ParameterString {}
+message ParameterText {}
+message ParameterBoolean {}
+
+enum NumberStep {
+  NUMBER_STEP_ONE = 0;
+  NUMBER_STEP_POINT_ONE = 1;
+  NUMBER_STEP_POINT_ZERO_ONE = 2;
+  NUMBER_STEP_POINT_ZERO_ZERO_ONE = 3;
+}
+
+message ParameterNumber {
+  NumberStep step = 1;
+  double min = 2;
+  double max = 3;
+}
+message ParameterColor {}
+
+message ParameterType {
+  oneof kind {
+    ParameterString string = 1;
+    ParameterText text = 2;
+    ParameterBoolean boolean = 3;
+    ParameterNumber number = 4;
+    ParameterColor color = 5;
+  }
+}
+
+message ParameterDefinition {
+  string key = 1;
+  ParameterType type = 2;
+  string label = 3;
+  Parameter default_value = 4;
+}
+
+message BatchRenderRequest {
+  repeated common.RenderRequest render_requests = 1;
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "format": 1,
+  "ppq": 480,
+  "raw_tracks": 15,
+  "tonejs_tracks": 14,
+  "notes": 184,
+  "bars": 8,
+  "duration_seconds": 14.4,
+  "duration_ticks": 15360,
+  "tempo_change": {
+    "tick": 7680,
+    "time": 8,
+    "from_bpm": 120,
+    "to_bpm": 150
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "drums",
+      "notes": 0,
+      "pitch_bends": 0
+    },
+    {
+      "index": 1,
+      "name": "sub-cymbal-a",
+      "notes": 8,
+      "pitch_bends": 0
+    },
+    {
+      "index": 2,
+      "name": "sub-cymbal-b",
+      "notes": 8,
+      "pitch_bends": 0
+    },
+    {
+      "index": 3,
+      "name": "drums-unused",
+      "notes": 0,
+      "pitch_bends": 0
+    },
+    {
+      "index": 4,
+      "name": "cymbal-a",
+      "notes": 8,
+      "pitch_bends": 0
+    },
+    {
+      "index": 5,
+      "name": "cymbal-b",
+      "notes": 8,
+      "pitch_bends": 0
+    },
+    {
+      "index": 6,
+      "name": "main-drums-a",
+      "notes": 32,
+      "pitch_bends": 0
+    },
+    {
+      "index": 7,
+      "name": "main-drums-b",
+      "notes": 64,
+      "pitch_bends": 0
+    },
+    {
+      "index": 8,
+      "name": "synth",
+      "notes": 0,
+      "pitch_bends": 0
+    },
+    {
+      "index": 9,
+      "name": "synth-unused",
+      "notes": 0,
+      "pitch_bends": 0
+    },
+    {
+      "index": 10,
+      "name": "synth-a",
+      "notes": 16,
+      "pitch_bends": 64
+    },
+    {
+      "index": 11,
+      "name": "synth-b",
+      "notes": 16,
+      "pitch_bends": 64
+    },
+    {
+      "index": 12,
+      "name": "Kaiwai Phrase",
+      "notes": 0,
+      "pitch_bends": 0
+    },
+    {
+      "index": 13,
+      "name": "phrase-notes",
+      "notes": 24,
+      "pitch_bends": 0
+    }
+  ],
+  "original_source_and_midi_unchanged": true,
+  "object_and_util_typescript_unchanged": true,
+  "sha256": "3121fb2c7a0c730a7a63f5279a54e7d9fe203627e88a47f90d006c2d4a7342b0"
+}

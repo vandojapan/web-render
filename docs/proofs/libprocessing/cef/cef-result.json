@@ -1,0 +1,81 @@
+{
+  "graceful_shutdown": true,
+  "includes": "JS, CEF CPU paint/readback, compression, IPC, decoding; PNG encoding excluded",
+  "init_ms": 23862.8383,
+  "renderer": "1.0.0",
+  "results": [
+    {
+      "first_frame_ms": 634.1419000000001,
+      "height": 1080,
+      "median_ms": 105.8783,
+      "p95_ms": 117.1943,
+      "samples": 60,
+      "scene": "shapes",
+      "width": 1920,
+      "same_frame_samples": 10,
+      "same_frame_redraw_median_ms": 110.55669999999999,
+      "host_frame_cache_present": false
+    },
+    {
+      "first_frame_ms": 111.31009999999999,
+      "height": 1080,
+      "median_ms": 99.87,
+      "p95_ms": 107.6264,
+      "samples": 60,
+      "scene": "text",
+      "width": 1920,
+      "same_frame_samples": 10,
+      "same_frame_redraw_median_ms": 99.41940000000001,
+      "host_frame_cache_present": false
+    },
+    {
+      "first_frame_ms": 112.4016,
+      "height": 1080,
+      "median_ms": 95.2447,
+      "p95_ms": 102.453,
+      "samples": 60,
+      "scene": "image",
+      "width": 1920,
+      "same_frame_samples": 10,
+      "same_frame_redraw_median_ms": 100.1319,
+      "host_frame_cache_present": false
+    },
+    {
+      "first_frame_ms": 628.2429000000001,
+      "height": 2160,
+      "median_ms": 194.42860000000002,
+      "p95_ms": 212.91060000000002,
+      "samples": 60,
+      "scene": "shapes",
+      "width": 3840,
+      "same_frame_samples": 10,
+      "same_frame_redraw_median_ms": 196.36690000000002,
+      "host_frame_cache_present": false
+    },
+    {
+      "first_frame_ms": 193.14319999999998,
+      "height": 2160,
+      "median_ms": 186.166,
+      "p95_ms": 206.328,
+      "samples": 60,
+      "scene": "text",
+      "width": 3840,
+      "same_frame_samples": 10,
+      "same_frame_redraw_median_ms": 190.8504,
+      "host_frame_cache_present": false
+    },
+    {
+      "first_frame_ms": 151.61769999999999,
+      "height": 2160,
+      "median_ms": 153.9503,
+      "p95_ms": 173.64270000000002,
+      "samples": 60,
+      "scene": "image",
+      "width": 3840,
+      "same_frame_samples": 10,
+      "same_frame_redraw_median_ms": 152.9701,
+      "host_frame_cache_present": false
+    }
+  ],
+  "status": "passed"
+}

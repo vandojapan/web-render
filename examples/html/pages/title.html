@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}
+body{font-family:Arial,"Yu Gothic",sans-serif;color:white;--accent:rgb(255,70,130)}
+.card{position:absolute;inset:12%;padding:5%;border:3px solid var(--accent);border-radius:32px;
+background:rgba(20,18,40,.78);box-shadow:0 0 45px var(--accent);display:flex;flex-direction:column;justify-content:center;
+animation:entry 1s both cubic-bezier(.16,1,.3,1)}
+small{font-size:clamp(16px,2vw,42px);letter-spacing:.25em;color:var(--accent)}
+h1{font-size:clamp(32px,6vw,130px);line-height:1.15;white-space:pre-wrap;margin:.3em 0}
+#info{font-variant-numeric:tabular-nums;font-size:clamp(12px,1.8vw,38px)}
+.line{height:4px;width:100%;background:var(--accent);transform-origin:left;animation:line 3s linear infinite}
+@keyframes entry{from{opacity:0;transform:translateY(100px) scale(.85)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+</style></head><body><main class="card"><small>CHROMIUM / HTML / CSS / SVG</small>
+<h1 id="title"></h1><p id="info"></p><div class="line"></div></main><script>
+window.aviutl={render(frame,params){
+ document.querySelector('#title').textContent=params.title;
+ const c=params.accent;document.body.style.setProperty('--accent',`rgba(${c.r},${c.g},${c.b},${c.a/255})`);
+ document.querySelector('#info').textContent=`FRAME ${frame.currentFrame} · TIME ${frame.currentTime.toFixed(3)}s`;
+}};
+</script></body></html>

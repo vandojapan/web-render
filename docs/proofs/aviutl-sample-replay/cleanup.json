@@ -1,0 +1,6 @@
+﻿{
+    "replay":  "passed",
+    "image_files_identical":  5,
+    "close":  "WM_CLOSE posted; no accessible confirmation window; stopped owned host after verified backup",
+    "native_reload_exception_after_fix":  false
+}

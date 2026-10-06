@@ -1,0 +1,63 @@
+// web-render-cef-server to vi5.js
+
+syntax = "proto3";
+package serverjs;
+
+import "common.proto";
+
+message InitializeInfo {
+  string project_name = 1;
+  string renderer_version = 2;
+}
+
+message RendereredObjectInfo {
+  int32 x = 1;
+  int32 y = 2;
+  int32 width = 3;
+  int32 height = 4;
+}
+message SingleRenderResponse {
+  int32 nonce = 1;
+  oneof response {
+    RendereredObjectInfo renderered_object_info = 2;
+    string error_message = 3;
+  }
+}
+
+message RootRenderResponse {
+  oneof response {
+    MaybeIncompleteRenderResponse success = 1;
+    string error_message = 2;
+  }
+}
+
+enum LogLevel {
+  LOG_LEVEL_INFO = 0;
+  LOG_LEVEL_WARN = 1;
+  LOG_LEVEL_ERROR = 2;
+}
+
+message Log {
+  LogLevel level = 1;
+  string message = 2;
+}
+
+message ObjectListUpdateNotification {
+  repeated common.ObjectInfo object_infos = 1;
+}
+
+message NotificationEntry {
+  oneof entry {
+    Log log = 1;
+    ObjectListUpdateNotification object_list_update = 2;
+  }
+}
+
+message Notifications {
+  repeated NotificationEntry entries = 1;
+}
+
+message MaybeIncompleteRenderResponse {
+  repeated SingleRenderResponse render_responses = 1;
+  bool is_incomplete = 2;
+}

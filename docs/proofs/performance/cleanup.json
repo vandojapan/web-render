@@ -1,0 +1,9 @@
+{
+    "checked_at":  "2026-10-06T02:10:07.6884496+09:00",
+    "remaining_owned_host_or_cef":  0,
+    "default_debug_deployed_sha256":  "5D2F01A55AAC40FD179F45BF12ECD932B04E5B54BF8074E1D022CFA67085D161",
+    "deployed_matches_default_package":  true,
+    "runtime_debug":  false,
+    "normal_user_installation_modified":  false,
+    "host_shutdown":  "Normal WM_CLOSE after SDK replay; CEF exit 0. See aviutl-after/host-log.txt."
+}

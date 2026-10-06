@@ -1,0 +1,41 @@
+{
+  "host_matches_independent_gpu": [
+    {
+      "bytes": 8294400,
+      "different_bytes": 0,
+      "mode": "default",
+      "scene": "shapes"
+    },
+    {
+      "bytes": 8294400,
+      "different_bytes": 0,
+      "mode": "default",
+      "scene": "text"
+    },
+    {
+      "bytes": 8294400,
+      "different_bytes": 0,
+      "mode": "default",
+      "scene": "image"
+    },
+    {
+      "bytes": 8294400,
+      "different_bytes": 0,
+      "mode": "no-smooth",
+      "scene": "shapes"
+    },
+    {
+      "bytes": 8294400,
+      "different_bytes": 0,
+      "mode": "no-smooth",
+      "scene": "text"
+    },
+    {
+      "bytes": 8294400,
+      "different_bytes": 0,
+      "mode": "no-smooth",
+      "scene": "image"
+    }
+  ],
+  "status": "passed"
+}

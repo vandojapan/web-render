@@ -1,0 +1,205 @@
+{
+  "effect": "MIDI Pattern Grid",
+  "frames": [
+    {
+      "colored_pixels_per_cell": [
+        4096,
+        3264,
+        1611,
+        1792,
+        2236,
+        2236,
+        1440,
+        1440,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame": 53
+    },
+    {
+      "colored_pixels_per_cell": [
+        4096,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame": 0
+    },
+    {
+      "colored_pixels_per_cell": [
+        1714,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4096,
+        3264,
+        1611,
+        1792,
+        2236,
+        2236,
+        1440,
+        1440
+      ],
+      "frame": 60
+    },
+    {
+      "colored_pixels_per_cell": [
+        1714,
+        824,
+        1624,
+        1543,
+        4096,
+        0,
+        0,
+        0,
+        2048,
+        1631,
+        806,
+        896,
+        1118,
+        1118,
+        720,
+        720
+      ],
+      "frame": 85
+    },
+    {
+      "colored_pixels_per_cell": [
+        2236,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1714,
+        824,
+        1624,
+        1543,
+        4096,
+        3264,
+        1611,
+        1792
+      ],
+      "frame": 108
+    },
+    {
+      "colored_pixels_per_cell": [
+        2236,
+        2236,
+        1440,
+        1440,
+        1714,
+        824,
+        1624,
+        1571,
+        217,
+        90,
+        206,
+        199,
+        512,
+        407,
+        201,
+        224
+      ],
+      "frame": 150
+    },
+    {
+      "colored_pixels_per_cell": [
+        1714,
+        824,
+        1624,
+        1571,
+        4096,
+        0,
+        0,
+        0,
+        2048,
+        1648,
+        864,
+        896,
+        1147,
+        1118,
+        600,
+        660
+      ],
+      "frame": 85
+    },
+    {
+      "colored_pixels_per_cell": [
+        1714,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4096,
+        3297,
+        1728,
+        1792,
+        2293,
+        2236,
+        1200,
+        1320
+      ],
+      "frame": 60
+    },
+    {
+      "colored_pixels_per_cell": [
+        4096,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "frame": 0
+    }
+  ],
+  "height": 1080,
+  "p5_canvas_height": 200,
+  "p5_canvas_width": 824,
+  "project": "E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\aviutl2\\p5-midi-sample.aup2",
+  "repeated_differences": [
+    85,
+    60
+  ],
+  "reverse_seek_full_rgba": false,
+  "status": "issues_detected",
+  "width": 1920
+}

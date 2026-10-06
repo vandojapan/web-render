@@ -1,0 +1,18 @@
+{
+    "checked_at":  "2026-10-06T11:02:37.8287224+09:00",
+    "remaining_owned_host_or_cef":  0,
+    "runtime_debug":  false,
+    "deployed_matches_default_debug":  true,
+    "deployed_hashes":  [
+                            {
+                                "name":  "web-render.aux2",
+                                "sha256":  "6E1B8E313CA20F962472266940910702FC7DF1ED86CFFB9D61FF397B48771B20"
+                            },
+                            {
+                                "name":  "web-render-cef-server.exe",
+                                "sha256":  "7F3ED0AFD999F4F7E78C8976D1C2BB2C2B1D6B868ED3BB298D2142889BE5AD75"
+                            }
+                        ],
+    "normal_user_installation_modified":  false,
+    "host_shutdown":  "Normal WM_CLOSE after SDK replay; CEF exit 0."
+}

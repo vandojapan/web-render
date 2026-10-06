@@ -1,0 +1,9 @@
+/target/
+/dist/
+/node_modules/
+**/node_modules/
+/.aviutl2-cli/
+/.aviutl2-runtime.toml
+/tests/*-proof.png
+**/.vite/
+/.local-tests/

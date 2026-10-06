@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-07",
+  "status": "passed",
+  "commit": "0b1a55dd2010a7f170b010ac5fceb48aed7f8d9e",
+  "checks": {
+    "native_release_build": true,
+    "gpu_image_semantics": true,
+    "late_warmup_keeps_configuration_locked": true,
+    "ffi_error_state_test": true,
+    "c17_example_msvc_w4_wx": true,
+    "rustfmt": true,
+    "unchanged_default_golden_images": 6,
+    "repeat_native_images_identical": 12,
+    "cef_ipc_requests": 480,
+    "cef_graceful_shutdown": true,
+    "patch_reverse_apply_check": true
+  },
+  "unverified": [
+    "native AviUtl2 adapter/preview/seek/export",
+    "wasm32 build and browser execution",
+    "Python bindings",
+    "native/host cache-hit timing",
+    "exact GPU timestamp timing"
+  ],
+  "artifacts": {
+    "patch_sha256": "95745f45b47c48e480bbe7bba5d497f9aaeb626279c5668f604c80c0f6cd2839",
+    "header_sha256": "44d908b720cc5dede3c297e42737feff49d07f4a016468ff1b1ba7d0595e14b4",
+    "gpu_verify_exe_sha256": "47b0677dd08705710b1e601981bf0814548ad9708ab8e4430dbf26d1a37cf200",
+    "benchmark_exe_sha256": "06c5b238dba2a396223894ffac3728c07f4f32db61887b3662c0978e9647f9e7"
+  }
+}

@@ -1,0 +1,13 @@
+2026-10-06T15:25:27.760320Z  INFO bevy_diagnostic::system_information_diagnostics_plugin::internal: SystemInfo { os: "Windows 11 Pro", kernel: "26200", cpu: "AMD Ryzen 7 7700 8-Core Processor", core_count: "8", memory: "31.2 GiB" }
+2026-10-06T15:25:27.779306Z  WARN bevy_asset::io::source: Skip creating file watcher because path "E:\\Downloads\\web_render_aux2_prototype\\web-render\\native\\libprocessing\\target\\release\\examples\\assets" does not exist.
+2026-10-06T15:25:27.786578Z  WARN bevy_asset::io::source: AssetSourceId::Default does not have an AssetWatcher configured. Consider adding an "assets" directory.
+2026-10-06T15:25:28.089324Z  INFO wgpu_hal::vulkan::adapter: Found 6 cooperative matrix configurations supported by wgpu
+2026-10-06T15:25:28.090942Z  INFO wgpu_hal::vulkan::adapter: Found 3 cooperative matrix configurations supported by wgpu
+2026-10-06T15:25:28.662748Z  INFO bevy_render::renderer: AdapterInfo { name: "NVIDIA GeForce RTX 4070 Ti SUPER", vendor: 4318, device: 9989, device_type: DiscreteGpu, device_pci_bus_id: "0000:01:00.0", driver: "NVIDIA", driver_info: "591.86", backend: Vulkan, subgroup_min_size: 32, subgroup_max_size: 32, transient_saves_memory: false }
+2026-10-06T15:25:29.133139Z  INFO bevy_pbr::cluster: GPU clustering is supported on this device.
+2026-10-06T15:25:29.133789Z  INFO bevy_render::batching::gpu_preprocessing: GPU preprocessing is fully supported on this device.
+2026-10-06T15:25:29.175138Z  INFO bevy_input::gamepad: Gamepad 407v0 connected.
+effective_msaa=Some(Off)
+BENCH_START
+BENCH_END
+shapes 1920x1080: median=9.893ms p95=11.892ms init=2234.628ms

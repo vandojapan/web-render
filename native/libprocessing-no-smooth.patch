@@ -1,0 +1,1389 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index be9f10d..9b0f71e 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -288,3 +288,11 @@ inherits = "release"
+ opt-level = "z"
+ lto = "fat"
+ codegen-units = 1
++
++[[example]]
++name = "smooth_probe"
++path = "examples/smooth_probe.rs"
++
++[[example]]
++name = "no_smooth_verify"
++path = "examples/no_smooth_verify.rs"
+diff --git a/crates/processing_ffi/src/lib.rs b/crates/processing_ffi/src/lib.rs
+index f78a866..6fd67ce 100644
+--- a/crates/processing_ffi/src/lib.rs
++++ b/crates/processing_ffi/src/lib.rs
+@@ -16,6 +16,33 @@ unsafe fn cstr_to_str<'a>(ptr: *const std::ffi::c_char) -> Result<&'a str, Proce
+         .map_err(|_| ProcessingError::InvalidArgument("non-UTF8 C string".to_string()))
+ }
+ 
++#[cfg(test)]
++mod smoothing_abi_tests {
++    use super::*;
++    fn last_error() -> String {
++        let ptr = error::processing_check_error();
++        assert!(!ptr.is_null());
++        unsafe { std::ffi::CStr::from_ptr(ptr) }
++            .to_str()
++            .unwrap()
++            .to_owned()
++    }
++    #[test]
++    fn invalid_modes_replace_the_c_error_state() {
++        let id = Entity::PLACEHOLDER.to_bits();
++        processing_graphics_set_antialiasing(id, 255);
++        assert!(last_error().contains("unknown antialiasing: 255"));
++        processing_graphics_set_image_sampling(id, 254);
++        assert!(last_error().contains("unknown image sampling: 254"));
++        // A later call must report its own error, not leave the old mode error.
++        // No App is initialized in this ABI-only test.
++        processing_graphics_no_smooth(id);
++        assert!(!last_error().contains("unknown image sampling"));
++        error::clear_error();
++        assert!(error::processing_check_error().is_null());
++    }
++}
++
+ /// Initialize libProcessing.
+ ///
+ /// SAFETY:
+@@ -177,6 +204,38 @@ pub extern "C" fn processing_graphics_create(surface_id: u64, width: u32, height
+         .unwrap_or(0)
+ }
+ 
++/// Configure before begin_draw/command recording. 0=Default (4 samples), 1=Off.
++/// Invalid values and late changes set processing's existing error state.
++#[unsafe(no_mangle)]
++pub extern "C" fn processing_graphics_set_antialiasing(graphics_id: u64, mode: u8) {
++    error::clear_error();
++    error::check(|| {
++        graphics_set_antialiasing(
++            Entity::from_bits(graphics_id),
++            Antialiasing::try_from(mode)?,
++        )
++    });
++}
++
++/// Configure before first draw. 0=inherit image, 1=Linear, 2=Nearest.
++#[unsafe(no_mangle)]
++pub extern "C" fn processing_graphics_set_image_sampling(graphics_id: u64, mode: u8) {
++    error::clear_error();
++    error::check(|| {
++        graphics_set_image_sampling(
++            Entity::from_bits(graphics_id),
++            ImageSampling::try_from(mode)?,
++        )
++    });
++}
++
++/// Atomic Off + Nearest, before the first user draw.
++#[unsafe(no_mangle)]
++pub extern "C" fn processing_graphics_no_smooth(graphics_id: u64) {
++    error::clear_error();
++    error::check(|| graphics_no_smooth(Entity::from_bits(graphics_id)));
++}
++
+ /// Destroy a graphics context.
+ ///
+ /// SAFETY:
+diff --git a/crates/processing_render/src/graphics.rs b/crates/processing_render/src/graphics.rs
+index c8005e7..c9becfa 100644
+--- a/crates/processing_render/src/graphics.rs
++++ b/crates/processing_render/src/graphics.rs
+@@ -217,6 +217,7 @@ pub fn create(
+         render_layer,
+         CommandBuffer::new(),
+         RenderState::default(),
++        crate::smoothing::Smoothing::default(),
+         crate::color::ColorMode::default(),
+         SurfaceSize(width, height),
+         Graphics {
+@@ -529,11 +530,15 @@ pub fn destroy(
+     Ok(())
+ }
+ 
+-pub fn begin_draw(In(entity): In<Entity>, mut state_query: Query<&mut RenderState>) -> Result<()> {
+-    let mut state = state_query
++pub fn begin_draw(
++    In(entity): In<Entity>,
++    mut state_query: Query<(&mut RenderState, &mut crate::smoothing::Smoothing)>,
++) -> Result<()> {
++    let (mut state, mut smoothing) = state_query
+         .get_mut(entity)
+         .map_err(|_| ProcessingError::GraphicsNotFound)?;
+     state.begin_frame();
++    smoothing.started = true;
+     Ok(())
+ }
+ 
+@@ -578,6 +583,10 @@ pub fn screen_point(
+ }
+ 
+ pub fn flush(app: &mut App, entity: Entity) -> Result<()> {
++    app.world_mut()
++        .get_mut::<crate::smoothing::Smoothing>(entity)
++        .ok_or(ProcessingError::GraphicsNotFound)?
++        .started = true;
+     graphics_mut!(app, entity).insert(Flush);
+     app.update();
+     graphics_mut!(app, entity).remove::<Flush>();
+@@ -619,6 +628,11 @@ pub fn end_draw(app: &mut App, entity: Entity) -> Result<()> {
+ ///
+ // TODO: why is metal particularly affected by this? can we remove this?
+ pub fn warmup(app: &mut App, entity: Entity) -> Result<()> {
++    let started = app
++        .world()
++        .get::<crate::smoothing::Smoothing>(entity)
++        .ok_or(ProcessingError::GraphicsNotFound)?
++        .started;
+     for _ in 0..3 {
+         app.world_mut()
+             .run_system_cached_with(
+@@ -628,18 +642,25 @@ pub fn warmup(app: &mut App, entity: Entity) -> Result<()> {
+             .unwrap()?;
+         flush(app, entity)?;
+     }
++    // Library initialization is not the first user draw. A later warmup must
++    // preserve an already locked context rather than unlock its configuration.
++    app.world_mut()
++        .get_mut::<crate::smoothing::Smoothing>(entity)
++        .unwrap()
++        .started = started;
+     Ok(())
+ }
+ 
+ pub fn record_command(
+     In((graphics_entity, cmd)): In<(Entity, DrawCommand)>,
+-    mut graphics_query: Query<&mut CommandBuffer>,
++    mut graphics_query: Query<(&mut CommandBuffer, &mut crate::smoothing::Smoothing)>,
+ ) -> Result<()> {
+-    let mut command_buffer = graphics_query
++    let (mut command_buffer, mut smoothing) = graphics_query
+         .get_mut(graphics_entity)
+         .map_err(|_| ProcessingError::GraphicsNotFound)?;
+ 
+     command_buffer.push(cmd);
++    smoothing.started = true;
+     Ok(())
+ }
+ 
+diff --git a/crates/processing_render/src/image.rs b/crates/processing_render/src/image.rs
+index 4945b3b..e73fbe9 100644
+--- a/crates/processing_render/src/image.rs
++++ b/crates/processing_render/src/image.rs
+@@ -562,6 +562,27 @@ pub fn set_sampler(
+         .get_mut(&p_image.handle)
+         .ok_or(ProcessingError::ImageNotFound)?;
+ 
++    let mut descriptor = ImageSamplerDescriptor::default();
++    set_sampler_filters(&mut descriptor, filter)?;
++    let addr_mode = |v: u8| match v {
++        0 => Ok(ImageAddressMode::ClampToEdge),
++        1 => Ok(ImageAddressMode::Repeat),
++        2 => Ok(ImageAddressMode::MirrorRepeat),
++        _ => Err(ProcessingError::InvalidArgument(format!(
++            "unknown wrap mode: {v}"
++        ))),
++    };
++    descriptor.address_mode_u = addr_mode(wrap_x)?;
++    descriptor.address_mode_v = addr_mode(wrap_y)?;
++    image.sampler = ImageSampler::Descriptor(descriptor);
++    Ok(())
++}
++
++/// Shared filter conversion for individual images and per-Graphics aliases.
++pub(crate) fn set_sampler_filters(
++    descriptor: &mut ImageSamplerDescriptor,
++    filter: u8,
++) -> Result<()> {
+     let filter_mode = match filter {
+         0 => ImageFilterMode::Linear,
+         1 => ImageFilterMode::Nearest,
+@@ -572,23 +593,13 @@ pub fn set_sampler(
+         }
+     };
+ 
+-    let addr_mode = |v: u8| match v {
+-        0 => Ok(ImageAddressMode::ClampToEdge),
+-        1 => Ok(ImageAddressMode::Repeat),
+-        2 => Ok(ImageAddressMode::MirrorRepeat),
+-        _ => Err(ProcessingError::InvalidArgument(format!(
+-            "unknown wrap mode: {v}"
+-        ))),
+-    };
+-
+-    image.sampler = ImageSampler::Descriptor(ImageSamplerDescriptor {
+-        mag_filter: filter_mode,
+-        min_filter: filter_mode,
+-        mipmap_filter: filter_mode,
+-        address_mode_u: addr_mode(wrap_x)?,
+-        address_mode_v: addr_mode(wrap_y)?,
+-        ..Default::default()
+-    });
++    descriptor.mag_filter = filter_mode;
++    descriptor.min_filter = filter_mode;
++    descriptor.mipmap_filter = filter_mode;
++    if filter_mode == ImageFilterMode::Nearest {
++        // wgpu requires Linear filters when anisotropy is greater than one.
++        descriptor.anisotropy_clamp = 1;
++    }
+ 
+     Ok(())
+ }
+diff --git a/crates/processing_render/src/lib.rs b/crates/processing_render/src/lib.rs
+index 6bbfe67..ea6f2c8 100644
+--- a/crates/processing_render/src/lib.rs
++++ b/crates/processing_render/src/lib.rs
+@@ -16,6 +16,8 @@ pub mod render;
+ pub mod shader_property;
+ pub mod shader_value;
+ pub mod sketch;
++pub mod smoothing;
++pub use smoothing::{Antialiasing, ImageSampling};
+ pub mod surface;
+ pub mod text;
+ pub mod time;
+@@ -106,6 +108,7 @@ impl Plugin for ProcessingRenderPlugin {
+             bevy::camera_controller::pan_camera::PanCameraPlugin,
+             text::font::TextPlugin,
+         ))
++        .add_plugins(smoothing::SmoothingPlugin)
+         .add_plugins(ci::CiPlugin);
+ 
+         app.add_systems(First, (clear_transient_meshes, activate_cameras))
+@@ -669,6 +672,42 @@ pub fn graphics_readback_raw(graphics_entity: Entity) -> error::Result<graphics:
+     })
+ }
+ 
++/// Configure geometry/outline-text MSAA before the first user draw.
++pub fn graphics_set_antialiasing(entity: Entity, aa: Antialiasing) -> error::Result<()> {
++    app_mut(|app| smoothing::configure(app, entity, Some(aa), None))
++}
++
++/// Configure image filters per Graphics, preserving each image's wrap modes.
++/// Default inherits the image sampler; explicit values override it.
++pub fn graphics_set_image_sampling(entity: Entity, sampling: ImageSampling) -> error::Result<()> {
++    app_mut(|app| smoothing::configure(app, entity, None, Some(sampling)))
++}
++
++/// Processing-style noSmooth: one raster sample and Nearest image sampling.
++/// Changes after begin_draw, command recording or flush return InvalidArgument.
++pub fn graphics_no_smooth(entity: Entity) -> error::Result<()> {
++    app_mut(|app| {
++        smoothing::configure(
++            app,
++            entity,
++            Some(Antialiasing::Off),
++            Some(ImageSampling::Nearest),
++        )
++    })
++}
++
++/// Read the last completed render without an extra app update/flush.
++/// Call end_draw or graphics_flush first; this does not execute queued commands.
++/// Returns tightly packed rows in the Graphics texture format.
++pub fn graphics_readback_completed_raw(entity: Entity) -> error::Result<graphics::ReadbackData> {
++    app_mut(|app| {
++        let texture = graphics::view_target(app, entity)?.main_texture().clone();
++        app.world_mut()
++            .run_system_cached_with(graphics::readback_raw, (entity, texture))
++            .unwrap()
++    })
++}
++
+ /// Read back pixel data from the graphics surface as LinearRgba.
+ pub fn graphics_readback(graphics_entity: Entity) -> error::Result<Vec<LinearRgba>> {
+     let raw = graphics_readback_raw(graphics_entity)?;
+diff --git a/crates/processing_render/src/render/mod.rs b/crates/processing_render/src/render/mod.rs
+index 0e79703..2aa0bc9 100644
+--- a/crates/processing_render/src/render/mod.rs
++++ b/crates/processing_render/src/render/mod.rs
+@@ -58,6 +58,38 @@ pub struct RenderResources<'w, 's> {
+     custom_materials: ResMut<'w, Assets<CustomMaterial>>,
+     particles_materials: ResMut<'w, Assets<crate::particles::material::ParticlesMaterial>>,
+     particle_buffers: Query<'w, 's, &'static crate::compute::Buffer>,
++    images: ResMut<'w, Assets<bevy::image::Image>>,
++    smoothing: Query<'w, 's, &'static mut crate::smoothing::Smoothing>,
++    sampling_defaults: Res<'w, crate::smoothing::SamplingDefaults>,
++    cameras: Query<'w, 's, &'static mut Camera>,
++}
++
++impl RenderResources<'_, '_> {
++    fn material(&mut self, key: &MaterialKey, graphics: Entity) -> UntypedHandle {
++        let mut key = key.clone();
++        let handle = match &mut key {
++            MaterialKey::Color {
++                background_image, ..
++            } => background_image,
++            MaterialKey::Pbr {
++                base_color_texture, ..
++            } => base_color_texture,
++            MaterialKey::Custom { .. } => unreachable!(),
++        };
++        if let Some(source) = handle {
++            if let Ok(mut smoothing) = self.smoothing.get_mut(graphics) {
++                *source =
++                    smoothing.image_handle(source, &mut self.images, &self.sampling_defaults.0);
++                // Texture alpha must remain effective in the new sampling path.
++                if smoothing.sampling != crate::ImageSampling::Default {
++                    if let MaterialKey::Color { transparent, .. } = &mut key {
++                        *transparent = true;
++                    }
++                }
++            }
++        }
++        key.to_material(&mut self.materials)
++    }
+ }
+ 
+ struct BatchState {
+@@ -164,6 +196,18 @@ pub fn flush_draw_commands(
+     for (graphics_entity, mut cmd_buffer, mut state, render_layers, projection, camera_transform) in
+         graphics.iter_mut()
+     {
++        let configured = res
++            .smoothing
++            .get_mut(graphics_entity)
++            .map(|s| {
++                s.aa != crate::Antialiasing::Default || s.sampling != crate::ImageSampling::Default
++            })
++            .unwrap_or(false);
++        if configured {
++            if let Ok(mut camera) = res.cameras.get_mut(graphics_entity) {
++                camera.clear_color = bevy::camera::ClearColorConfig::None;
++            }
++        }
+         for (raster_entity, raster_layers) in p_raster_draws.iter() {
+             if raster_layers.intersects(render_layers) {
+                 res.commands
+@@ -847,6 +891,17 @@ pub fn flush_draw_commands(
+                     flush_batch(&mut res, &mut batch, &p_material_handles);
+                 }
+                 DrawCommand::BackgroundColor(color) => {
++                    // An initial background is a render-pass clear. This avoids
++                    // a fullscreen draw, and guarantees it precedes transparent
++                    // images/text rather than competing in Bevy's depth sort.
++                    // Leave the unspecified legacy rendering path unchanged.
++                    if configured && batch.draw_index == 0 && batch.current_mesh.is_none() {
++                        if let Ok(mut camera) = res.cameras.get_mut(graphics_entity) {
++                            camera.clear_color = bevy::camera::ClearColorConfig::Custom(color);
++                        }
++                        batch.draw_index += 1;
++                        continue;
++                    }
+                     flush_batch(&mut res, &mut batch, &p_material_handles);
+ 
+                     let mesh = create_ndc_background_quad(world_from_clip, color, false);
+@@ -858,7 +913,7 @@ pub fn flush_draw_commands(
+                         uv_transform: Affine2::IDENTITY,
+                         blend_state: Some(BlendState::REPLACE),
+                     };
+-                    let material_handle = material_key.to_material(&mut res.materials);
++                    let material_handle = res.material(&material_key, graphics_entity);
+ 
+                     res.commands.spawn((
+                         Mesh3d(mesh_handle),
+@@ -887,7 +942,7 @@ pub fn flush_draw_commands(
+                         uv_transform: Affine2::IDENTITY,
+                         blend_state: Some(BlendState::REPLACE),
+                     };
+-                    let material_handle = material_key.to_material(&mut res.materials);
++                    let material_handle = res.material(&material_key, graphics_entity);
+ 
+                     res.commands.spawn((
+                         Mesh3d(mesh_handle),
+@@ -934,7 +989,7 @@ pub fn flush_draw_commands(
+                                 *blend_state,
+                             )
+                         }
+-                        _ => material_key.to_material(&mut res.materials),
++                        _ => res.material(&material_key, graphics_entity),
+                     };
+ 
+                     flush_batch(&mut res, &mut batch, &p_material_handles);
+@@ -1090,7 +1145,7 @@ pub fn flush_draw_commands(
+                                     *blend_state,
+                                 )
+                             }
+-                            _ => material_key.to_material(&mut res.materials),
++                            _ => res.material(&material_key, graphics_entity),
+                         }
+                     };
+ 
+@@ -1443,7 +1498,7 @@ fn spawn_mesh(
+             };
+             clone_custom_material_with_blend(&mut res.custom_materials, &untyped.0, *blend_state)
+         }
+-        _ => key.to_material(&mut res.materials),
++        _ => res.material(key, batch.graphics_entity),
+     };
+ 
+     res.commands.spawn((
+@@ -1672,7 +1727,7 @@ fn add_shape3d(
+         }
+         _ => {
+             let key = material_key_with_fill(state);
+-            key.to_material(&mut res.materials)
++            res.material(&key, batch.graphics_entity)
+         }
+     };
+ 
+diff --git a/crates/processing_wasm/src/lib.rs b/crates/processing_wasm/src/lib.rs
+index 4131a7a..1b8a5a1 100644
+--- a/crates/processing_wasm/src/lib.rs
++++ b/crates/processing_wasm/src/lib.rs
+@@ -80,6 +80,26 @@ pub fn js_graphics_destroy(graphics_id: u64) -> Result<(), JsValue> {
+     check(graphics_destroy(graphics_entity))
+ }
+ 
++#[wasm_bindgen(js_name = "graphicsSetAntialiasing")]
++pub fn js_graphics_set_antialiasing(graphics_id: u64, mode: u8) -> Result<(), JsValue> {
++    check(
++        Antialiasing::try_from(mode)
++            .and_then(|aa| graphics_set_antialiasing(Entity::from_bits(graphics_id), aa)),
++    )
++}
++#[wasm_bindgen(js_name = "graphicsSetImageSampling")]
++pub fn js_graphics_set_image_sampling(graphics_id: u64, mode: u8) -> Result<(), JsValue> {
++    check(
++        ImageSampling::try_from(mode).and_then(|sampling| {
++            graphics_set_image_sampling(Entity::from_bits(graphics_id), sampling)
++        }),
++    )
++}
++#[wasm_bindgen(js_name = "graphicsNoSmooth")]
++pub fn js_graphics_no_smooth(graphics_id: u64) -> Result<(), JsValue> {
++    check(graphics_no_smooth(Entity::from_bits(graphics_id)))
++}
++
+ #[wasm_bindgen(js_name = "surfaceDestroy")]
+ pub fn js_surface_destroy(window_id: u64) -> Result<(), JsValue> {
+     let window_entity = Entity::from_bits(window_id);
+diff --git a/NO_SMOOTH.md b/NO_SMOOTH.md
+new file mode 100644
+index 0000000..7c5fa53
+--- /dev/null
++++ b/NO_SMOOTH.md
+@@ -0,0 +1,121 @@
++# Per-Graphics noSmooth extension
++
++Based on Processing libprocessing `0b1a55dd2010a7f170b010ac5fceb48aed7f8d9e`,
++with its locked Processing Bevy fork (`9da7c625`, Bevy 0.19 development snapshot).
++No AviUtl2, CEF or JavaScript adapter code is added to this library.
++
++```rust
++use processing::prelude::*;
++init(Config::default())?;
++let surface = surface_create_offscreen(1920, 1080, 1., TextureFormat::Rgba8UnormSrgb)?;
++let graphics = graphics_create(surface, 1920, 1080, TextureFormat::Rgba8UnormSrgb)?;
++graphics_no_smooth(graphics)?;
++graphics_begin_draw(graphics)?;
++// graphics_record_command(...)
++graphics_end_draw(graphics)?;
++let frame = graphics_readback_completed_raw(graphics)?;
++// frame.bytes: tightly packed rows, width * 4 bytes for RGBA8.
++exit(0)?; // Drop the Bevy App/GPU resources before thread-local destruction.
++```
++
++The independent APIs are `graphics_set_antialiasing(g, Antialiasing::Off)` and
++`graphics_set_image_sampling(g, ImageSampling::Nearest)`. All return the existing
++`processing_core::error::Result`. Unknown C/WASM numeric modes return
++`InvalidArgument`; nonexistent Graphics return `GraphicsNotFound`.
++
++| Setting | Meaning |
++| --- | --- |
++| Antialiasing::Default / C value 0 | Existing Bevy MSAA default, four samples |
++| Antialiasing::Off / C value 1 | `Msaa::Off`, one sample, not zero |
++| ImageSampling::Default / C value 0 | Inherit the individual image's sampler |
++| ImageSampling::Linear / C value 1 | Override mag/min/mipmap filters with Linear |
++| ImageSampling::Nearest / C value 2 | Override mag/min/mipmap filters with Nearest |
++
++Configure before the first `begin_draw`, recorded command or flush. The internal
++three-frame initialization warmup does not lock configuration. Changing settings
++after recording starts returns `InvalidArgument` and changes neither setting.
++There is no dynamic frame-boundary switching in this version. Create a new
++Graphics to use another configuration. Leaving both settings unspecified retains
++the old rendering path, sampler and automatic dithering.
++
++An explicit Graphics filter takes precedence over `image_set_sampler`'s filter.
++The source descriptor's wrapping, LOD and comparison settings remain intact.
++Nearest sets anisotropy to one because wgpu disallows anisotropic Nearest filters.
++Aliases are cached per Graphics/source descriptor. They share the uploaded GPU
++texture and view, with their own sampler; the original image is never modified.
++Placeholder assets have MAIN_WORLD usage only, so no duplicate GPU texture or
++image upload is allocated. Aliases refresh their shared texture reference when
++the source GPU asset is replaced. Destroying Graphics releases aliases/samplers.
++
++`Off` or `Nearest` also disables Bevy's automatic `DebandDither`: otherwise an
++opaque two-color image may acquire 254 instead of 255 color values. Returning to
++Default/Linear before the first draw restores the prior dither component. This
++does not disable explicitly requested blur, bloom, filters or custom shaders.
++
++For explicitly configured Graphics, an initial `BackgroundColor` uses the camera
++render-pass clear instead of a fullscreen mesh. It removes one draw and puts the
++background before alpha blending. Subsequent backgrounds within the same command
++stream retain the upstream mesh behavior. Explicitly sampled image materials
++honor texture alpha via AlphaMode::Blend, including the user's blend-state
++override; opaque images remain opaque. The unspecified legacy image-material
++behavior is retained. Arbitrary custom materials retain their own sampler rules.
++
++Builtin filled/stroked text uses Parley layout, Skrifa outlines and Lyon meshes;
++its raster edge coverage follows camera MSAA. Lines, circles and tessellated
++shapes use the same camera. Camera3d MSAA specialization controls standard 3D
++color/depth/resolve sample counts as well. Custom shaders, particle-specific
++renderers, SDF text and external bitmap text may contain their own smoothing;
++disabling camera MSAA does not promise to remove that. Bitmap text already has
++alpha in its pixels. Preserve it; do not threshold every alpha channel.
++
++GPU RGBA8 readback is in the chosen Graphics format. For the tested
++`Rgba8UnormSrgb` render target and ordinary alpha blending, RGB is sRGB encoded
++after linear-space compositing, while alpha is linear coverage. Transparent
++composited RGB therefore contains linear-premultiplied color encoded as sRGB.
++Decode RGB to linear before unpremultiplying for a straight-alpha consumer;
++divide only when alpha is nonzero, then re-encode to sRGB. Row pitch is stripped
++by `graphics_readback_completed_raw`. Do not interpret RGBA16F/HDR data as RGBA8.
++REPLACE or arbitrary custom blend states can change this RGB/alpha relationship;
++an adapter must define its output-alpha contract for those modes separately.
++
++The old `graphics_readback_raw` still flushes pending commands. The new completed
++readback API reads the last render without another app update, and intentionally
++does not execute queued commands. Use it after `graphics_flush`/`end_draw` to avoid
++two render updates per frame. GPU wait/readback remains synchronous and stays on
++the initialization thread.
++
++Build and verify on Windows:
++
++```powershell
++git submodule update --init --depth 1
++cargo build --locked --release --example no_smooth_verify --example smooth_probe
++.\target\release\examples\no_smooth_verify.exe proof-images
++.\target\release\examples\smooth_probe.exe 1920 1080 shapes proof-default 120 default
++.\target\release\examples\smooth_probe.exe 1920 1080 shapes proof-off 120 no-smooth
++cargo check --locked --release -p processing_ffi -p processing_wasm
++cargo test --locked --release -p processing_ffi --lib smoothing_abi_tests
++```
++
++`processing_ffi/include/processing.h` is generated by cbindgen. The C commands are
++`processing_graphics_set_antialiasing`, `processing_graphics_set_image_sampling`
++and `processing_graphics_no_smooth`; they use `processing_check_error` and clear
++old errors like existing commands. See `examples/no_smooth.c`. WASM names are
++`graphicsSetAntialiasing`, `graphicsSetImageSampling`, `graphicsNoSmooth`.
++WASM wrappers are added but unverified: this crate is gated by `target_arch=wasm32`,
++so a Windows cargo check does not type-check their bodies. The wasm32 target is
++not installed in the tested environment; neither the WASM build nor browser
++execution has been verified. Python bindings are unchanged in this native-first
++extension.
++
++The GPU verification checks actual readback bytes: AA edges, outline text,
++two-color Nearest scaling, independently configured/shared images, Repeat
++wrapping, shared GPU texture identities, Graphics blitting/composition, fill and
++image alpha, late-command errors, completed-readback semantics, destruction,
++recreation and GPU image counts. Benchmark CSV stages separate command creation,
++CPU tessellation/submission, and readback including remaining GPU execution wait.
++They are wall times, not GPU timestamp-query durations. First frame, initialization
++and Graphics creation/warmup are recorded separately.
++
++Processing-style noSmooth differs from p5.js Canvas2D (image interpolation only)
++and p5.js WebGL (geometry AA only). No p5.js script automatically runs through
++this Rust library. A JavaScript runtime and command adapter are a separate layer.
+diff --git a/crates/processing_render/src/smoothing.rs b/crates/processing_render/src/smoothing.rs
+new file mode 100644
+index 0000000..b5aac50
+--- /dev/null
++++ b/crates/processing_render/src/smoothing.rs
+@@ -0,0 +1,243 @@
++//! Initial, per-Graphics rasterization and image-sampling configuration.
++//! GPU image aliases share the source texture and only replace its sampler.
++use crate::render::material::ProcessingExtendedMaterial;
++use bevy::{
++    asset::{AssetId, RenderAssetUsages},
++    core_pipeline::tonemapping::DebandDither,
++    image::{ImageSampler, ImageSamplerDescriptor},
++    prelude::*,
++    render::{
++        Render, RenderApp, RenderSystems,
++        erased_render_asset::prepare_erased_assets,
++        extract_component::{ExtractComponent, ExtractComponentPlugin},
++        render_asset::{RenderAssets, prepare_assets},
++        render_resource::{DefaultImageSamplerDescriptor, Sampler},
++        renderer::RenderDevice,
++        texture::GpuImage,
++        view::Msaa,
++    },
++};
++use processing_core::error::{ProcessingError, Result};
++use std::collections::{HashMap, HashSet};
++
++/// Effective multisampling. Off means one sample; Default retains Bevy's four.
++#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
++#[repr(u8)]
++pub enum Antialiasing {
++    #[default]
++    Default = 0,
++    Off = 1,
++}
++impl TryFrom<u8> for Antialiasing {
++    type Error = ProcessingError;
++    fn try_from(v: u8) -> Result<Self> {
++        match v {
++            0 => Ok(Self::Default),
++            1 => Ok(Self::Off),
++            _ => Err(ProcessingError::InvalidArgument(format!(
++                "unknown antialiasing: {v}"
++            ))),
++        }
++    }
++}
++/// Default inherits the individual image sampler. Explicit Graphics settings
++/// override its filters, retaining addressing and other sampler properties.
++#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
++#[repr(u8)]
++pub enum ImageSampling {
++    #[default]
++    Default = 0,
++    Linear = 1,
++    Nearest = 2,
++}
++impl TryFrom<u8> for ImageSampling {
++    type Error = ProcessingError;
++    fn try_from(v: u8) -> Result<Self> {
++        match v {
++            0 => Ok(Self::Default),
++            1 => Ok(Self::Linear),
++            2 => Ok(Self::Nearest),
++            _ => Err(ProcessingError::InvalidArgument(format!(
++                "unknown image sampling: {v}"
++            ))),
++        }
++    }
++}
++
++#[derive(Clone)]
++struct Alias {
++    source: Handle<Image>,
++    handle: Handle<Image>,
++    descriptor: ImageSamplerDescriptor,
++}
++
++#[derive(Component, Clone, Default, ExtractComponent)]
++#[doc(hidden)]
++pub struct Smoothing {
++    pub(crate) aa: Antialiasing,
++    pub(crate) sampling: ImageSampling,
++    pub(crate) started: bool,
++    original_dither: Option<DebandDither>,
++    aliases: HashMap<AssetId<Image>, Alias>,
++}
++impl Smoothing {
++    fn configurable(&self) -> Result<()> {
++        if self.started {
++            Err(ProcessingError::InvalidArgument(
++                "smoothing must be configured before the first begin_draw or recorded command"
++                    .into(),
++            ))
++        } else {
++            Ok(())
++        }
++    }
++    pub fn image_handle(
++        &mut self,
++        source: &Handle<Image>,
++        images: &mut Assets<Image>,
++        default: &ImageSamplerDescriptor,
++    ) -> Handle<Image> {
++        if self.sampling == ImageSampling::Default {
++            return source.clone();
++        }
++        let Some(image) = images.get(source) else {
++            return source.clone();
++        };
++        let mut descriptor = match &image.sampler {
++            ImageSampler::Default => default.clone(),
++            ImageSampler::Descriptor(d) => d.clone(),
++        };
++        // Reuse precisely the same filter conversion as image_set_sampler.
++        crate::image::set_sampler_filters(
++            &mut descriptor,
++            if self.sampling == ImageSampling::Nearest {
++                1
++            } else {
++                0
++            },
++        )
++        .expect("typed sampling mode");
++        if let Some(alias) = self.aliases.get(&source.id()) {
++            if alias.descriptor == descriptor {
++                return alias.handle.clone();
++            }
++        }
++        // This is an asset identity, not a second upload or full-size texture.
++        let mut placeholder = Image::default();
++        placeholder.asset_usage = RenderAssetUsages::MAIN_WORLD;
++        let handle = images.add(placeholder);
++        self.aliases.insert(
++            source.id(),
++            Alias {
++                source: source.clone(),
++                handle: handle.clone(),
++                descriptor,
++            },
++        );
++        handle
++    }
++}
++
++pub struct SmoothingPlugin;
++#[derive(Resource)]
++pub(crate) struct SamplingDefaults(pub ImageSamplerDescriptor);
++impl Plugin for SmoothingPlugin {
++    fn build(&self, app: &mut App) {
++        app.add_plugins(ExtractComponentPlugin::<Smoothing>::default());
++        if let Some(render) = app.get_sub_app_mut(RenderApp) {
++            render.init_resource::<AliasSamplers>().add_systems(
++                Render,
++                prepare_aliases
++                    .in_set(RenderSystems::PrepareAssets)
++                    .after(prepare_assets::<GpuImage>)
++                    .before(prepare_erased_assets::<MeshMaterial3d<ProcessingExtendedMaterial>>),
++            );
++        }
++        app.insert_resource(SamplingDefaults(ImageSamplerDescriptor::linear()));
++    }
++    fn finish(&self, app: &mut App) {
++        // TexturePlugin initializes this descriptor during its finish phase.
++        if let Some(render) = app.get_sub_app(RenderApp) {
++            if let Some(defaults) = render
++                .world()
++                .get_resource::<DefaultImageSamplerDescriptor>()
++            {
++                let defaults = defaults.0.clone();
++                app.insert_resource(SamplingDefaults(defaults));
++            }
++        }
++    }
++}
++
++#[derive(Resource, Default)]
++struct AliasSamplers(HashMap<AssetId<Image>, Sampler>);
++fn prepare_aliases(
++    states: Query<&Smoothing>,
++    device: Res<RenderDevice>,
++    mut gpu: ResMut<RenderAssets<GpuImage>>,
++    mut cache: ResMut<AliasSamplers>,
++) {
++    let mut live = HashSet::new();
++    for state in &states {
++        for alias in state.aliases.values() {
++            live.insert(alias.handle.id());
++            let Some(mut image) = gpu.get(alias.source.id()).cloned() else {
++                continue;
++            };
++            image.sampler = cache
++                .0
++                .entry(alias.handle.id())
++                .or_insert_with(|| device.create_sampler(&alias.descriptor.as_wgpu()))
++                .clone();
++            gpu.insert(alias.handle.id(), image);
++        }
++    }
++    cache.0.retain(|id, _| {
++        if live.contains(id) {
++            true
++        } else {
++            gpu.remove(*id);
++            false
++        }
++    });
++}
++
++/// Atomic validation precedes either change, so noSmooth cannot partly apply.
++pub(crate) fn configure(
++    app: &mut App,
++    entity: Entity,
++    aa: Option<Antialiasing>,
++    sampling: Option<ImageSampling>,
++) -> Result<()> {
++    let state = app
++        .world()
++        .get::<Smoothing>(entity)
++        .ok_or(ProcessingError::GraphicsNotFound)?;
++    state.configurable()?;
++    let mut entity = app.world_mut().entity_mut(entity);
++    if let Some(aa) = aa {
++        entity.insert(match aa {
++            Antialiasing::Default => Msaa::default(),
++            Antialiasing::Off => Msaa::Off,
++        });
++        entity.get_mut::<Smoothing>().unwrap().aa = aa;
++    }
++    if let Some(sampling) = sampling {
++        entity.get_mut::<Smoothing>().unwrap().sampling = sampling;
++    }
++    let previous_dither = entity
++        .get::<DebandDither>()
++        .copied()
++        .unwrap_or(DebandDither::Disabled);
++    let dither = {
++        let mut state = entity.get_mut::<Smoothing>().unwrap();
++        let original = *state.original_dither.get_or_insert(previous_dither);
++        if state.aa == Antialiasing::Off || state.sampling == ImageSampling::Nearest {
++            DebandDither::Disabled
++        } else {
++            original
++        }
++    };
++    entity.insert(dither);
++    Ok(())
++}
+diff --git a/examples/no_smooth.c b/examples/no_smooth.c
+new file mode 100644
+index 0000000..90b5dde
+--- /dev/null
++++ b/examples/no_smooth.c
+@@ -0,0 +1,20 @@
++/* Call on the initialization thread, after graphics_create and before drawing.
++ * Header is generated by: cargo check -p processing_ffi --release
++ */
++#include "processing.h"
++#include <stdio.h>
++
++int configure_no_smooth(uint64_t graphics) {
++    processing_graphics_no_smooth(graphics);
++    const char *error = processing_check_error();
++    if (error) { fprintf(stderr, "%s\n", error); return 1; }
++    return 0;
++}
++
++int configure_independent_modes(uint64_t graphics) {
++    /* Geometry AA Off, images Linear: independently configurable. */
++    processing_graphics_set_antialiasing(graphics, 1);
++    if (processing_check_error()) return 1;
++    processing_graphics_set_image_sampling(graphics, 1);
++    return processing_check_error() ? 1 : 0;
++}
+diff --git a/examples/no_smooth_verify.rs b/examples/no_smooth_verify.rs
+new file mode 100644
+index 0000000..7ca3636
+--- /dev/null
++++ b/examples/no_smooth_verify.rs
+@@ -0,0 +1,363 @@
++//! GPU image semantics, isolation, composition and lifecycle verification.
++use bevy::{
++    prelude::*,
++    render::{render_resource::Extent3d, view::Msaa},
++};
++use processing::prelude::*;
++use std::fs;
++
++fn make(w: u32, h: u32, mode: u8) -> error::Result<(Entity, Entity)> {
++    let s = surface_create_offscreen(w, h, 1., TextureFormat::Rgba8UnormSrgb)?;
++    let g = graphics_create(s, w, h, TextureFormat::Rgba8UnormSrgb)?;
++    match mode {
++        1 => graphics_no_smooth(g)?,
++        2 => graphics_set_antialiasing(g, Antialiasing::Off)?,
++        3 => graphics_set_image_sampling(g, ImageSampling::Nearest)?,
++        _ => (),
++    }
++    Ok((s, g))
++}
++fn record(g: Entity, commands: Vec<DrawCommand>) -> error::Result<()> {
++    graphics_begin_draw(g)?;
++    for c in commands {
++        graphics_record_command(g, c)?;
++    }
++    Ok(())
++}
++fn draw_image(image: Entity, w: f32, h: f32) -> DrawCommand {
++    DrawCommand::Image {
++        entity: image,
++        dx: 0.,
++        dy: 0.,
++        d_width: Some(w),
++        d_height: Some(h),
++        sx: None,
++        sy: None,
++        s_width: None,
++        s_height: None,
++    }
++}
++fn read(g: Entity, label: &str, out: &str) -> error::Result<Vec<u8>> {
++    let bytes = graphics_readback_raw(g)?.bytes;
++    fs::write(format!("{out}/{label}.rgba"), &bytes).unwrap();
++    Ok(bytes)
++}
++fn binary(bytes: &[u8]) -> bool {
++    bytes
++        .chunks_exact(4)
++        .all(|p| p == [0, 0, 0, 255] || p == [255, 255, 255, 255])
++}
++fn two_colors(bytes: &[u8]) -> bool {
++    bytes
++        .chunks_exact(4)
++        .all(|p| p == [255, 0, 0, 255] || p == [0, 0, 255, 255])
++}
++fn main() -> error::Result<()> {
++    let out = std::env::args().nth(1).unwrap_or("no-smooth-proof".into());
++    fs::create_dir_all(&out).unwrap();
++    init(Config::default())?;
++    let image = image_create(
++        Extent3d {
++            width: 2,
++            height: 1,
++            depth_or_array_layers: 1,
++        },
++        vec![255, 0, 0, 255, 0, 0, 255, 255],
++        TextureFormat::Rgba8UnormSrgb,
++    )?;
++    // Explicit image Linear must not defeat an explicit Graphics Nearest.
++    image_set_sampler(image, 0, 1, 2)?;
++    let (_, smooth) = make(256, 256, 0)?;
++    let (_, off) = make(256, 256, 1)?;
++    let (_, aa_only) = make(256, 256, 2)?;
++    let (_, sample_only) = make(256, 256, 3)?;
++    for g in [smooth, off, aa_only, sample_only] {
++        record(
++            g,
++            vec![
++                DrawCommand::BackgroundColor(Color::BLACK),
++                DrawCommand::NoStroke,
++                draw_image(image, 256., 256.),
++            ],
++        )?;
++    }
++    assert!(
++        graphics_no_smooth(off).is_err(),
++        "late configuration must error"
++    );
++    let nearest = read(off, "image-nearest", &out)?;
++    let linear = read(smooth, "image-linear", &out)?;
++    assert!(
++        two_colors(&nearest),
++        "nearest must have exactly source colors"
++    );
++    assert!(!two_colors(&linear), "baseline Linear must interpolate");
++    assert!(
++        !two_colors(&read(aa_only, "image-aa-only", &out)?),
++        "AA and sampling must be independent"
++    );
++    assert!(two_colors(&read(sample_only, "image-sampling-only", &out)?));
++    processing_core::app_mut(|app| {
++        let source = app
++            .world()
++            .get::<processing_render::image::Image>(image)
++            .unwrap()
++            .handle
++            .clone();
++        let gpu = app
++            .sub_app(bevy::render::RenderApp)
++            .world()
++            .resource::<bevy::render::render_asset::RenderAssets<bevy::render::texture::GpuImage>>(
++        );
++        let original = gpu.get(&source).unwrap();
++        let aliases: Vec<_> = gpu
++            .iter()
++            .filter(|(id, img)| *id != source.id() && img.texture.id() == original.texture.id())
++            .collect();
++        assert!(
++            aliases.len() >= 2,
++            "Graphics sampler aliases must share the uploaded source texture"
++        );
++        assert!(
++            aliases
++                .iter()
++                .all(|(_, img)| img.sampler.id() != original.sampler.id())
++        );
++        Ok(())
++    })?;
++    let mut repeated = draw_image(image, 256., 256.);
++    if let DrawCommand::Image {
++        sx,
++        sy,
++        s_width,
++        s_height,
++        ..
++    } = &mut repeated
++    {
++        *sx = Some(0.);
++        *sy = Some(0.);
++        *s_height = Some(1.);
++        *s_width = Some(4.);
++    }
++    record(off, vec![DrawCommand::NoStroke, repeated])?;
++    let wrapped = read(off, "image-wrap-repeat", &out)?;
++    for (x, pixel) in [
++        (32, [255, 0, 0, 255]),
++        (96, [0, 0, 255, 255]),
++        (160, [255, 0, 0, 255]),
++        (224, [0, 0, 255, 255]),
++    ] {
++        assert_eq!(
++            &wrapped[x * 4..x * 4 + 4],
++            &pixel,
++            "explicit Repeat wrapping must survive Nearest override"
++        );
++    }
++    // Render shared images repeatedly in opposite order; no sampler leak.
++    for _ in 0..3 {
++        record(
++            smooth,
++            vec![DrawCommand::NoStroke, draw_image(image, 256., 256.)],
++        )?;
++        assert_eq!(read(smooth, "image-linear-repeat", &out)?, linear);
++        record(
++            off,
++            vec![DrawCommand::NoStroke, draw_image(image, 256., 256.)],
++        )?;
++        assert_eq!(read(off, "image-nearest-repeat", &out)?, nearest);
++    }
++    let edge = || {
++        vec![
++            DrawCommand::BackgroundColor(Color::BLACK),
++            DrawCommand::NoStroke,
++            DrawCommand::Fill(Color::WHITE),
++            DrawCommand::Triangle {
++                x1: 11.3,
++                y1: 12.3,
++                x2: 118.3,
++                y2: 47.3,
++                x3: 25.3,
++                y3: 109.3,
++            },
++            DrawCommand::Ellipse {
++                cx: 170.3,
++                cy: 170.3,
++                w: 95.7,
++                h: 95.7,
++            },
++            DrawCommand::StrokeColor(Color::WHITE),
++            DrawCommand::StrokeWeight(3.7),
++            DrawCommand::Line {
++                x1: 9.3,
++                y1: 135.3,
++                x2: 99.3,
++                y2: 229.3,
++            },
++        ]
++    };
++    record(smooth, edge())?;
++    record(off, edge())?;
++    assert!(!binary(&read(smooth, "edges-default", &out)?));
++    assert!(
++        binary(&read(off, "edges-off", &out)?),
++        "off shape edges must be binary"
++    );
++    let text = || {
++        vec![
++            DrawCommand::BackgroundColor(Color::BLACK),
++            DrawCommand::NoStroke,
++            DrawCommand::Fill(Color::WHITE),
++            DrawCommand::TextSize(49.7),
++            DrawCommand::Text {
++                content: "Outline Aa 123".into(),
++                x: 7.3,
++                y: 77.3,
++                z: 0.,
++                max_w: Some(240.),
++                max_h: None,
++            },
++        ]
++    };
++    record(smooth, text())?;
++    record(off, text())?;
++    assert!(!binary(&read(smooth, "text-default", &out)?));
++    let text_off = read(off, "text-off", &out)?;
++    assert!(binary(&text_off));
++    assert!(
++        text_off.chunks_exact(4).any(|p| p == [255, 255, 255, 255]),
++        "text must actually render"
++    );
++    // Copy Graphics -> image -> Graphics; existing blitter is Nearest.
++    let (_, small) = make(2, 1, 1)?;
++    record(
++        small,
++        vec![DrawCommand::NoStroke, draw_image(image, 2., 1.)],
++    )?;
++    let intermediary = image_create(
++        Extent3d {
++            width: 2,
++            height: 1,
++            depth_or_array_layers: 1,
++        },
++        vec![0; 8],
++        TextureFormat::Rgba8UnormSrgb,
++    )?;
++    image_copy_from(intermediary, small, true)?;
++    record(
++        off,
++        vec![DrawCommand::NoStroke, draw_image(intermediary, 256., 256.)],
++    )?;
++    assert_eq!(read(off, "graphics-composite", &out)?, nearest);
++    graphics_record_command(off, DrawCommand::BackgroundColor(Color::srgb(0., 1., 0.)))?;
++    assert_eq!(
++        graphics_readback_completed_raw(off)?.bytes,
++        nearest,
++        "completed readback must not execute new commands"
++    );
++    assert!(
++        graphics_readback_raw(off)?
++            .bytes
++            .chunks_exact(4)
++            .all(|p| p == [0, 255, 0, 255])
++    );
++    // Original image alpha is retained, not thresholded to opaque/transparent.
++    let alpha_image = image_create(
++        Extent3d {
++            width: 2,
++            height: 1,
++            depth_or_array_layers: 1,
++        },
++        vec![255, 255, 255, 64, 255, 255, 255, 192],
++        TextureFormat::Rgba8UnormSrgb,
++    )?;
++    record(
++        off,
++        vec![
++            DrawCommand::BackgroundColor(Color::NONE),
++            DrawCommand::NoStroke,
++            draw_image(alpha_image, 256., 256.),
++        ],
++    )?;
++    let alpha = read(off, "image-alpha", &out)?;
++    assert_eq!(alpha[(128 * 256 + 32) * 4 + 3], 64);
++    assert_eq!(alpha[(128 * 256 + 224) * 4 + 3], 192);
++    record(
++        off,
++        vec![
++            DrawCommand::BackgroundColor(Color::NONE),
++            DrawCommand::NoStroke,
++            DrawCommand::Fill(Color::srgba(1., 1., 1., 0.5)),
++            DrawCommand::Rect {
++                x: 32.,
++                y: 32.,
++                w: 128.,
++                h: 128.,
++                radii: [0.; 4],
++            },
++        ],
++    )?;
++    let opacity = read(off, "fill-alpha", &out)?;
++    assert!((opacity[(64 * 256 + 64) * 4 + 3] as i16 - 128).abs() <= 1);
++    processing_core::app_mut(|app| processing_render::graphics::warmup(app, off))?;
++    assert!(
++        graphics_no_smooth(off).is_err(),
++        "a later warmup must not unlock settings"
++    );
++    // Invalid values and entities return typed errors, including C parse values.
++    assert!(Antialiasing::try_from(255).is_err());
++    assert!(ImageSampling::try_from(255).is_err());
++    let (_, pending) = make(16, 16, 0)?;
++    graphics_record_command(pending, DrawCommand::BackgroundColor(Color::BLACK))?;
++    assert!(
++        graphics_no_smooth(pending).is_err(),
++        "queued commands lock configuration"
++    );
++    processing_core::app_mut(|app| {
++        assert_eq!(app.world().get::<Msaa>(off).unwrap().samples(), 1);
++        assert_eq!(app.world().get::<Msaa>(smooth).unwrap().samples(), 4);
++        Ok(())
++    })?;
++    graphics_destroy(pending)?;
++    assert!(graphics_no_smooth(pending).is_err());
++    let gpu_count = || {
++        processing_core::app_mut(|app| {
++            Ok(app.sub_app(bevy::render::RenderApp).world().resource::<bevy::render::render_asset::RenderAssets<bevy::render::texture::GpuImage>>().iter().count())
++        })
++    };
++    let before = gpu_count()?;
++    for mode in [1, 0, 1, 0, 1, 0] {
++        let (s, g) = make(256, 256, mode)?;
++        record(
++            g,
++            vec![DrawCommand::NoStroke, draw_image(image, 256., 256.)],
++        )?;
++        assert_eq!(
++            read(g, "lifecycle", &out)?,
++            if mode == 1 {
++                nearest.clone()
++            } else {
++                linear.clone()
++            }
++        );
++        graphics_destroy(g)?;
++        surface_destroy(s)?;
++    }
++    processing_core::app_mut(|app| {
++        for _ in 0..4 {
++            app.update();
++        }
++        Ok(())
++    })?;
++    assert!(
++        gpu_count()? <= before,
++        "destroy/recreate must release GPU image aliases"
++    );
++    fs::write(
++        format!("{out}/passed.txt"),
++        "GPU image semantics, AA, text, alpha, isolation, composition, lifecycle: passed\n",
++    )
++    .unwrap();
++    println!("All native GPU image checks passed");
++    exit(0)?;
++    Ok(())
++}
+diff --git a/examples/smooth_probe.rs b/examples/smooth_probe.rs
+new file mode 100644
+index 0000000..bcb6ee7
+--- /dev/null
++++ b/examples/smooth_probe.rs
+@@ -0,0 +1,146 @@
++//! Offscreen CPU-readback baseline, no window or MIDI device required.
++use bevy::{prelude::*, render::render_resource::Extent3d};
++use processing::prelude::*;
++use std::{fs, time::Instant};
++
++fn main() -> error::Result<()> {
++    let args: Vec<String> = std::env::args().collect();
++    let w: u32 = args.get(1).and_then(|v| v.parse().ok()).unwrap_or(256);
++    let h: u32 = args.get(2).and_then(|v| v.parse().ok()).unwrap_or(256);
++    let scene = args.get(3).map(String::as_str).unwrap_or("shapes");
++    let out = args.get(4).map(String::as_str).unwrap_or("probe");
++    let count: usize = args.get(5).and_then(|v| v.parse().ok()).unwrap_or(60);
++    let mode = args.get(6).map(String::as_str).unwrap_or("default");
++    let start = Instant::now();
++    init(Config::default())?;
++    let init_ms = start.elapsed().as_secs_f64() * 1000.;
++    let create_at = Instant::now();
++    let surface = surface_create_offscreen(w, h, 1., TextureFormat::Rgba8UnormSrgb)?;
++    let g = graphics_create(surface, w, h, TextureFormat::Rgba8UnormSrgb)?;
++    if mode == "no-smooth" {
++        graphics_no_smooth(g)?;
++    }
++    let create_ms = create_at.elapsed().as_secs_f64() * 1000.;
++    processing_core::app_mut(|app| {
++        println!(
++            "effective_msaa={:?}",
++            app.world().get::<bevy::render::view::Msaa>(g)
++        );
++        Ok(())
++    })?;
++    let image = image_create(
++        Extent3d {
++            width: 2,
++            height: 1,
++            depth_or_array_layers: 1,
++        },
++        vec![255, 0, 0, 255, 0, 0, 255, 255],
++        TextureFormat::Rgba8UnormSrgb,
++    )?;
++    let mut times = Vec::new();
++    let mut stages = Vec::new();
++    let mut last = Vec::new();
++    let mut first_frame_ms = 0.;
++    for frame in 0..count + 10 {
++        if frame == 10 {
++            println!("BENCH_START");
++        }
++        let t = Instant::now();
++        graphics_begin_draw(g)?;
++        graphics_record_command(g, DrawCommand::BackgroundColor(Color::BLACK))?;
++        graphics_record_command(g, DrawCommand::NoStroke)?;
++        graphics_record_command(g, DrawCommand::Fill(Color::WHITE))?;
++        match scene {
++            "image" => graphics_record_command(
++                g,
++                DrawCommand::Image {
++                    entity: image,
++                    dx: 0.,
++                    dy: 0.,
++                    d_width: Some(w as f32),
++                    d_height: Some(h as f32),
++                    sx: None,
++                    sy: None,
++                    s_width: None,
++                    s_height: None,
++                },
++            )?,
++            "text" => {
++                graphics_record_command(g, DrawCommand::TextSize(24.))?;
++                for i in 0..100 {
++                    graphics_record_command(
++                        g,
++                        DrawCommand::Text {
++                            content: "Processing 0123 Aa".into(),
++                            x: (i % 5) as f32 * w as f32 / 5.,
++                            y: (i / 5 + 1) as f32 * h as f32 / 21.,
++                            z: 0.,
++                            max_w: None,
++                            max_h: None,
++                        },
++                    )?;
++                }
++            }
++            _ => {
++                for i in 0..1000 {
++                    let x = ((i * 37) % w) as f32 + 0.3;
++                    let y = ((i * 71) % h) as f32 + 0.3;
++                    graphics_record_command(
++                        g,
++                        DrawCommand::Triangle {
++                            x1: x,
++                            y1: y,
++                            x2: x + 19.,
++                            y2: y + 5.,
++                            x3: x + 3.,
++                            y3: y + 23.,
++                        },
++                    )?;
++                    graphics_record_command(
++                        g,
++                        DrawCommand::Ellipse {
++                            cx: x + 31.,
++                            cy: y + 31.,
++                            w: 19.,
++                            h: 19.,
++                        },
++                    )?;
++                }
++            }
++        }
++        let generated = t.elapsed().as_secs_f64() * 1000.;
++        let submitted_at = Instant::now();
++        graphics_flush(g)?;
++        let submitted = submitted_at.elapsed().as_secs_f64() * 1000.;
++        let read_at = Instant::now();
++        let raw = graphics_readback_completed_raw(g)?;
++        let read_ms = read_at.elapsed().as_secs_f64() * 1000.;
++        let elapsed = t.elapsed().as_secs_f64() * 1000.;
++        if frame == 0 {
++            first_frame_ms = elapsed;
++        }
++        if frame >= 10 {
++            times.push(elapsed);
++            stages.push((frame, generated, submitted, read_ms, elapsed));
++        }
++        last = raw.bytes;
++    }
++    println!("BENCH_END");
++    fs::write(format!("{out}.rgba"), last).unwrap();
++    times.sort_by(f64::total_cmp);
++    let median = times[times.len() / 2];
++    let p95 = times[((times.len() as f64 * 0.95).ceil() as usize - 1).min(times.len() - 1)];
++    fs::write(format!("{out}.csv"), format!("width,height,scene,samples,init_ms,graphics_create_ms,first_frame_ms,median_total_readback_ms,p95_total_readback_ms\n{w},{h},{scene},{count},{init_ms},{create_ms},{first_frame_ms},{median},{p95}\n")).unwrap();
++    let mut rows = String::from(
++        "frame,command_generation_ms,cpu_tessellation_and_submit_ms,readback_including_gpu_wait_ms,total_ms\n",
++    );
++    for (frame, c, s, r, t) in stages {
++        rows.push_str(&format!("{frame},{c},{s},{r},{t}\n"));
++    }
++    fs::write(format!("{out}-stages.csv"), rows).unwrap();
++    println!("{scene} {w}x{h}: median={median:.3}ms p95={p95:.3}ms init={init_ms:.3}ms");
++    graphics_destroy(g)?;
++    surface_destroy(surface)?;
++    exit(0)?;
++    Ok(())
++}

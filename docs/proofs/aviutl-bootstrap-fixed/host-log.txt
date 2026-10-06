@@ -1,0 +1,70 @@
+﻿[10/05 23:22:44] [INFO] [wWinMain] Application Start: AviUtl ExEdit2 2.1.12 (2011200)
+[10/05 23:22:44] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/05 23:22:44] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/05 23:22:44] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\Default.aul2 (section=27)
+[10/05 23:22:44] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\module.ini (section=3)
+[10/05 23:22:48] [INFO] [Plugin::CommonPlugin::CommonPlugin] LoadLibrary: \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2
+[10/05 23:22:52] [INFO] [Plugin::web-render.aux2] [aviutl2::generic::__bridge] Creating plugin table for plugin: web_render_aux2::Vi5Aux2
+[10/05 23:22:52] [INFO] [Plugin::CommonPluginService::registerPlugin] register common plugin [\\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\Plugin\web-render\web-render.aux2]
+[10/05 23:22:52] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\history.ini (section=1)
+[10/05 23:22:52] [VERBOSE] [System::IniFile::loadFile] load ini file : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\explorer.ini (section=0)
+[10/05 23:22:52] [INFO] [Edit::EditService::parseCommandLine] project : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\html-sample.aup2
+[10/05 23:22:52] [INFO] [Plugin::web-render.aux2] [web_render_aux2] No web project configured in this project file.
+[10/05 23:22:52] [INFO] [Edit::EditService::loadProject] load project file : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\html-sample.aup2
+[10/05 23:22:52] [VERBOSE] [System::IniFile::loadFile] load ini file : E:\Downloads\web_render_aux2_prototype\web-render\examples\aviutl2\html-sample.aup2 (section=3)
+[10/05 23:22:52] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded project directory from project file: E:\Downloads\web_render_aux2_prototype\web-render\examples\html
+[10/05 23:22:52] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Setting project directory to: E:\Downloads\web_render_aux2_prototype\web-render\examples\html
+[10/05 23:22:52] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Starting web-render-cef server on port 57083
+[10/05 23:22:52] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Launching web-render-cef server: Command { std: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Plugin\\web-render\\web-render-cef-server.exe" "--port" "57083" "--parent-process" "9196", kill_on_drop: true }
+[10/05 23:22:55] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:22:55.337613Z  INFO main ThreadId(01) web_render_cef_server::cef_app: launch browser process 8268
+[10/05 23:22:55] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:22:55.918247Z  INFO main ThreadId(01) web_render_cef_server: Starting gRPC server on [::1]:57083
+[10/05 23:22:57] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:22:57.310552Z  INFO main ThreadId(01) web_render_cef_server::server: Received initialize request: InitializeRequest { root_path: "E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\html" }
+[10/05 23:22:57] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:22:57.319565Z  INFO main ThreadId(01) web_render_cef_server::server: Started vi5 process with PID: 4084
+[10/05 23:22:57] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:22:57.848514Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Loading URL for initialization: http://localhost:59456/vi5
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.046351Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.046400Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.751735Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 0, 0, 0, 255, 0, 18, 0, 255, 0, 0, 10, 255, 9, 72, 84, 255]
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.751833Z  INFO main ThreadId(01) web_render_cef_server::render_loop: Page initialization complete
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.751847Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 0 completed and removed
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.765888Z TRACE main ThreadId(01) web_render_cef_server::handlers: Received software paint from CEF
+[10/05 23:23:00] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:00.765964Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Software paint received: 4096x2304
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.436544Z TRACE main ThreadId(01) web_render_cef_server::render_loop: First 20 bytes of buffer: [255, 192, 128, 255, 1, 0, 0, 255, 0, 54, 1, 255, 0, 0, 10, 255, 225, 1, 18, 255]
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.436742Z DEBUG main ThreadId(01) web_render_cef_server::render_loop: Paint callback for nonce 1 processed frame, waiting for more frames
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.441508Z  INFO main ThreadId(01) web_render_cef_server::server: Initialization completed: InitializeResponse { project_name: "HTML Demo", renderer_version: "1.0.0" }
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] web-render-cef initialized successfully.
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Started notification listener task
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Received object infos notification with 2 objects
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Project script directory: "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo"
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'html-title': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\HTMLタイトル.obj2"
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] Comparing existing and new script contents for object 'html-title'
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] Existing headers:
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] --text@WEB_RENDER_AUX2_title:タイトル,"WEB → AVIUTL2"
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] --color@WEB_RENDER_AUX2_accent:アクセント,0xFF4682
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] New headers:
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] --text@WEB_RENDER_AUX2_title:タイトル,WEB → AVIUTL2
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] --color@WEB_RENDER_AUX2_accent:アクセント,0xFF4682
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Updated script file for object 'html-title': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\HTMLタイトル.obj2"
+[10/05 23:23:01] [WARN] [Plugin::web-render.aux2] [web_render_aux2] Script file for object 'html-title' has updated headers
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Loaded script for object 'frame-proof': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\フレーム検証.obj2"
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] Comparing existing and new script contents for object 'frame-proof'
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] Existing headers:
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] --text@WEB_RENDER_AUX2_caption:文字,"Frame proof"
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] New headers:
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] --text@WEB_RENDER_AUX2_caption:文字,Frame proof
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Updated script file for object 'frame-proof': "\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\フレーム検証.obj2"
+[10/05 23:23:01] [WARN] [Plugin::web-render.aux2] [web_render_aux2] Script file for object 'frame-proof' has updated headers
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Debug bootstrap: script update restart=true, reload=false
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] vi5 notification: 2026-10-05 14:22:59.296 +00:00 [info] [vi5]: Vi5 Client Runtime initialized.
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2::runtime_debug] AviUtl2 SDK sample probe: {"script":"\\\\?\\E:\\Downloads\\web_render_aux2_prototype\\web-render\\.aviutl2-cli\\development\\data\\Script\\web-render.aux2_HTML Demo\\フレーム検証.obj2","status":"bootstrap"}
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2::runtime_debug] Debug close: current=Some("E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\aviutl2\\html-sample.aup2"), expected="E:\\Downloads\\web_render_aux2_prototype\\web-render\\examples\\aviutl2\\html-sample.aup2"
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2::runtime_debug] Debug WM_CLOSE hwnd=14162342, pid=9196, posted=1
+[10/05 23:23:01] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Shutting down web-render-cef server...
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.906040Z  INFO main ThreadId(01) web_render_cef_server::server: Received shutdown request
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.906369Z  INFO main ThreadId(01) web_render_cef_server: Received shutdown request
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.920016Z  INFO main ThreadId(01) web_render_cef_server::server: Successfully killed vi5 process with PID: 0
+[10/05 23:23:01] [VERBOSE] [Plugin::web-render.aux2] [web_render_aux2] [web-render-cef-server stdout] 2026-10-05T14:23:01.920567Z  INFO main ThreadId(01) web_render_cef_server::handlers: Shutting down CEF
+[10/05 23:23:02] [INFO] [Plugin::web-render.aux2] [web_render_aux2] CEF stopped: exit code: 0
+[10/05 23:23:02] [INFO] [Plugin::web-render.aux2] [web_render_aux2] web-render-cef server has exited normally.
+[10/05 23:23:02] [INFO] [Plugin::web-render.aux2] [web_render_aux2] Shutting down Tokio runtime...
+[10/05 23:23:02] [VERBOSE] [System::IniFile::Save::Save] saveFile : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\explorer.ini
+[10/05 23:23:02] [VERBOSE] [System::IniFile::Save::Save] saveFile : \\?\E:\Downloads\web_render_aux2_prototype\web-render\.aviutl2-cli\development\data\history.ini

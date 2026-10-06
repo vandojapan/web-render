@@ -1,0 +1,55 @@
+# 画像所有権とネイティブ境界
+
+`ImageBuffers` はeffect IDごとにRendering予約またはReadyな `Box<[u8]>` を所有する。
+通常描画、RAMキャッシュ、Freezeディスクキャッシュの全経路は、返す画像をこの所有者へ移してから、
+実際に保持されているBoxのポインタをLuaへ返す。別のcloneを保持して元Vecのポインタを返さない。
+
+同じeffectのRendering/Readyがある間は新しい描画を拒否する。
+未完了予約のDropは失敗した描画を解除し、早すぎるfreeはRenderingを取り除かない。
+`free_image(effect_id)` はReadyを取り除く。二回目のfreeは何もしない。
+cache clear、素材切替、プロジェクトgeneration変更はこの所有者をclearしない。
+
+Luaは画像ポインタを `obj.putpixeldata` の同期コピー中だけ使用する。
+コピーをpcallで囲み、成功/失敗のどちらでもfreeを呼んでからコピー失敗を再送出する。
+Lua/ホストがfree後にポインタを再利用する操作は契約外。同じeffectへの並行freeとホストコピーは
+呼出側で直列化する必要がある。この変更はホストのthread利用を新たに保証するものではない。
+所有権、競合予約、失敗時解放、cache clear後の有効性をRustテストで確認している。
+ホストでのFreezeディスク保存/読込と全RGBA一致はSDKサンプル試験で確認した。
+異常終了時のfree漏れ・長時間メモリ観測は未完了。
+
+CEFのOnPaintは外部APIが渡すポインタを読むunsafe境界。
+null、正の寸法、4096x2304上限、checkedな画素数/バイト数を確認してからsliceを作り、
+callback内だけで借用する。入力が有効な長さの領域であることはCEF OnPaintのAPI契約に依存する。
+APIの生ポインタ自体から実際の割当長を検査することはできない。
+
+安全な借用sliceを `PaintFrame` で検証し、stride、RGBA長、符号付き切出し範囲を確認する。
+nonceが登録済みcallbackに一致した場合だけメタデータを読み、要求画像の範囲だけを
+BGRA→straight RGBAへ変換して所有するVecにコピーする。全4096x2304面の中間コピーは行わない。
+借用sliceをcallback外へ保存したりawaitを跨いで保持したりしない。画像コピー完了後にACKを返す。
+先頭64行以外をメタデータとして読まず、その領域を画像へ混ぜない。
+IPC応答は要求IDの集合を照合し、欠落/重複/余剰/未設定をエラーにする。
+エラー後の画像取得はCEF統合試験、入力の境界と色変換はRust単体試験で確認している。
+全256段階のalphaと色成分で従来変換との一致、padded strideのRGBA/BGRAメタデータ読取も検証した。
+GPU入力のstrideは単体検証のみで、GPU実機経路は未検証。[性能と画像比較](PERFORMANCE.md)。
+
+IPC応答には交渉済みgzipを使用できる。64KiB以上で同色画素が多い画像だけを圧縮し、
+クライアントはtonicで展開した後に従来の画像長・寸法・要求ID検証を通す。
+圧縮判定は各画像最大256か所の安全なslice比較で行う。共有メモリや新しい生ポインタは導入していない。
+親監視のOS照会はblocking workerで行い、CEFの初期化・pump・OnPaintは従来のmain threadに留める。
+[単発待ちの改善と実測](LATENCY_APPROACHES.md)。
+
+検証専用 `runtime-debug` featureはSDKの `rendering_scene_video` コールバック内で
+strideを検証して画像をコピーする。コールバック後にSDKの借用バッファを保持しない。
+ホストのSDKハンドルからHWNDを取得し、終了要求直前にGetWindowThreadProcessIdで
+自プロセスの所有を確認してWM_CLOSEをpostする。このFFIは通常ビルドに含まない。
+SDK保存は編集済み状態を解除しないため、ホスト自身の保存確認を尊重する。
+バックグラウンド検証workerから終了のためにプロジェクトを再読込する処理は、
+ホストのpreview描画と競合したため除去した。
+
+`inspect_host_dialog` のWindows FFIは実行ファイルを照合したPIDのGUI threadだけを読む。
+同期EnumChildWindowsの間だけ生存するInspectionをcallbackへ渡し、各HWNDの所有PIDも照合する。
+既定は読取り。明示した操作では追加ファイル一覧が今回のp5 obj2だけの場合の信頼確認、
+または現在のp5サンプル名・保存済みコピー・正確な保存確認文言が揃う場合の保存ボタンだけをpostする。
+他のプロセスのウィンドウ操作は行わず、この補助EXEはプラグイン配布パッケージに含めない。
+himawari試験でも同じ所有PID照合を行い、追加ファイル名は今回生成したDrum/Kaiwai Phrase/Synth Soloのobj2に限定する。
+保存確認はhimawari-sample.aup2のウィンドウ名と保存済み3objectの名前を照合してからpostする。

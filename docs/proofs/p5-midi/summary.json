@@ -1,0 +1,12 @@
+﻿{
+    "date":  "2026-10-06",
+    "original_source_and_existing_midi_preserved":  true,
+    "midi_sha256":  "FB31D56571F294E033136CA5A2335FCD49CF81F3AC3D454224181EDFA8EF3B34",
+    "unit_tests":  9,
+    "web_tests":  5,
+    "rust_tests":  12,
+    "cef_debug":  "issues_detected",
+    "cef_release":  "issues_detected",
+    "aviutl2_sdk":  "issues_detected",
+    "host_normal_exit":  true
+}

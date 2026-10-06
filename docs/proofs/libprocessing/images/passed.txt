@@ -1,0 +1,1 @@
+GPU image semantics, AA, text, alpha, isolation, composition, lifecycle: passed

@@ -1,0 +1,33 @@
+[package]
+name = "web-render-aux2"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+runtime-debug = []
+
+[dependencies]
+anyhow = "1.0.100"
+# aviutl2 = { version = "0.11.2", features = ["serde"] }
+aviutl2 = { features = ["serde"], git = "https://github.com/sevenc-nanashi/aviutl2-rs", rev = "fc94dbf9d05df7d527a23ae20b934c9ec4c6662a" }
+dashmap = "6.1.0"
+dirs = "6.0.0"
+futures = "0.3.31"
+image = "0.25.9"
+native-dialog = { version = "0.9.6", features = ["async"] }
+process_path = "0.1.4"
+rfd = "0.17.2"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+tap = "1.0.1"
+tokio = { version = "1.49.0", features = ["rt-multi-thread", "process", "fs"] }
+web-render-cef.workspace = true
+web-render-processing = { path = "../web-render-processing" }
+
+[dev-dependencies]
+base64 = "0.22.1"
+rmp-serde = "1.3.1"
+tempfile = "3.27.0"

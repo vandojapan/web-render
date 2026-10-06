@@ -1,0 +1,38 @@
+﻿[
+    {
+        "file":  "aviutl-p5-frame-0000.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "aviutl-p5-frame-0053.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "aviutl-p5-frame-0060.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "aviutl-p5-frame-0085.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "aviutl-p5-frame-0108.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "aviutl-p5-frame-0150.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "repeated-p5-frame-0000.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "repeated-p5-frame-0060.png",
+        "byte_equal":  true
+    },
+    {
+        "file":  "repeated-p5-frame-0085.png",
+        "byte_equal":  true
+    }
+]

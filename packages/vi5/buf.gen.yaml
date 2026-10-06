@@ -1,0 +1,11 @@
+version: v2
+clean: true
+plugins:
+  - local: protoc-gen-es
+    opt: target=ts
+    out: ./src/gen
+inputs:
+  - directory: ../../
+    paths:
+      - ../../protocol/common.proto
+      - ../../protocol/server-js.proto

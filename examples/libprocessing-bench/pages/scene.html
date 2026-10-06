@@ -1,0 +1,24 @@
+<!doctype html><html><meta charset="utf-8">
+<style>html,body{margin:0;overflow:hidden;background:transparent}canvas{display:block}</style>
+<canvas id="scene"></canvas><script>
+const canvas=document.querySelector('#scene');
+const ctx=canvas.getContext('2d');
+const image=document.createElement('canvas');image.width=2;image.height=1;
+const pixels=image.getContext('2d');pixels.fillStyle='#f00';pixels.fillRect(0,0,1,1);pixels.fillStyle='#00f';pixels.fillRect(1,0,1,1);
+window.aviutl={render(frame,params){
+  const w=frame.screenWidth,h=frame.screenHeight;
+  if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+  ctx.fillStyle='#000';ctx.fillRect(0,0,w,h);ctx.fillStyle='#fff';
+  if(params.scene==='image'){ctx.imageSmoothingEnabled=true;ctx.drawImage(image,0,0,w,h);}
+  else if(params.scene==='text'){
+    ctx.font='24px "Arial"';ctx.textBaseline='alphabetic';
+    for(let i=0;i<100;i++)ctx.fillText('Processing 0123 Aa',(i%5)*w/5,(Math.floor(i/5)+1)*h/21);
+  }else{
+    for(let i=0;i<1000;i++){
+      const x=(i*37)%w+0.3,y=(i*71)%h+0.3;
+      ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+19,y+5);ctx.lineTo(x+3,y+23);ctx.closePath();ctx.fill();
+      ctx.beginPath();ctx.ellipse(x+31,y+31,9.5,9.5,0,0,2*Math.PI);ctx.fill();
+    }
+  }
+}};
+</script></html>

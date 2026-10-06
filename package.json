@@ -1,0 +1,12 @@
+{
+  "name": "web-render-root",
+  "private": true,
+  "scripts": {
+    "build:web": "npm --prefix packages/vi5 run build",
+    "check:web": "npm --prefix packages/vi5 run typecheck",
+    "test": "node --experimental-transform-types --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.0"
+  }
+}
