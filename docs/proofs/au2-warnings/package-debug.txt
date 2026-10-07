@@ -1,0 +1,11 @@
+   Compiling web-render-aux2 v0.1.0 (E:\Downloads\web_render_aux2_prototype\web-render\crates\web-render-aux2)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.43s
+   Compiling processing_core v0.0.5 (E:\Downloads\web_render_aux2_prototype\web-render\native\libprocessing\crates\processing_core)
+   Compiling processing_input v0.0.5 (E:\Downloads\web_render_aux2_prototype\web-render\native\libprocessing\crates\processing_input)
+   Compiling processing_render v0.0.5 (E:\Downloads\web_render_aux2_prototype\web-render\native\libprocessing\crates\processing_render)
+   Compiling processing_midi v0.0.5 (E:\Downloads\web_render_aux2_prototype\web-render\native\libprocessing\crates\processing_midi)
+   Compiling processing v0.0.8 (E:\Downloads\web_render_aux2_prototype\web-render\native\libprocessing)
+   Compiling web-render-processing-server v0.1.0 (E:\Downloads\web_render_aux2_prototype\web-render\native\web-render-processing-server)
+    Finished `release` profile [optimized] target(s) in 1m 22s
+Package: E:\Downloads\web_render_aux2_prototype\web-render\dist\windows-debug\Plugin\web-render
+Development: au2 dev -p debug

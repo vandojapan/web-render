@@ -53,18 +53,23 @@ try {
     Copy-Item 'native/libprocessing/LICENSE.md' (Join-Path $out 'libprocessing-LICENSE.md')
     Copy-Item 'native/libprocessing/lygia/LICENSE.md' (Join-Path $out 'lygia-LICENSE.md')
     Copy-Item -LiteralPath (Join-Path $CefRuntimeDirectory 'CREDITS.html') -Destination $out -Force
-    # au2 0.10 copies files; generate explicit artifacts for every CEF resource/locale.
+    # au2 0.10 copies files; keep the default and compatibility configs identical
+    # so plain `au2 prepare` / `au2 dev` deploy the complete runtime together.
     $config = [IO.File]::ReadAllText((Join-Path $root 'aviutl2.toml'))
-    # au2 0.10 starts build commands through cmd.exe from a canonical \\?\ path.
-    # Absolute script paths survive cmd.exe falling back to its Windows directory.
-    $scriptPath = (Join-Path $root 'scripts/build-windows.ps1').Replace('\\?\','').Replace('\','/')
-    foreach ($buildProfile in @('debug','release')) {
-        $original = "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows.ps1 -Profile $buildProfile"
-        $invocation = "& '" + $scriptPath.Replace("'", "''") + "' -Profile $buildProfile`nif (`$LASTEXITCODE) { exit `$LASTEXITCODE }"
-        $encoded = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($invocation))
-        $config = $config.Replace($original, "powershell -NoProfile -ExecutionPolicy Bypass -OutputFormat Text -EncodedCommand $encoded")
+    $begin = '# BEGIN GENERATED RUNTIME ARTIFACTS'
+    $end = '# END GENERATED RUNTIME ARTIFACTS'
+    $start = $config.IndexOf($begin)
+    if ($start -ge 0) {
+        $finish = $config.IndexOf($end, $start)
+        if ($finish -lt 0) { throw 'Generated runtime artifact block is incomplete.' }
+        $config = $config.Remove($start, $finish + $end.Length - $start)
     }
-    $files = Get-ChildItem -LiteralPath $out -File -Recurse | Where-Object { $_.Name -ne 'web-render.aux2' }
+    $config = $config.TrimEnd() + "`n`n$begin`n"
+    # CEF may write debug.log next to its executable. Logs are not runtime
+    # artifacts and must not change the generated config after a test run.
+    $files = Get-ChildItem -LiteralPath $out -File -Recurse |
+        Where-Object { $_.Name -ne 'web-render.aux2' -and $_.Extension -ne '.log' } |
+        Sort-Object FullName
     $artifactIndex = 0
     foreach ($file in $files) {
         $relative = $file.FullName.Substring($out.Length + 1).Replace('\','/')
@@ -74,8 +79,10 @@ try {
         }
         $artifactIndex++
     }
+    $config += "`n$end`n"
+    [IO.File]::WriteAllText((Join-Path $root 'aviutl2.toml'), $config, [Text.UTF8Encoding]::new($false))
     $configPath = Join-Path $root '.aviutl2-runtime.toml'
     [IO.File]::WriteAllText($configPath, $config, [Text.UTF8Encoding]::new($false))
     Write-Host "Package: $out"
-    Write-Host "Development: au2 -C .aviutl2-runtime.toml dev -p $Profile"
+    Write-Host "Development: au2 dev -p $Profile"
 } finally { Pop-Location }

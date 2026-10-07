@@ -14,6 +14,19 @@ index be9f10d..9b0f71e 100644
 +[[example]]
 +name = "no_smooth_verify"
 +path = "examples/no_smooth_verify.rs"
+diff --git a/crates/processing_core/src/config.rs b/crates/processing_core/src/config.rs
+index a10edd0..6a9d4c2 100644
+--- a/crates/processing_core/src/config.rs
++++ b/crates/processing_core/src/config.rs
+@@ -7,6 +7,8 @@ pub enum ConfigKey {
+     SketchRootPath,
+     SketchFileName,
+     LogLevel,
++    /// Optional "true" / "false" override for Bevy asset hot reloading.
++    AssetWatchForChanges,
+ }
+ 
+ // TODO: Consider Box<dyn Any> instead of String
 diff --git a/crates/processing_ffi/src/lib.rs b/crates/processing_ffi/src/lib.rs
 index f78a866..6fd67ce 100644
 --- a/crates/processing_ffi/src/lib.rs
@@ -91,6 +104,127 @@ index f78a866..6fd67ce 100644
  /// Destroy a graphics context.
  ///
  /// SAFETY:
+diff --git a/crates/processing_render/build.rs b/crates/processing_render/build.rs
+index d5b62aa..51b7b8d 100644
+--- a/crates/processing_render/build.rs
++++ b/crates/processing_render/build.rs
+@@ -1,7 +1,93 @@
+-// packages wesl libraries for processing and lygia
+-// note that bevy does not (as of yet) understand how to use these packages
+-// they are, instead, used by us as part of shader pre-processing in the
+-// processing_render crate
++use std::{collections::BTreeSet, path::Path};
++
++// Package shader modules, excluding Lygia's tooling, tests and legacy WGSL
++// filenames whose WESL replacements have valid import names.
++fn scan_lygia(path: &Path, name: &str, root: &Path) -> std::io::Result<Option<wesl::Module>> {
++    let relative = path
++        .strip_prefix(root)
++        .expect("Lygia module stays inside its root");
++    if matches!(
++        relative.to_str(),
++        Some(
++            "math/const"
++                | "math\\const"
++                | "math/quat/2mat3"
++                | "math\\quat\\2mat3"
++                | "math/quat/2mat4"
++                | "math\\quat\\2mat4"
++        )
++    ) {
++        let replacement = match name {
++            "const" => "consts.wesl",
++            "2mat3" => "quat2mat3.wesl",
++            "2mat4" => "quat2mat4.wesl",
++            _ => unreachable!(),
++        };
++        assert!(
++            path.with_file_name(replacement).is_file(),
++            "Missing WESL replacement for {}",
++            path.display()
++        );
++        return Ok(None);
++    }
++    let wesl_file = path.with_extension("wesl");
++    let wgsl_file = path.with_extension("wgsl");
++    let source = if wesl_file.is_file() {
++        println!("cargo::rerun-if-changed={}", wesl_file.display());
++        std::fs::read_to_string(wesl_file)?
++    } else if wgsl_file.is_file() {
++        println!("cargo::rerun-if-changed={}", wgsl_file.display());
++        std::fs::read_to_string(wgsl_file)?
++    } else {
++        String::new()
++    };
++    let mut submodules = Vec::new();
++    if path.is_dir() {
++        println!("cargo::rerun-if-changed={}", path.display());
++        let mut candidates = BTreeSet::new();
++        for entry in std::fs::read_dir(path)? {
++            let entry = entry?;
++            let file = entry.path();
++            let filename = entry.file_name();
++            let filename = filename.to_string_lossy();
++            if filename.starts_with('.') || (path == root && filename == "test") {
++                continue;
++            }
++            if file.is_dir()
++                || matches!(
++                    file.extension().and_then(|e| e.to_str()),
++                    Some("wesl" | "wgsl")
++                )
++            {
++                candidates.insert(file.with_extension(""));
++            }
++        }
++        for file in candidates {
++            let name = file
++                .file_name()
++                .expect("Module filename")
++                .to_str()
++                .expect("UTF-8 module name");
++            if let Some(module) = scan_lygia(&file, name, root)? {
++                submodules.push(module);
++            }
++        }
++    }
++    if source.is_empty() && submodules.is_empty() {
++        return Ok(None);
++    }
++    if path != root {
++        format!("package::{name}")
++            .parse::<wesl::ModulePath>()
++            .unwrap_or_else(|error| panic!("Invalid WESL module {}: {error}", path.display()));
++    }
++    Ok(Some(wesl::Module {
++        name: name.into(),
++        source,
++        submodules,
++    }))
++}
++
+ fn main() {
+     wesl::PkgBuilder::new("processing")
+         .scan_root("shaders/processing")
+@@ -9,9 +95,15 @@ fn main() {
+         .build_artifact()
+         .expect("failed to build processing package artifact");
+ 
+-    wesl::PkgBuilder::new("lygia")
+-        .scan_root("../../lygia")
+-        .expect("failed to scan Lygia WESL files")
++    let root = Path::new("../../lygia");
++    let lygia = wesl::Pkg {
++        crate_name: std::env::var("CARGO_PKG_NAME").expect("Cargo package name"),
++        root: scan_lygia(root, "lygia", root)
++            .expect("failed to scan Lygia shader modules")
++            .expect("Lygia shader package is empty"),
++        dependencies: Vec::new(),
++    };
++    lygia
+         .build_artifact()
+         .expect("failed to build Lygia package artifact");
+ }
 diff --git a/crates/processing_render/src/graphics.rs b/crates/processing_render/src/graphics.rs
 index c8005e7..c9becfa 100644
 --- a/crates/processing_render/src/graphics.rs
@@ -464,6 +598,25 @@ index 4131a7a..1b8a5a1 100644
  #[wasm_bindgen(js_name = "surfaceDestroy")]
  pub fn js_surface_destroy(window_id: u64) -> Result<(), JsValue> {
      let window_entity = Entity::from_bits(window_id);
+diff --git a/src/lib.rs b/src/lib.rs
+index 7620f21..cd8f273 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -59,6 +59,14 @@ fn create_app(config: Config) -> App {
+             ..default()
+         });
+ 
++    let plugins = plugins.set(bevy::asset::AssetPlugin {
++        watch_for_changes_override: config.get(ConfigKey::AssetWatchForChanges).map(|value| {
++            value
++                .parse::<bool>()
++                .expect("AssetWatchForChanges must be true or false")
++        }),
++        ..default()
++    });
+     app.add_plugins(plugins);
+     app.add_plugins(processing_midi::MidiPlugin);
+     app.add_plugins(processing_input::InputPlugin);
 diff --git a/NO_SMOOTH.md b/NO_SMOOTH.md
 new file mode 100644
 index 0000000..7c5fa53

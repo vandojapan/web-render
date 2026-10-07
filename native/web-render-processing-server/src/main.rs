@@ -23,7 +23,11 @@ fn run() -> anyhow::Result<()> {
             .ok_or_else(|| anyhow::anyhow!("Expected native project directory"))?,
     );
     let project = Project::load(&root)?;
-    init(Config::default())?;
+    // All worker assets are supplied through IPC or generated in memory. There
+    // is no executable-relative assets directory to watch for hot reloading.
+    let mut config = Config::default();
+    config.set(ConfigKey::AssetWatchForChanges, "false".into());
+    init(config)?;
     let image = image_create(
         Extent3d {
             width: 2,

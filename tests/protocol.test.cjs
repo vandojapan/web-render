@@ -67,15 +67,14 @@ require('node:test').test('Vite runtime emits the matching frame metadata and pa
  // metadata, so even a small canvas must start at y >= 64 and retain its pixels.
  await p.evaluate(()=>window.__vi5__.register({
   id:'p5-protocol-proof',label:'p5 protocol proof',parameters:{},
-  async setup(ctx){window.__p5SetupCount=(window.__p5SetupCount??0)+1;await Promise.resolve();return ctx.createCanvas(48,24)},
+  async setup(ctx){window.__p5SetupCount=(window.__p5SetupCount??0)+1;await new Promise(resolve=>setTimeout(resolve,150));return ctx.createCanvas(48,24)},
   draw(ctx,sketch){sketch.clear();sketch.noStroke();sketch.fill(123,45,210);sketch.rect(0,0,48,24)},
  }));
  const p5Data=pb.toBinary(schema.BatchRenderRequestSchema,pb.create(schema.BatchRenderRequestSchema,{renderRequests:[{
   renderNonce:18,object:'p5-protocol-proof',objectId:2n,isOffline:false,
   frameInfo:{screenWidth:1920,screenHeight:1080,currentFrame:90,currentTime:1.5,framerate:60,totalFrames:600,totalTime:10},
  }]}));
- // A preview may return pending on its first request, then must become ready.
- await p.evaluate(async encoded=>{await window.__vi5__.render(23455,encoded);window.__vi5__.acknowledge(23455);await new Promise(r=>setTimeout(r,200))},Buffer.from(p5Data).toString('base64'));
+ // The first preview waits for delayed setup and paints the requested frame.
  await p.evaluate(async encoded=>{await window.__vi5__.render(23456,encoded)},Buffer.from(p5Data).toString('base64'));
  const p5Paint=await p.evaluate(()=>{
   const d=window.__vi5__.ctx.getImageData(0,0,4096,64).data;
@@ -98,7 +97,7 @@ require('node:test').test('Vite runtime emits the matching frame metadata and pa
   async setup(){throw new Error('expected async p5 setup failure')},draw(){},
  }));
  const failedP5Data=pb.toBinary(schema.BatchRenderRequestSchema,pb.create(schema.BatchRenderRequestSchema,{renderRequests:[{
-  renderNonce:19,object:'p5-setup-failure',objectId:3n,isOffline:true,
+  renderNonce:19,object:'p5-setup-failure',objectId:3n,isOffline:false,
   frameInfo:{screenWidth:1920,screenHeight:1080,currentFrame:0,currentTime:0,framerate:60,totalFrames:600,totalTime:10},
  }]}));
  await p.evaluate(async encoded=>{

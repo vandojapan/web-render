@@ -1,0 +1,36 @@
+#:schema ./.aviutl2-cli/aviutl2.schema.json
+# 設定ファイルについては https://github.com/sevenc-nanashi/aviutl2-cli を参照してください。
+[project]
+id = "web-render-aux2"
+name = "web-render-aux2"
+version = "0.1.0"
+
+[artifacts.web_render_aux2]
+enabled = true
+destination = "Plugin/web-render/web-render.aux2"
+placement_method = "copy"
+
+[artifacts.web_render_aux2.profiles.debug]
+build = "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows.ps1 -Profile debug"
+source = "dist/windows-debug/Plugin/web-render/web-render.aux2"
+enabled = true
+
+[artifacts.web_render_aux2.profiles.release]
+build = "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows.ps1 -Profile release"
+source = "dist/windows-release/Plugin/web-render/web-render.aux2"
+enabled = true
+
+[development]
+aviutl2_version = "2.1.12"
+# prebuild = "echo prebuild"
+# postbuild = "echo postbuild"
+
+[preview]
+# aviutl2_version = "2.00beta31"
+# prebuild = "echo prebuild"
+# postbuild = "echo postbuild"
+
+[release]
+package_template = "package_template.txt"
+# prebuild = "echo prebuild"
+# postbuild = "echo postbuild"

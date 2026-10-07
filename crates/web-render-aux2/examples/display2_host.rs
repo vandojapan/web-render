@@ -171,103 +171,104 @@ fn main() -> anyhow::Result<()> {
                 println!("Display2 window: {title}");
                 s.windows.push(title.clone());
             }
-            if s.export.is_some() && !s.export_posted && title.contains(&s.expected) {
-                if let Some(id) = png_command(GetMenu(hwnd)) {
-                    PostMessageW(hwnd, 0x0111, id as usize, 0);
-                    s.export_posted = true;
-                    println!("Opened built-in PNG output on display 2, command={id}");
-                }
+            if s.export.is_some()
+                && !s.export_posted
+                && title.contains(&s.expected)
+                && let Some(id) = png_command(GetMenu(hwnd))
+            {
+                PostMessageW(hwnd, 0x0111, id as usize, 0);
+                s.export_posted = true;
+                println!("Opened built-in PNG output on display 2, command={id}");
             }
             if text(hwnd, true) != "#32770" {
                 return 1;
             }
             let mut dialog = Dialog { items: Vec::new() };
             EnumChildWindows(hwnd, child, &mut dialog as *mut Dialog as isize);
-            if let Some(path) = &s.export {
-                if title.contains("PNG") && !s.export_dialog_posted {
-                    println!("PNG dialog controls: {:?}", dialog.items);
-                    let edits: Vec<_> = dialog
+            if let Some(path) = &s.export
+                && title.contains("PNG")
+                && !s.export_dialog_posted
+            {
+                println!("PNG dialog controls: {:?}", dialog.items);
+                let edits: Vec<_> = dialog
+                    .items
+                    .iter()
+                    .filter(|(_, c, _)| c == "Edit")
+                    .collect();
+                if let (Some(edit), Some((button, _, _))) = (
+                    edits.first(),
+                    dialog
                         .items
                         .iter()
-                        .filter(|(_, c, _)| c == "Edit")
+                        .find(|(_, c, t)| c == "Button" && (t == "保存(&S)" || t == "保存")),
+                ) {
+                    let value: Vec<_> = path
+                        .to_string_lossy()
+                        .encode_utf16()
+                        .chain(Some(0))
                         .collect();
-                    if let (Some(edit), Some((button, _, _))) = (
-                        edits.first(),
-                        dialog
-                            .items
-                            .iter()
-                            .find(|(_, c, t)| c == "Button" && (t == "保存(&S)" || t == "保存")),
-                    ) {
-                        let value: Vec<_> = path
-                            .to_string_lossy()
-                            .encode_utf16()
-                            .chain(Some(0))
-                            .collect();
-                        SetWindowTextW(edit.0, value.as_ptr());
-                        let empty = [0u16];
-                        SetWindowTextW(edit.0, empty.as_ptr());
-                        for character in value.iter().copied().take(value.len() - 1) {
-                            SendMessageW(edit.0, 0x0102, character as usize, 1);
-                        }
-                        let edit_id = GetDlgCtrlID(edit.0);
-                        SendMessageW(hwnd, 0x0468, edit_id as usize, value.as_ptr() as isize);
+                    SetWindowTextW(edit.0, value.as_ptr());
+                    let empty = [0u16];
+                    SetWindowTextW(edit.0, empty.as_ptr());
+                    for character in value.iter().copied().take(value.len() - 1) {
+                        SendMessageW(edit.0, 0x0102, character as usize, 1);
+                    }
+                    let edit_id = GetDlgCtrlID(edit.0);
+                    SendMessageW(hwnd, 0x0468, edit_id as usize, value.as_ptr() as isize);
+                    println!(
+                        "PNG controls edit_id={edit_id}, save_id={}, enabled={}",
+                        GetDlgCtrlID(*button),
+                        IsWindowEnabled(*button)
+                    );
+                    // Deliver button input directly to the verified control; a foreground
+                    // overlay in an automated desktop may intercept global mouse input.
+                    PostMessageW(*button, 0x0201, 1, (10 << 16) | 10);
+                    PostMessageW(*button, 0x0202, 0, (10 << 16) | 10);
+                    let mut rect = Rect::default();
+                    if GetWindowRect(*button, &mut rect) != 0
+                        && rect.left >= s.work.left
+                        && rect.top >= s.work.top
+                        && rect.right <= s.work.right
+                        && rect.bottom <= s.work.bottom
+                    {
+                        let current = GetCurrentThreadId();
+                        let target = GetWindowThreadProcessId(hwnd, std::ptr::null_mut());
+                        let foreground =
+                            GetWindowThreadProcessId(GetForegroundWindow(), std::ptr::null_mut());
+                        AttachThreadInput(current, target, 1);
+                        AttachThreadInput(current, foreground, 1);
+                        let active = SetForegroundWindow(hwnd);
+                        SetFocus(*button);
                         println!(
-                            "PNG controls edit_id={edit_id}, save_id={}, enabled={}",
-                            GetDlgCtrlID(*button),
-                            IsWindowEnabled(*button)
+                            "PNG foreground={:?}, activate={active}",
+                            GetForegroundWindow()
                         );
-                        // Deliver button input directly to the verified control; a foreground
-                        // overlay in an automated desktop may intercept global mouse input.
-                        PostMessageW(*button, 0x0201, 1, (10 << 16) | 10);
-                        PostMessageW(*button, 0x0202, 0, (10 << 16) | 10);
-                        let mut rect = Rect::default();
-                        if GetWindowRect(*button, &mut rect) != 0
-                            && rect.left >= s.work.left
-                            && rect.top >= s.work.top
-                            && rect.right <= s.work.right
-                            && rect.bottom <= s.work.bottom
-                        {
-                            let current = GetCurrentThreadId();
-                            let target = GetWindowThreadProcessId(hwnd, std::ptr::null_mut());
-                            let foreground = GetWindowThreadProcessId(
-                                GetForegroundWindow(),
-                                std::ptr::null_mut(),
-                            );
-                            AttachThreadInput(current, target, 1);
-                            AttachThreadInput(current, foreground, 1);
-                            let active = SetForegroundWindow(hwnd);
-                            SetFocus(*button);
-                            println!(
-                                "PNG foreground={:?}, activate={active}",
-                                GetForegroundWindow()
-                            );
-                            SetWindowPos(hwnd, -1isize as H, 0, 0, 0, 0, 0x43);
-                            let x = (rect.left + rect.right) / 2;
-                            let y = (rect.top + rect.bottom) / 2;
-                            let point = (x as u32 as i64) | ((y as i64) << 32);
-                            println!(
-                                "PNG save hit={:?}, expected={button:?}, rect={rect:?}",
-                                WindowFromPoint(point)
-                            );
+                        SetWindowPos(hwnd, -1isize as H, 0, 0, 0, 0, 0x43);
+                        let x = (rect.left + rect.right) / 2;
+                        let y = (rect.top + rect.bottom) / 2;
+                        let point = (x as u32 as i64) | ((y as i64) << 32);
+                        println!(
+                            "PNG save hit={:?}, expected={button:?}, rect={rect:?}",
+                            WindowFromPoint(point)
+                        );
+                        if WindowFromPoint(point) == *button {
+                            SetCursorPos(x, y);
+                            mouse_event(2, 0, 0, 0, 0);
+                            mouse_event(4, 0, 0, 0, 0);
+                            std::thread::sleep(std::time::Duration::from_millis(100));
                             if WindowFromPoint(point) == *button {
-                                SetCursorPos(x, y);
                                 mouse_event(2, 0, 0, 0, 0);
                                 mouse_event(4, 0, 0, 0, 0);
-                                std::thread::sleep(std::time::Duration::from_millis(100));
-                                if WindowFromPoint(point) == *button {
-                                    mouse_event(2, 0, 0, 0, 0);
-                                    mouse_event(4, 0, 0, 0, 0);
-                                }
                             }
-                            PostMessageW(*button, 0x00f5, 0, 0);
-                            AttachThreadInput(current, foreground, 0);
-                            AttachThreadInput(current, target, 0);
-                        } else {
-                            PostMessageW(hwnd, 0x0111, 1, *button as isize);
                         }
-                        s.export_dialog_posted = true;
-                        println!("Requested PNG export to {}", path.display());
+                        PostMessageW(*button, 0x00f5, 0, 0);
+                        AttachThreadInput(current, foreground, 0);
+                        AttachThreadInput(current, target, 0);
+                    } else {
+                        PostMessageW(hwnd, 0x0111, 1, *button as isize);
                     }
+                    s.export_dialog_posted = true;
+                    println!("Requested PNG export to {}", path.display());
                 }
             }
             if title == "スクリプト・プラグインの追加" && !s.trusted {
@@ -280,14 +281,15 @@ fn main() -> anyhow::Result<()> {
                     })
                     .flat_map(|(_, _, t)| t.lines().map(str::trim).filter(|s| !s.is_empty()))
                     .collect();
-                if !entries.is_empty() && entries.iter().all(|e| s.allowed.iter().any(|a| a == e)) {
-                    if let Some((button, _, _)) = dialog.items.iter().find(|(_, c, t)| {
+                if !entries.is_empty()
+                    && entries.iter().all(|e| s.allowed.iter().any(|a| a == e))
+                    && let Some((button, _, _)) = dialog.items.iter().find(|(_, c, t)| {
                         c == "Button" && t == "このプラグイン・スクリプトを信頼して使用する"
-                    }) {
-                        PostMessageW(*button, 0x00f5, 0, 0);
-                        s.trusted = true;
-                        println!("Trusted the generated scripts of this explicit test project");
-                    }
+                    })
+                {
+                    PostMessageW(*button, 0x00f5, 0, 0);
+                    s.trusted = true;
+                    println!("Trusted the generated scripts of this explicit test project");
                 }
             }
             if title == "AviUtl ExEdit2"
@@ -298,16 +300,14 @@ fn main() -> anyhow::Result<()> {
                         && t.replace('\r', "").trim()
                             == "現在の編集データは更新されています\nプロジェクトを保存しますか？"
                 })
-            {
-                if let Some((button, _, _)) = dialog
+                && let Some((button, _, _)) = dialog
                     .items
                     .iter()
                     .find(|(_, c, t)| c == "Button" && t == "はい(&Y)")
-                {
-                    PostMessageW(*button, 0x00f5, 0, 0);
-                    s.saved = true;
-                    println!("Saved and closed only {}", s.expected);
-                }
+            {
+                PostMessageW(*button, 0x00f5, 0, 0);
+                s.saved = true;
+                println!("Saved and closed only {}", s.expected);
             }
         }
         1
@@ -453,20 +453,19 @@ fn main() -> anyhow::Result<()> {
     let status = loop {
         if s.export.is_none() {
             let signal = std::path::PathBuf::from(&args[3]).with_file_name("export-request.json");
-            if let Ok(bytes) = std::fs::read(&signal) {
-                if let Ok(value) = serde_json::from_slice::<serde_json::Value>(&bytes) {
-                    if let Some(path) = value["file"].as_str() {
-                        let path = std::path::absolute(path)?;
-                        let allowed = std::path::absolute(
-                            std::path::PathBuf::from(&args[3]).with_file_name("native-export.png"),
-                        )?;
-                        anyhow::ensure!(
-                            path == allowed,
-                            "Refused an export outside this explicit test output"
-                        );
-                        s.export = Some(path);
-                    }
-                }
+            if let Ok(bytes) = std::fs::read(&signal)
+                && let Ok(value) = serde_json::from_slice::<serde_json::Value>(&bytes)
+                && let Some(path) = value["file"].as_str()
+            {
+                let path = std::path::absolute(path)?;
+                let allowed = std::path::absolute(
+                    std::path::PathBuf::from(&args[3]).with_file_name("native-export.png"),
+                )?;
+                anyhow::ensure!(
+                    path == allowed,
+                    "Refused an export outside this explicit test output"
+                );
+                s.export = Some(path);
             }
         }
         unsafe {

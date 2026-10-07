@@ -34,3 +34,1951 @@ aviutl2_version = "2.1.12"
 package_template = "package_template.txt"
 # prebuild = "echo prebuild"
 # postbuild = "echo postbuild"
+
+# BEGIN GENERATED RUNTIME ARTIFACTS
+
+[artifacts.runtime_0]
+placement_method = 'copy'
+destination = 'Plugin/web-render/archive.json'
+[artifacts.runtime_0.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/archive.json'
+[artifacts.runtime_0.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/archive.json'
+
+[artifacts.runtime_1]
+placement_method = 'copy'
+destination = 'Plugin/web-render/chrome_100_percent.pak'
+[artifacts.runtime_1.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/chrome_100_percent.pak'
+[artifacts.runtime_1.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/chrome_100_percent.pak'
+
+[artifacts.runtime_2]
+placement_method = 'copy'
+destination = 'Plugin/web-render/chrome_200_percent.pak'
+[artifacts.runtime_2.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/chrome_200_percent.pak'
+[artifacts.runtime_2.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/chrome_200_percent.pak'
+
+[artifacts.runtime_3]
+placement_method = 'copy'
+destination = 'Plugin/web-render/chrome_elf.dll'
+[artifacts.runtime_3.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/chrome_elf.dll'
+[artifacts.runtime_3.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/chrome_elf.dll'
+
+[artifacts.runtime_4]
+placement_method = 'copy'
+destination = 'Plugin/web-render/CREDITS.html'
+[artifacts.runtime_4.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/CREDITS.html'
+[artifacts.runtime_4.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/CREDITS.html'
+
+[artifacts.runtime_5]
+placement_method = 'copy'
+destination = 'Plugin/web-render/d3dcompiler_47.dll'
+[artifacts.runtime_5.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/d3dcompiler_47.dll'
+[artifacts.runtime_5.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/d3dcompiler_47.dll'
+
+[artifacts.runtime_6]
+placement_method = 'copy'
+destination = 'Plugin/web-render/dxcompiler.dll'
+[artifacts.runtime_6.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/dxcompiler.dll'
+[artifacts.runtime_6.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/dxcompiler.dll'
+
+[artifacts.runtime_7]
+placement_method = 'copy'
+destination = 'Plugin/web-render/dxil.dll'
+[artifacts.runtime_7.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/dxil.dll'
+[artifacts.runtime_7.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/dxil.dll'
+
+[artifacts.runtime_8]
+placement_method = 'copy'
+destination = 'Plugin/web-render/icudtl.dat'
+[artifacts.runtime_8.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/icudtl.dat'
+[artifacts.runtime_8.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/icudtl.dat'
+
+[artifacts.runtime_9]
+placement_method = 'copy'
+destination = 'Plugin/web-render/libcef.dll'
+[artifacts.runtime_9.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/libcef.dll'
+[artifacts.runtime_9.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/libcef.dll'
+
+[artifacts.runtime_10]
+placement_method = 'copy'
+destination = 'Plugin/web-render/libEGL.dll'
+[artifacts.runtime_10.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/libEGL.dll'
+[artifacts.runtime_10.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/libEGL.dll'
+
+[artifacts.runtime_11]
+placement_method = 'copy'
+destination = 'Plugin/web-render/libGLESv2.dll'
+[artifacts.runtime_11.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/libGLESv2.dll'
+[artifacts.runtime_11.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/libGLESv2.dll'
+
+[artifacts.runtime_12]
+placement_method = 'copy'
+destination = 'Plugin/web-render/libprocessing-LICENSE.md'
+[artifacts.runtime_12.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/libprocessing-LICENSE.md'
+[artifacts.runtime_12.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/libprocessing-LICENSE.md'
+
+[artifacts.runtime_13]
+placement_method = 'copy'
+destination = 'Plugin/web-render/LICENSE'
+[artifacts.runtime_13.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/LICENSE'
+[artifacts.runtime_13.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/LICENSE'
+
+[artifacts.runtime_14]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/af.pak'
+[artifacts.runtime_14.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/af.pak'
+[artifacts.runtime_14.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/af.pak'
+
+[artifacts.runtime_15]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/af_FEMININE.pak'
+[artifacts.runtime_15.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/af_FEMININE.pak'
+[artifacts.runtime_15.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/af_FEMININE.pak'
+
+[artifacts.runtime_16]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/af_MASCULINE.pak'
+[artifacts.runtime_16.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/af_MASCULINE.pak'
+[artifacts.runtime_16.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/af_MASCULINE.pak'
+
+[artifacts.runtime_17]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/af_NEUTER.pak'
+[artifacts.runtime_17.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/af_NEUTER.pak'
+[artifacts.runtime_17.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/af_NEUTER.pak'
+
+[artifacts.runtime_18]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/am.pak'
+[artifacts.runtime_18.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/am.pak'
+[artifacts.runtime_18.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/am.pak'
+
+[artifacts.runtime_19]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/am_FEMININE.pak'
+[artifacts.runtime_19.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/am_FEMININE.pak'
+[artifacts.runtime_19.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/am_FEMININE.pak'
+
+[artifacts.runtime_20]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/am_MASCULINE.pak'
+[artifacts.runtime_20.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/am_MASCULINE.pak'
+[artifacts.runtime_20.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/am_MASCULINE.pak'
+
+[artifacts.runtime_21]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/am_NEUTER.pak'
+[artifacts.runtime_21.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/am_NEUTER.pak'
+[artifacts.runtime_21.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/am_NEUTER.pak'
+
+[artifacts.runtime_22]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ar.pak'
+[artifacts.runtime_22.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ar.pak'
+[artifacts.runtime_22.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ar.pak'
+
+[artifacts.runtime_23]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ar_FEMININE.pak'
+[artifacts.runtime_23.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ar_FEMININE.pak'
+[artifacts.runtime_23.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ar_FEMININE.pak'
+
+[artifacts.runtime_24]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ar_MASCULINE.pak'
+[artifacts.runtime_24.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ar_MASCULINE.pak'
+[artifacts.runtime_24.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ar_MASCULINE.pak'
+
+[artifacts.runtime_25]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ar_NEUTER.pak'
+[artifacts.runtime_25.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ar_NEUTER.pak'
+[artifacts.runtime_25.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ar_NEUTER.pak'
+
+[artifacts.runtime_26]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bg.pak'
+[artifacts.runtime_26.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bg.pak'
+[artifacts.runtime_26.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bg.pak'
+
+[artifacts.runtime_27]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bg_FEMININE.pak'
+[artifacts.runtime_27.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bg_FEMININE.pak'
+[artifacts.runtime_27.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bg_FEMININE.pak'
+
+[artifacts.runtime_28]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bg_MASCULINE.pak'
+[artifacts.runtime_28.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bg_MASCULINE.pak'
+[artifacts.runtime_28.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bg_MASCULINE.pak'
+
+[artifacts.runtime_29]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bg_NEUTER.pak'
+[artifacts.runtime_29.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bg_NEUTER.pak'
+[artifacts.runtime_29.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bg_NEUTER.pak'
+
+[artifacts.runtime_30]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bn.pak'
+[artifacts.runtime_30.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bn.pak'
+[artifacts.runtime_30.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bn.pak'
+
+[artifacts.runtime_31]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bn_FEMININE.pak'
+[artifacts.runtime_31.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bn_FEMININE.pak'
+[artifacts.runtime_31.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bn_FEMININE.pak'
+
+[artifacts.runtime_32]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bn_MASCULINE.pak'
+[artifacts.runtime_32.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bn_MASCULINE.pak'
+[artifacts.runtime_32.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bn_MASCULINE.pak'
+
+[artifacts.runtime_33]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/bn_NEUTER.pak'
+[artifacts.runtime_33.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/bn_NEUTER.pak'
+[artifacts.runtime_33.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/bn_NEUTER.pak'
+
+[artifacts.runtime_34]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ca.pak'
+[artifacts.runtime_34.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ca.pak'
+[artifacts.runtime_34.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ca.pak'
+
+[artifacts.runtime_35]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ca_FEMININE.pak'
+[artifacts.runtime_35.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ca_FEMININE.pak'
+[artifacts.runtime_35.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ca_FEMININE.pak'
+
+[artifacts.runtime_36]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ca_MASCULINE.pak'
+[artifacts.runtime_36.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ca_MASCULINE.pak'
+[artifacts.runtime_36.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ca_MASCULINE.pak'
+
+[artifacts.runtime_37]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ca_NEUTER.pak'
+[artifacts.runtime_37.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ca_NEUTER.pak'
+[artifacts.runtime_37.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ca_NEUTER.pak'
+
+[artifacts.runtime_38]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/cs.pak'
+[artifacts.runtime_38.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/cs.pak'
+[artifacts.runtime_38.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/cs.pak'
+
+[artifacts.runtime_39]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/cs_FEMININE.pak'
+[artifacts.runtime_39.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/cs_FEMININE.pak'
+[artifacts.runtime_39.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/cs_FEMININE.pak'
+
+[artifacts.runtime_40]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/cs_MASCULINE.pak'
+[artifacts.runtime_40.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/cs_MASCULINE.pak'
+[artifacts.runtime_40.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/cs_MASCULINE.pak'
+
+[artifacts.runtime_41]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/cs_NEUTER.pak'
+[artifacts.runtime_41.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/cs_NEUTER.pak'
+[artifacts.runtime_41.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/cs_NEUTER.pak'
+
+[artifacts.runtime_42]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/da.pak'
+[artifacts.runtime_42.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/da.pak'
+[artifacts.runtime_42.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/da.pak'
+
+[artifacts.runtime_43]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/da_FEMININE.pak'
+[artifacts.runtime_43.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/da_FEMININE.pak'
+[artifacts.runtime_43.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/da_FEMININE.pak'
+
+[artifacts.runtime_44]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/da_MASCULINE.pak'
+[artifacts.runtime_44.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/da_MASCULINE.pak'
+[artifacts.runtime_44.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/da_MASCULINE.pak'
+
+[artifacts.runtime_45]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/da_NEUTER.pak'
+[artifacts.runtime_45.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/da_NEUTER.pak'
+[artifacts.runtime_45.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/da_NEUTER.pak'
+
+[artifacts.runtime_46]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/de.pak'
+[artifacts.runtime_46.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/de.pak'
+[artifacts.runtime_46.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/de.pak'
+
+[artifacts.runtime_47]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/de_FEMININE.pak'
+[artifacts.runtime_47.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/de_FEMININE.pak'
+[artifacts.runtime_47.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/de_FEMININE.pak'
+
+[artifacts.runtime_48]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/de_MASCULINE.pak'
+[artifacts.runtime_48.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/de_MASCULINE.pak'
+[artifacts.runtime_48.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/de_MASCULINE.pak'
+
+[artifacts.runtime_49]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/de_NEUTER.pak'
+[artifacts.runtime_49.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/de_NEUTER.pak'
+[artifacts.runtime_49.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/de_NEUTER.pak'
+
+[artifacts.runtime_50]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/el.pak'
+[artifacts.runtime_50.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/el.pak'
+[artifacts.runtime_50.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/el.pak'
+
+[artifacts.runtime_51]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/el_FEMININE.pak'
+[artifacts.runtime_51.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/el_FEMININE.pak'
+[artifacts.runtime_51.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/el_FEMININE.pak'
+
+[artifacts.runtime_52]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/el_MASCULINE.pak'
+[artifacts.runtime_52.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/el_MASCULINE.pak'
+[artifacts.runtime_52.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/el_MASCULINE.pak'
+
+[artifacts.runtime_53]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/el_NEUTER.pak'
+[artifacts.runtime_53.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/el_NEUTER.pak'
+[artifacts.runtime_53.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/el_NEUTER.pak'
+
+[artifacts.runtime_54]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-GB.pak'
+[artifacts.runtime_54.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-GB.pak'
+[artifacts.runtime_54.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-GB.pak'
+
+[artifacts.runtime_55]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-GB_FEMININE.pak'
+[artifacts.runtime_55.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-GB_FEMININE.pak'
+[artifacts.runtime_55.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-GB_FEMININE.pak'
+
+[artifacts.runtime_56]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-GB_MASCULINE.pak'
+[artifacts.runtime_56.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-GB_MASCULINE.pak'
+[artifacts.runtime_56.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-GB_MASCULINE.pak'
+
+[artifacts.runtime_57]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-GB_NEUTER.pak'
+[artifacts.runtime_57.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-GB_NEUTER.pak'
+[artifacts.runtime_57.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-GB_NEUTER.pak'
+
+[artifacts.runtime_58]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-US.pak'
+[artifacts.runtime_58.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-US.pak'
+[artifacts.runtime_58.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-US.pak'
+
+[artifacts.runtime_59]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-US_FEMININE.pak'
+[artifacts.runtime_59.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-US_FEMININE.pak'
+[artifacts.runtime_59.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-US_FEMININE.pak'
+
+[artifacts.runtime_60]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-US_MASCULINE.pak'
+[artifacts.runtime_60.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-US_MASCULINE.pak'
+[artifacts.runtime_60.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-US_MASCULINE.pak'
+
+[artifacts.runtime_61]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/en-US_NEUTER.pak'
+[artifacts.runtime_61.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/en-US_NEUTER.pak'
+[artifacts.runtime_61.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/en-US_NEUTER.pak'
+
+[artifacts.runtime_62]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es.pak'
+[artifacts.runtime_62.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es.pak'
+[artifacts.runtime_62.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es.pak'
+
+[artifacts.runtime_63]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es_FEMININE.pak'
+[artifacts.runtime_63.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es_FEMININE.pak'
+[artifacts.runtime_63.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es_FEMININE.pak'
+
+[artifacts.runtime_64]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es_MASCULINE.pak'
+[artifacts.runtime_64.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es_MASCULINE.pak'
+[artifacts.runtime_64.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es_MASCULINE.pak'
+
+[artifacts.runtime_65]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es_NEUTER.pak'
+[artifacts.runtime_65.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es_NEUTER.pak'
+[artifacts.runtime_65.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es_NEUTER.pak'
+
+[artifacts.runtime_66]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es-419.pak'
+[artifacts.runtime_66.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es-419.pak'
+[artifacts.runtime_66.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es-419.pak'
+
+[artifacts.runtime_67]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es-419_FEMININE.pak'
+[artifacts.runtime_67.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es-419_FEMININE.pak'
+[artifacts.runtime_67.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es-419_FEMININE.pak'
+
+[artifacts.runtime_68]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es-419_MASCULINE.pak'
+[artifacts.runtime_68.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es-419_MASCULINE.pak'
+[artifacts.runtime_68.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es-419_MASCULINE.pak'
+
+[artifacts.runtime_69]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/es-419_NEUTER.pak'
+[artifacts.runtime_69.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/es-419_NEUTER.pak'
+[artifacts.runtime_69.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/es-419_NEUTER.pak'
+
+[artifacts.runtime_70]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/et.pak'
+[artifacts.runtime_70.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/et.pak'
+[artifacts.runtime_70.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/et.pak'
+
+[artifacts.runtime_71]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/et_FEMININE.pak'
+[artifacts.runtime_71.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/et_FEMININE.pak'
+[artifacts.runtime_71.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/et_FEMININE.pak'
+
+[artifacts.runtime_72]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/et_MASCULINE.pak'
+[artifacts.runtime_72.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/et_MASCULINE.pak'
+[artifacts.runtime_72.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/et_MASCULINE.pak'
+
+[artifacts.runtime_73]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/et_NEUTER.pak'
+[artifacts.runtime_73.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/et_NEUTER.pak'
+[artifacts.runtime_73.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/et_NEUTER.pak'
+
+[artifacts.runtime_74]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fa.pak'
+[artifacts.runtime_74.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fa.pak'
+[artifacts.runtime_74.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fa.pak'
+
+[artifacts.runtime_75]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fa_FEMININE.pak'
+[artifacts.runtime_75.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fa_FEMININE.pak'
+[artifacts.runtime_75.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fa_FEMININE.pak'
+
+[artifacts.runtime_76]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fa_MASCULINE.pak'
+[artifacts.runtime_76.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fa_MASCULINE.pak'
+[artifacts.runtime_76.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fa_MASCULINE.pak'
+
+[artifacts.runtime_77]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fa_NEUTER.pak'
+[artifacts.runtime_77.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fa_NEUTER.pak'
+[artifacts.runtime_77.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fa_NEUTER.pak'
+
+[artifacts.runtime_78]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fi.pak'
+[artifacts.runtime_78.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fi.pak'
+[artifacts.runtime_78.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fi.pak'
+
+[artifacts.runtime_79]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fi_FEMININE.pak'
+[artifacts.runtime_79.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fi_FEMININE.pak'
+[artifacts.runtime_79.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fi_FEMININE.pak'
+
+[artifacts.runtime_80]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fi_MASCULINE.pak'
+[artifacts.runtime_80.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fi_MASCULINE.pak'
+[artifacts.runtime_80.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fi_MASCULINE.pak'
+
+[artifacts.runtime_81]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fi_NEUTER.pak'
+[artifacts.runtime_81.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fi_NEUTER.pak'
+[artifacts.runtime_81.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fi_NEUTER.pak'
+
+[artifacts.runtime_82]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fil.pak'
+[artifacts.runtime_82.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fil.pak'
+[artifacts.runtime_82.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fil.pak'
+
+[artifacts.runtime_83]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fil_FEMININE.pak'
+[artifacts.runtime_83.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fil_FEMININE.pak'
+[artifacts.runtime_83.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fil_FEMININE.pak'
+
+[artifacts.runtime_84]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fil_MASCULINE.pak'
+[artifacts.runtime_84.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fil_MASCULINE.pak'
+[artifacts.runtime_84.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fil_MASCULINE.pak'
+
+[artifacts.runtime_85]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fil_NEUTER.pak'
+[artifacts.runtime_85.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fil_NEUTER.pak'
+[artifacts.runtime_85.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fil_NEUTER.pak'
+
+[artifacts.runtime_86]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fr.pak'
+[artifacts.runtime_86.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fr.pak'
+[artifacts.runtime_86.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fr.pak'
+
+[artifacts.runtime_87]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fr_FEMININE.pak'
+[artifacts.runtime_87.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fr_FEMININE.pak'
+[artifacts.runtime_87.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fr_FEMININE.pak'
+
+[artifacts.runtime_88]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fr_MASCULINE.pak'
+[artifacts.runtime_88.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fr_MASCULINE.pak'
+[artifacts.runtime_88.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fr_MASCULINE.pak'
+
+[artifacts.runtime_89]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/fr_NEUTER.pak'
+[artifacts.runtime_89.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/fr_NEUTER.pak'
+[artifacts.runtime_89.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/fr_NEUTER.pak'
+
+[artifacts.runtime_90]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/gu.pak'
+[artifacts.runtime_90.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/gu.pak'
+[artifacts.runtime_90.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/gu.pak'
+
+[artifacts.runtime_91]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/gu_FEMININE.pak'
+[artifacts.runtime_91.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/gu_FEMININE.pak'
+[artifacts.runtime_91.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/gu_FEMININE.pak'
+
+[artifacts.runtime_92]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/gu_MASCULINE.pak'
+[artifacts.runtime_92.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/gu_MASCULINE.pak'
+[artifacts.runtime_92.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/gu_MASCULINE.pak'
+
+[artifacts.runtime_93]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/gu_NEUTER.pak'
+[artifacts.runtime_93.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/gu_NEUTER.pak'
+[artifacts.runtime_93.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/gu_NEUTER.pak'
+
+[artifacts.runtime_94]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/he.pak'
+[artifacts.runtime_94.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/he.pak'
+[artifacts.runtime_94.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/he.pak'
+
+[artifacts.runtime_95]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/he_FEMININE.pak'
+[artifacts.runtime_95.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/he_FEMININE.pak'
+[artifacts.runtime_95.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/he_FEMININE.pak'
+
+[artifacts.runtime_96]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/he_MASCULINE.pak'
+[artifacts.runtime_96.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/he_MASCULINE.pak'
+[artifacts.runtime_96.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/he_MASCULINE.pak'
+
+[artifacts.runtime_97]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/he_NEUTER.pak'
+[artifacts.runtime_97.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/he_NEUTER.pak'
+[artifacts.runtime_97.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/he_NEUTER.pak'
+
+[artifacts.runtime_98]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hi.pak'
+[artifacts.runtime_98.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hi.pak'
+[artifacts.runtime_98.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hi.pak'
+
+[artifacts.runtime_99]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hi_FEMININE.pak'
+[artifacts.runtime_99.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hi_FEMININE.pak'
+[artifacts.runtime_99.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hi_FEMININE.pak'
+
+[artifacts.runtime_100]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hi_MASCULINE.pak'
+[artifacts.runtime_100.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hi_MASCULINE.pak'
+[artifacts.runtime_100.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hi_MASCULINE.pak'
+
+[artifacts.runtime_101]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hi_NEUTER.pak'
+[artifacts.runtime_101.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hi_NEUTER.pak'
+[artifacts.runtime_101.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hi_NEUTER.pak'
+
+[artifacts.runtime_102]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hr.pak'
+[artifacts.runtime_102.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hr.pak'
+[artifacts.runtime_102.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hr.pak'
+
+[artifacts.runtime_103]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hr_FEMININE.pak'
+[artifacts.runtime_103.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hr_FEMININE.pak'
+[artifacts.runtime_103.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hr_FEMININE.pak'
+
+[artifacts.runtime_104]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hr_MASCULINE.pak'
+[artifacts.runtime_104.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hr_MASCULINE.pak'
+[artifacts.runtime_104.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hr_MASCULINE.pak'
+
+[artifacts.runtime_105]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hr_NEUTER.pak'
+[artifacts.runtime_105.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hr_NEUTER.pak'
+[artifacts.runtime_105.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hr_NEUTER.pak'
+
+[artifacts.runtime_106]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hu.pak'
+[artifacts.runtime_106.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hu.pak'
+[artifacts.runtime_106.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hu.pak'
+
+[artifacts.runtime_107]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hu_FEMININE.pak'
+[artifacts.runtime_107.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hu_FEMININE.pak'
+[artifacts.runtime_107.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hu_FEMININE.pak'
+
+[artifacts.runtime_108]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hu_MASCULINE.pak'
+[artifacts.runtime_108.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hu_MASCULINE.pak'
+[artifacts.runtime_108.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hu_MASCULINE.pak'
+
+[artifacts.runtime_109]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/hu_NEUTER.pak'
+[artifacts.runtime_109.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/hu_NEUTER.pak'
+[artifacts.runtime_109.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/hu_NEUTER.pak'
+
+[artifacts.runtime_110]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/id.pak'
+[artifacts.runtime_110.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/id.pak'
+[artifacts.runtime_110.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/id.pak'
+
+[artifacts.runtime_111]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/id_FEMININE.pak'
+[artifacts.runtime_111.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/id_FEMININE.pak'
+[artifacts.runtime_111.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/id_FEMININE.pak'
+
+[artifacts.runtime_112]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/id_MASCULINE.pak'
+[artifacts.runtime_112.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/id_MASCULINE.pak'
+[artifacts.runtime_112.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/id_MASCULINE.pak'
+
+[artifacts.runtime_113]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/id_NEUTER.pak'
+[artifacts.runtime_113.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/id_NEUTER.pak'
+[artifacts.runtime_113.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/id_NEUTER.pak'
+
+[artifacts.runtime_114]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/it.pak'
+[artifacts.runtime_114.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/it.pak'
+[artifacts.runtime_114.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/it.pak'
+
+[artifacts.runtime_115]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/it_FEMININE.pak'
+[artifacts.runtime_115.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/it_FEMININE.pak'
+[artifacts.runtime_115.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/it_FEMININE.pak'
+
+[artifacts.runtime_116]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/it_MASCULINE.pak'
+[artifacts.runtime_116.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/it_MASCULINE.pak'
+[artifacts.runtime_116.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/it_MASCULINE.pak'
+
+[artifacts.runtime_117]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/it_NEUTER.pak'
+[artifacts.runtime_117.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/it_NEUTER.pak'
+[artifacts.runtime_117.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/it_NEUTER.pak'
+
+[artifacts.runtime_118]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ja.pak'
+[artifacts.runtime_118.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ja.pak'
+[artifacts.runtime_118.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ja.pak'
+
+[artifacts.runtime_119]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ja_FEMININE.pak'
+[artifacts.runtime_119.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ja_FEMININE.pak'
+[artifacts.runtime_119.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ja_FEMININE.pak'
+
+[artifacts.runtime_120]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ja_MASCULINE.pak'
+[artifacts.runtime_120.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ja_MASCULINE.pak'
+[artifacts.runtime_120.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ja_MASCULINE.pak'
+
+[artifacts.runtime_121]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ja_NEUTER.pak'
+[artifacts.runtime_121.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ja_NEUTER.pak'
+[artifacts.runtime_121.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ja_NEUTER.pak'
+
+[artifacts.runtime_122]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/kn.pak'
+[artifacts.runtime_122.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/kn.pak'
+[artifacts.runtime_122.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/kn.pak'
+
+[artifacts.runtime_123]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/kn_FEMININE.pak'
+[artifacts.runtime_123.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/kn_FEMININE.pak'
+[artifacts.runtime_123.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/kn_FEMININE.pak'
+
+[artifacts.runtime_124]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/kn_MASCULINE.pak'
+[artifacts.runtime_124.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/kn_MASCULINE.pak'
+[artifacts.runtime_124.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/kn_MASCULINE.pak'
+
+[artifacts.runtime_125]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/kn_NEUTER.pak'
+[artifacts.runtime_125.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/kn_NEUTER.pak'
+[artifacts.runtime_125.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/kn_NEUTER.pak'
+
+[artifacts.runtime_126]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ko.pak'
+[artifacts.runtime_126.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ko.pak'
+[artifacts.runtime_126.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ko.pak'
+
+[artifacts.runtime_127]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ko_FEMININE.pak'
+[artifacts.runtime_127.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ko_FEMININE.pak'
+[artifacts.runtime_127.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ko_FEMININE.pak'
+
+[artifacts.runtime_128]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ko_MASCULINE.pak'
+[artifacts.runtime_128.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ko_MASCULINE.pak'
+[artifacts.runtime_128.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ko_MASCULINE.pak'
+
+[artifacts.runtime_129]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ko_NEUTER.pak'
+[artifacts.runtime_129.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ko_NEUTER.pak'
+[artifacts.runtime_129.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ko_NEUTER.pak'
+
+[artifacts.runtime_130]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lt.pak'
+[artifacts.runtime_130.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lt.pak'
+[artifacts.runtime_130.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lt.pak'
+
+[artifacts.runtime_131]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lt_FEMININE.pak'
+[artifacts.runtime_131.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lt_FEMININE.pak'
+[artifacts.runtime_131.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lt_FEMININE.pak'
+
+[artifacts.runtime_132]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lt_MASCULINE.pak'
+[artifacts.runtime_132.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lt_MASCULINE.pak'
+[artifacts.runtime_132.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lt_MASCULINE.pak'
+
+[artifacts.runtime_133]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lt_NEUTER.pak'
+[artifacts.runtime_133.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lt_NEUTER.pak'
+[artifacts.runtime_133.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lt_NEUTER.pak'
+
+[artifacts.runtime_134]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lv.pak'
+[artifacts.runtime_134.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lv.pak'
+[artifacts.runtime_134.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lv.pak'
+
+[artifacts.runtime_135]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lv_FEMININE.pak'
+[artifacts.runtime_135.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lv_FEMININE.pak'
+[artifacts.runtime_135.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lv_FEMININE.pak'
+
+[artifacts.runtime_136]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lv_MASCULINE.pak'
+[artifacts.runtime_136.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lv_MASCULINE.pak'
+[artifacts.runtime_136.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lv_MASCULINE.pak'
+
+[artifacts.runtime_137]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/lv_NEUTER.pak'
+[artifacts.runtime_137.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/lv_NEUTER.pak'
+[artifacts.runtime_137.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/lv_NEUTER.pak'
+
+[artifacts.runtime_138]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ml.pak'
+[artifacts.runtime_138.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ml.pak'
+[artifacts.runtime_138.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ml.pak'
+
+[artifacts.runtime_139]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ml_FEMININE.pak'
+[artifacts.runtime_139.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ml_FEMININE.pak'
+[artifacts.runtime_139.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ml_FEMININE.pak'
+
+[artifacts.runtime_140]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ml_MASCULINE.pak'
+[artifacts.runtime_140.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ml_MASCULINE.pak'
+[artifacts.runtime_140.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ml_MASCULINE.pak'
+
+[artifacts.runtime_141]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ml_NEUTER.pak'
+[artifacts.runtime_141.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ml_NEUTER.pak'
+[artifacts.runtime_141.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ml_NEUTER.pak'
+
+[artifacts.runtime_142]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/mr.pak'
+[artifacts.runtime_142.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/mr.pak'
+[artifacts.runtime_142.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/mr.pak'
+
+[artifacts.runtime_143]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/mr_FEMININE.pak'
+[artifacts.runtime_143.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/mr_FEMININE.pak'
+[artifacts.runtime_143.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/mr_FEMININE.pak'
+
+[artifacts.runtime_144]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/mr_MASCULINE.pak'
+[artifacts.runtime_144.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/mr_MASCULINE.pak'
+[artifacts.runtime_144.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/mr_MASCULINE.pak'
+
+[artifacts.runtime_145]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/mr_NEUTER.pak'
+[artifacts.runtime_145.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/mr_NEUTER.pak'
+[artifacts.runtime_145.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/mr_NEUTER.pak'
+
+[artifacts.runtime_146]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ms.pak'
+[artifacts.runtime_146.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ms.pak'
+[artifacts.runtime_146.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ms.pak'
+
+[artifacts.runtime_147]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ms_FEMININE.pak'
+[artifacts.runtime_147.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ms_FEMININE.pak'
+[artifacts.runtime_147.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ms_FEMININE.pak'
+
+[artifacts.runtime_148]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ms_MASCULINE.pak'
+[artifacts.runtime_148.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ms_MASCULINE.pak'
+[artifacts.runtime_148.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ms_MASCULINE.pak'
+
+[artifacts.runtime_149]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ms_NEUTER.pak'
+[artifacts.runtime_149.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ms_NEUTER.pak'
+[artifacts.runtime_149.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ms_NEUTER.pak'
+
+[artifacts.runtime_150]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nb.pak'
+[artifacts.runtime_150.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nb.pak'
+[artifacts.runtime_150.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nb.pak'
+
+[artifacts.runtime_151]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nb_FEMININE.pak'
+[artifacts.runtime_151.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nb_FEMININE.pak'
+[artifacts.runtime_151.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nb_FEMININE.pak'
+
+[artifacts.runtime_152]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nb_MASCULINE.pak'
+[artifacts.runtime_152.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nb_MASCULINE.pak'
+[artifacts.runtime_152.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nb_MASCULINE.pak'
+
+[artifacts.runtime_153]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nb_NEUTER.pak'
+[artifacts.runtime_153.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nb_NEUTER.pak'
+[artifacts.runtime_153.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nb_NEUTER.pak'
+
+[artifacts.runtime_154]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nl.pak'
+[artifacts.runtime_154.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nl.pak'
+[artifacts.runtime_154.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nl.pak'
+
+[artifacts.runtime_155]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nl_FEMININE.pak'
+[artifacts.runtime_155.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nl_FEMININE.pak'
+[artifacts.runtime_155.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nl_FEMININE.pak'
+
+[artifacts.runtime_156]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nl_MASCULINE.pak'
+[artifacts.runtime_156.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nl_MASCULINE.pak'
+[artifacts.runtime_156.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nl_MASCULINE.pak'
+
+[artifacts.runtime_157]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/nl_NEUTER.pak'
+[artifacts.runtime_157.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/nl_NEUTER.pak'
+[artifacts.runtime_157.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/nl_NEUTER.pak'
+
+[artifacts.runtime_158]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pl.pak'
+[artifacts.runtime_158.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pl.pak'
+[artifacts.runtime_158.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pl.pak'
+
+[artifacts.runtime_159]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pl_FEMININE.pak'
+[artifacts.runtime_159.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pl_FEMININE.pak'
+[artifacts.runtime_159.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pl_FEMININE.pak'
+
+[artifacts.runtime_160]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pl_MASCULINE.pak'
+[artifacts.runtime_160.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pl_MASCULINE.pak'
+[artifacts.runtime_160.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pl_MASCULINE.pak'
+
+[artifacts.runtime_161]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pl_NEUTER.pak'
+[artifacts.runtime_161.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pl_NEUTER.pak'
+[artifacts.runtime_161.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pl_NEUTER.pak'
+
+[artifacts.runtime_162]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-BR.pak'
+[artifacts.runtime_162.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-BR.pak'
+[artifacts.runtime_162.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-BR.pak'
+
+[artifacts.runtime_163]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-BR_FEMININE.pak'
+[artifacts.runtime_163.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-BR_FEMININE.pak'
+[artifacts.runtime_163.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-BR_FEMININE.pak'
+
+[artifacts.runtime_164]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-BR_MASCULINE.pak'
+[artifacts.runtime_164.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-BR_MASCULINE.pak'
+[artifacts.runtime_164.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-BR_MASCULINE.pak'
+
+[artifacts.runtime_165]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-BR_NEUTER.pak'
+[artifacts.runtime_165.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-BR_NEUTER.pak'
+[artifacts.runtime_165.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-BR_NEUTER.pak'
+
+[artifacts.runtime_166]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-PT.pak'
+[artifacts.runtime_166.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-PT.pak'
+[artifacts.runtime_166.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-PT.pak'
+
+[artifacts.runtime_167]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-PT_FEMININE.pak'
+[artifacts.runtime_167.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-PT_FEMININE.pak'
+[artifacts.runtime_167.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-PT_FEMININE.pak'
+
+[artifacts.runtime_168]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-PT_MASCULINE.pak'
+[artifacts.runtime_168.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-PT_MASCULINE.pak'
+[artifacts.runtime_168.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-PT_MASCULINE.pak'
+
+[artifacts.runtime_169]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/pt-PT_NEUTER.pak'
+[artifacts.runtime_169.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/pt-PT_NEUTER.pak'
+[artifacts.runtime_169.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/pt-PT_NEUTER.pak'
+
+[artifacts.runtime_170]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ro.pak'
+[artifacts.runtime_170.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ro.pak'
+[artifacts.runtime_170.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ro.pak'
+
+[artifacts.runtime_171]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ro_FEMININE.pak'
+[artifacts.runtime_171.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ro_FEMININE.pak'
+[artifacts.runtime_171.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ro_FEMININE.pak'
+
+[artifacts.runtime_172]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ro_MASCULINE.pak'
+[artifacts.runtime_172.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ro_MASCULINE.pak'
+[artifacts.runtime_172.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ro_MASCULINE.pak'
+
+[artifacts.runtime_173]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ro_NEUTER.pak'
+[artifacts.runtime_173.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ro_NEUTER.pak'
+[artifacts.runtime_173.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ro_NEUTER.pak'
+
+[artifacts.runtime_174]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ru.pak'
+[artifacts.runtime_174.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ru.pak'
+[artifacts.runtime_174.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ru.pak'
+
+[artifacts.runtime_175]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ru_FEMININE.pak'
+[artifacts.runtime_175.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ru_FEMININE.pak'
+[artifacts.runtime_175.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ru_FEMININE.pak'
+
+[artifacts.runtime_176]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ru_MASCULINE.pak'
+[artifacts.runtime_176.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ru_MASCULINE.pak'
+[artifacts.runtime_176.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ru_MASCULINE.pak'
+
+[artifacts.runtime_177]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ru_NEUTER.pak'
+[artifacts.runtime_177.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ru_NEUTER.pak'
+[artifacts.runtime_177.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ru_NEUTER.pak'
+
+[artifacts.runtime_178]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sk.pak'
+[artifacts.runtime_178.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sk.pak'
+[artifacts.runtime_178.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sk.pak'
+
+[artifacts.runtime_179]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sk_FEMININE.pak'
+[artifacts.runtime_179.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sk_FEMININE.pak'
+[artifacts.runtime_179.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sk_FEMININE.pak'
+
+[artifacts.runtime_180]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sk_MASCULINE.pak'
+[artifacts.runtime_180.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sk_MASCULINE.pak'
+[artifacts.runtime_180.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sk_MASCULINE.pak'
+
+[artifacts.runtime_181]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sk_NEUTER.pak'
+[artifacts.runtime_181.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sk_NEUTER.pak'
+[artifacts.runtime_181.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sk_NEUTER.pak'
+
+[artifacts.runtime_182]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sl.pak'
+[artifacts.runtime_182.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sl.pak'
+[artifacts.runtime_182.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sl.pak'
+
+[artifacts.runtime_183]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sl_FEMININE.pak'
+[artifacts.runtime_183.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sl_FEMININE.pak'
+[artifacts.runtime_183.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sl_FEMININE.pak'
+
+[artifacts.runtime_184]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sl_MASCULINE.pak'
+[artifacts.runtime_184.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sl_MASCULINE.pak'
+[artifacts.runtime_184.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sl_MASCULINE.pak'
+
+[artifacts.runtime_185]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sl_NEUTER.pak'
+[artifacts.runtime_185.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sl_NEUTER.pak'
+[artifacts.runtime_185.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sl_NEUTER.pak'
+
+[artifacts.runtime_186]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sr.pak'
+[artifacts.runtime_186.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sr.pak'
+[artifacts.runtime_186.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sr.pak'
+
+[artifacts.runtime_187]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sr_FEMININE.pak'
+[artifacts.runtime_187.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sr_FEMININE.pak'
+[artifacts.runtime_187.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sr_FEMININE.pak'
+
+[artifacts.runtime_188]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sr_MASCULINE.pak'
+[artifacts.runtime_188.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sr_MASCULINE.pak'
+[artifacts.runtime_188.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sr_MASCULINE.pak'
+
+[artifacts.runtime_189]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sr_NEUTER.pak'
+[artifacts.runtime_189.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sr_NEUTER.pak'
+[artifacts.runtime_189.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sr_NEUTER.pak'
+
+[artifacts.runtime_190]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sv.pak'
+[artifacts.runtime_190.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sv.pak'
+[artifacts.runtime_190.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sv.pak'
+
+[artifacts.runtime_191]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sv_FEMININE.pak'
+[artifacts.runtime_191.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sv_FEMININE.pak'
+[artifacts.runtime_191.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sv_FEMININE.pak'
+
+[artifacts.runtime_192]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sv_MASCULINE.pak'
+[artifacts.runtime_192.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sv_MASCULINE.pak'
+[artifacts.runtime_192.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sv_MASCULINE.pak'
+
+[artifacts.runtime_193]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sv_NEUTER.pak'
+[artifacts.runtime_193.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sv_NEUTER.pak'
+[artifacts.runtime_193.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sv_NEUTER.pak'
+
+[artifacts.runtime_194]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sw.pak'
+[artifacts.runtime_194.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sw.pak'
+[artifacts.runtime_194.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sw.pak'
+
+[artifacts.runtime_195]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sw_FEMININE.pak'
+[artifacts.runtime_195.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sw_FEMININE.pak'
+[artifacts.runtime_195.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sw_FEMININE.pak'
+
+[artifacts.runtime_196]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sw_MASCULINE.pak'
+[artifacts.runtime_196.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sw_MASCULINE.pak'
+[artifacts.runtime_196.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sw_MASCULINE.pak'
+
+[artifacts.runtime_197]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/sw_NEUTER.pak'
+[artifacts.runtime_197.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/sw_NEUTER.pak'
+[artifacts.runtime_197.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/sw_NEUTER.pak'
+
+[artifacts.runtime_198]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ta.pak'
+[artifacts.runtime_198.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ta.pak'
+[artifacts.runtime_198.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ta.pak'
+
+[artifacts.runtime_199]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ta_FEMININE.pak'
+[artifacts.runtime_199.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ta_FEMININE.pak'
+[artifacts.runtime_199.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ta_FEMININE.pak'
+
+[artifacts.runtime_200]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ta_MASCULINE.pak'
+[artifacts.runtime_200.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ta_MASCULINE.pak'
+[artifacts.runtime_200.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ta_MASCULINE.pak'
+
+[artifacts.runtime_201]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ta_NEUTER.pak'
+[artifacts.runtime_201.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ta_NEUTER.pak'
+[artifacts.runtime_201.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ta_NEUTER.pak'
+
+[artifacts.runtime_202]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/te.pak'
+[artifacts.runtime_202.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/te.pak'
+[artifacts.runtime_202.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/te.pak'
+
+[artifacts.runtime_203]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/te_FEMININE.pak'
+[artifacts.runtime_203.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/te_FEMININE.pak'
+[artifacts.runtime_203.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/te_FEMININE.pak'
+
+[artifacts.runtime_204]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/te_MASCULINE.pak'
+[artifacts.runtime_204.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/te_MASCULINE.pak'
+[artifacts.runtime_204.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/te_MASCULINE.pak'
+
+[artifacts.runtime_205]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/te_NEUTER.pak'
+[artifacts.runtime_205.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/te_NEUTER.pak'
+[artifacts.runtime_205.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/te_NEUTER.pak'
+
+[artifacts.runtime_206]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/th.pak'
+[artifacts.runtime_206.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/th.pak'
+[artifacts.runtime_206.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/th.pak'
+
+[artifacts.runtime_207]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/th_FEMININE.pak'
+[artifacts.runtime_207.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/th_FEMININE.pak'
+[artifacts.runtime_207.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/th_FEMININE.pak'
+
+[artifacts.runtime_208]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/th_MASCULINE.pak'
+[artifacts.runtime_208.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/th_MASCULINE.pak'
+[artifacts.runtime_208.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/th_MASCULINE.pak'
+
+[artifacts.runtime_209]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/th_NEUTER.pak'
+[artifacts.runtime_209.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/th_NEUTER.pak'
+[artifacts.runtime_209.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/th_NEUTER.pak'
+
+[artifacts.runtime_210]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/tr.pak'
+[artifacts.runtime_210.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/tr.pak'
+[artifacts.runtime_210.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/tr.pak'
+
+[artifacts.runtime_211]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/tr_FEMININE.pak'
+[artifacts.runtime_211.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/tr_FEMININE.pak'
+[artifacts.runtime_211.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/tr_FEMININE.pak'
+
+[artifacts.runtime_212]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/tr_MASCULINE.pak'
+[artifacts.runtime_212.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/tr_MASCULINE.pak'
+[artifacts.runtime_212.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/tr_MASCULINE.pak'
+
+[artifacts.runtime_213]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/tr_NEUTER.pak'
+[artifacts.runtime_213.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/tr_NEUTER.pak'
+[artifacts.runtime_213.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/tr_NEUTER.pak'
+
+[artifacts.runtime_214]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/uk.pak'
+[artifacts.runtime_214.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/uk.pak'
+[artifacts.runtime_214.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/uk.pak'
+
+[artifacts.runtime_215]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/uk_FEMININE.pak'
+[artifacts.runtime_215.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/uk_FEMININE.pak'
+[artifacts.runtime_215.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/uk_FEMININE.pak'
+
+[artifacts.runtime_216]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/uk_MASCULINE.pak'
+[artifacts.runtime_216.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/uk_MASCULINE.pak'
+[artifacts.runtime_216.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/uk_MASCULINE.pak'
+
+[artifacts.runtime_217]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/uk_NEUTER.pak'
+[artifacts.runtime_217.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/uk_NEUTER.pak'
+[artifacts.runtime_217.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/uk_NEUTER.pak'
+
+[artifacts.runtime_218]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ur.pak'
+[artifacts.runtime_218.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ur.pak'
+[artifacts.runtime_218.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ur.pak'
+
+[artifacts.runtime_219]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ur_FEMININE.pak'
+[artifacts.runtime_219.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ur_FEMININE.pak'
+[artifacts.runtime_219.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ur_FEMININE.pak'
+
+[artifacts.runtime_220]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ur_MASCULINE.pak'
+[artifacts.runtime_220.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ur_MASCULINE.pak'
+[artifacts.runtime_220.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ur_MASCULINE.pak'
+
+[artifacts.runtime_221]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/ur_NEUTER.pak'
+[artifacts.runtime_221.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/ur_NEUTER.pak'
+[artifacts.runtime_221.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/ur_NEUTER.pak'
+
+[artifacts.runtime_222]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/vi.pak'
+[artifacts.runtime_222.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/vi.pak'
+[artifacts.runtime_222.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/vi.pak'
+
+[artifacts.runtime_223]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/vi_FEMININE.pak'
+[artifacts.runtime_223.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/vi_FEMININE.pak'
+[artifacts.runtime_223.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/vi_FEMININE.pak'
+
+[artifacts.runtime_224]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/vi_MASCULINE.pak'
+[artifacts.runtime_224.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/vi_MASCULINE.pak'
+[artifacts.runtime_224.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/vi_MASCULINE.pak'
+
+[artifacts.runtime_225]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/vi_NEUTER.pak'
+[artifacts.runtime_225.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/vi_NEUTER.pak'
+[artifacts.runtime_225.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/vi_NEUTER.pak'
+
+[artifacts.runtime_226]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-CN.pak'
+[artifacts.runtime_226.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-CN.pak'
+[artifacts.runtime_226.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-CN.pak'
+
+[artifacts.runtime_227]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-CN_FEMININE.pak'
+[artifacts.runtime_227.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-CN_FEMININE.pak'
+[artifacts.runtime_227.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-CN_FEMININE.pak'
+
+[artifacts.runtime_228]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-CN_MASCULINE.pak'
+[artifacts.runtime_228.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-CN_MASCULINE.pak'
+[artifacts.runtime_228.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-CN_MASCULINE.pak'
+
+[artifacts.runtime_229]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-CN_NEUTER.pak'
+[artifacts.runtime_229.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-CN_NEUTER.pak'
+[artifacts.runtime_229.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-CN_NEUTER.pak'
+
+[artifacts.runtime_230]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-TW.pak'
+[artifacts.runtime_230.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-TW.pak'
+[artifacts.runtime_230.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-TW.pak'
+
+[artifacts.runtime_231]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-TW_FEMININE.pak'
+[artifacts.runtime_231.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-TW_FEMININE.pak'
+[artifacts.runtime_231.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-TW_FEMININE.pak'
+
+[artifacts.runtime_232]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-TW_MASCULINE.pak'
+[artifacts.runtime_232.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-TW_MASCULINE.pak'
+[artifacts.runtime_232.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-TW_MASCULINE.pak'
+
+[artifacts.runtime_233]
+placement_method = 'copy'
+destination = 'Plugin/web-render/locales/zh-TW_NEUTER.pak'
+[artifacts.runtime_233.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/locales/zh-TW_NEUTER.pak'
+[artifacts.runtime_233.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/locales/zh-TW_NEUTER.pak'
+
+[artifacts.runtime_234]
+placement_method = 'copy'
+destination = 'Plugin/web-render/lygia-LICENSE.md'
+[artifacts.runtime_234.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/lygia-LICENSE.md'
+[artifacts.runtime_234.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/lygia-LICENSE.md'
+
+[artifacts.runtime_235]
+placement_method = 'copy'
+destination = 'Plugin/web-render/resources.pak'
+[artifacts.runtime_235.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/resources.pak'
+[artifacts.runtime_235.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/resources.pak'
+
+[artifacts.runtime_236]
+placement_method = 'copy'
+destination = 'Plugin/web-render/THIRD_PARTY_NOTICES.md'
+[artifacts.runtime_236.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/THIRD_PARTY_NOTICES.md'
+[artifacts.runtime_236.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/THIRD_PARTY_NOTICES.md'
+
+[artifacts.runtime_237]
+placement_method = 'copy'
+destination = 'Plugin/web-render/v8_context_snapshot.bin'
+[artifacts.runtime_237.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/v8_context_snapshot.bin'
+[artifacts.runtime_237.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/v8_context_snapshot.bin'
+
+[artifacts.runtime_238]
+placement_method = 'copy'
+destination = 'Plugin/web-render/vk_swiftshader.dll'
+[artifacts.runtime_238.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/vk_swiftshader.dll'
+[artifacts.runtime_238.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/vk_swiftshader.dll'
+
+[artifacts.runtime_239]
+placement_method = 'copy'
+destination = 'Plugin/web-render/vk_swiftshader_icd.json'
+[artifacts.runtime_239.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/vk_swiftshader_icd.json'
+[artifacts.runtime_239.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/vk_swiftshader_icd.json'
+
+[artifacts.runtime_240]
+placement_method = 'copy'
+destination = 'Plugin/web-render/vulkan-1.dll'
+[artifacts.runtime_240.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/vulkan-1.dll'
+[artifacts.runtime_240.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/vulkan-1.dll'
+
+[artifacts.runtime_241]
+placement_method = 'copy'
+destination = 'Plugin/web-render/web-render-cef-server.exe'
+[artifacts.runtime_241.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/web-render-cef-server.exe'
+[artifacts.runtime_241.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/web-render-cef-server.exe'
+
+[artifacts.runtime_242]
+placement_method = 'copy'
+destination = 'Plugin/web-render/web-render-processing-server.exe'
+[artifacts.runtime_242.profiles.debug]
+source = 'dist/windows-debug/Plugin/web-render/web-render-processing-server.exe'
+[artifacts.runtime_242.profiles.release]
+source = 'dist/windows-release/Plugin/web-render/web-render-processing-server.exe'
+
+# END GENERATED RUNTIME ARTIFACTS

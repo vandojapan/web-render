@@ -399,13 +399,6 @@ const isMessage = (data) => {
 };
 const initializePromises = /* @__PURE__ */ new Map();
 const contexts = /* @__PURE__ */ new Map();
-async function maybeInitializeContext(objectId, object, renderRequest, parameter) {
-	if (!initializePromises.has(objectId)) {
-		const initPromise = initializeContext(objectId, object, renderRequest, parameter);
-		await Promise.race([initPromise, {}]);
-	}
-	if (contexts.has(objectId)) return contexts.get(objectId);
-}
 async function initializeContext(id, object, renderRequest, parameter) {
 	if (contexts.has(id)) return contexts.get(id);
 	if (initializePromises.has(id)) return initializePromises.get(id);
@@ -774,15 +767,7 @@ var Vi5Runtime = class {
 		}
 		if ("kind" in object) throw new Error("HTML cannot use the Canvas render path");
 		const params = grpcParamsToJsParams(request.parameters);
-		const ctx = request.isOffline ? await initializeContext(request.objectId, object, request, params) : await maybeInitializeContext(request.objectId, object, request, params);
-		if (!ctx) {
-			runtimeLog.info`Object not initialized yet: ${request.object}`;
-			return {
-				type: "error",
-				renderNonce: request.renderNonce,
-				error: `Object not initialized yet: ${request.object}`
-			};
-		}
+		const ctx = await initializeContext(request.objectId, object, request, params);
 		ctx.setFrameInfo(request.frameInfo);
 		object.draw(ctx, ctx.p, params);
 		const p5Canvas = ctx.mainCanvas;

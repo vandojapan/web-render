@@ -56,26 +56,6 @@ const isMessage = <Desc extends protobuf.DescMessage>(
 const initializePromises = new Map<bigint, Promise<Vi5Context>>();
 const contexts = new Map<bigint, Vi5Context>();
 
-async function maybeInitializeContext<T extends ParameterDefinitions>(
-  objectId: bigint,
-  object: Vi5Object<T>,
-  renderRequest: RenderRequest,
-  parameter: InferParameters<T>,
-): Promise<Vi5Context | undefined> {
-  if (!initializePromises.has(objectId)) {
-    const initPromise = initializeContext(
-      objectId,
-      object,
-      renderRequest,
-      parameter,
-    );
-    // 一瞬だけ待ってあげる
-    await Promise.race([initPromise, {}]);
-  }
-  if (contexts.has(objectId)) {
-    return contexts.get(objectId);
-  }
-}
 async function initializeContext<T extends ParameterDefinitions>(
   id: bigint,
   object: Vi5Object<T>,
@@ -557,17 +537,9 @@ export class Vi5Runtime {
 
     if ("kind" in object) throw new Error("HTML cannot use the Canvas render path");
     const params = grpcParamsToJsParams(request.parameters);
-    const ctx = request.isOffline
-      ? await initializeContext(request.objectId, object, request, params)
-      : await maybeInitializeContext(request.objectId, object, request, params);
-    if (!ctx) {
-      runtimeLog.info`Object not initialized yet: ${request.object}`;
-      return {
-        type: "error",
-        renderNonce: request.renderNonce,
-        error: `Object not initialized yet: ${request.object}`,
-      };
-    }
+    // A preview must await the same setup promise as an offline render. A
+    // temporary error here becomes a cached blank scene frame in AviUtl2.
+    const ctx = await initializeContext(request.objectId, object, request, params);
     ctx.setFrameInfo(request.frameInfo!);
     object.draw(ctx, ctx.p, params);
     const p5Canvas = ctx.mainCanvas;

@@ -1,0 +1,63 @@
+{
+    "status":  "passed",
+    "date":  "2026-10-07",
+    "au2_dev_runs":  2,
+    "checks":  [
+                   {
+                       "log":  "after-dev.txt",
+                       "warnings":  0
+                   },
+                   {
+                       "log":  "repeat-dev.txt",
+                       "warnings":  0
+                   },
+                   {
+                       "log":  "clippy.txt",
+                       "warnings":  0
+                   },
+                   {
+                       "log":  "himawari/aviutl2.log",
+                       "warnings":  0
+                   },
+                   {
+                       "log":  "p5/aviutl2.log",
+                       "warnings":  0
+                   },
+                   {
+                       "log":  "native/aviutl2.log",
+                       "warnings":  0
+                   },
+                   {
+                       "log":  "native-worker/worker-stderr.txt",
+                       "warnings":  0
+                   }
+               ],
+    "hosts":  [
+                  {
+                      "fixture":  "himawari",
+                      "display":  "DISPLAY2",
+                      "exit_code":  0
+                  },
+                  {
+                      "fixture":  "p5",
+                      "display":  "DISPLAY2",
+                      "exit_code":  0
+                  },
+                  {
+                      "fixture":  "native",
+                      "display":  "DISPLAY2",
+                      "exit_code":  0
+                  }
+              ],
+    "rust_library_tests":  16,
+    "web_tests":  7,
+    "native_worker_stderr_bytes":  0,
+    "config_stable_across_profiles":  true,
+    "config_sha256":  "9813E1C2A0A1FDA9EE65B7DB393E452E7200A20E3222979256807AAD8B07B701",
+    "deployed_plugin_sha256":  "B7518062D22F468522577E9BE5DD8F0C12FED7E5D821E93263031338D94D242D",
+    "deployed_worker_sha256":  "F4EE2E0A6E1BC8A48BB45907C3C44F80A5F81501E5F2D1A8154B3D955F49C5E1",
+    "remaining_cef_errors":  [
+                                 "DEPRECATED_ENDPOINT",
+                                 "QUOTA_EXCEEDED"
+                             ]
+}

@@ -48,17 +48,22 @@ WebプロジェクトはまだNode/npmとweb-renderのローカル依存を必�
 ## au2による配置
 
 ```powershell
-au2 prepare:aviutl2
-# build-windows.ps1実行後に生成される、CEF全ファイルを含む定義を使う
-au2 -C .aviutl2-runtime.toml dev --detach
+# 初回は上記のdebug/releaseパッケージを作成してから実行する
+au2 prepare
+au2 dev
 ```
 
 通常のAviUtl2インストールは変更せず `.aviutl2-cli/development` に配置する。
 au2 0.10.2のcopy方式はディレクトリを直接扱えず、symlink方式はWindows権限が必要だった。
 そこでビルドスクリプトが全CEFファイル・localesを個別のcopy artifactとして生成する。
-この生成ファイルは作業環境固有で、Gitには含めない。
-au2のcmd.exeによるビルドで `\\?\` パスが作業ディレクトリに使われる問題には、
-絶対パスのスクリプトをプロセス単位のEncodedCommandで実行して対応している。
+定義は `aviutl2.toml` の `GENERATED RUNTIME ARTIFACTS` ブロックへ生成し、
+互換用の `.aviutl2-runtime.toml` にも同じ内容を保存する。
+通常の `au2 prepare` と `au2 dev` は同じ設定を使うため、設定差異の警告を出さずに全ランタイムを配置できる。
+生成ブロックを直接編集せず、パッケージスクリプトで再生成する。
+CEFが生成する `.log` ファイルは成果物一覧から除外し、debug/release間で設定を安定させる。
+既存環境で設定を更新した場合は `au2 prepare:artifacts --force` を一度実行する。
+ディスプレイ2に限定した起動検証では `au2 dev --skip-start` の後に専用の
+[起動ヘルパー](../crates/web-render-aux2/examples/display2_host.rs) を使用する。
 
 プラグインのロード・メニュー・Luaモジュールは開発ログで確認する。
 HTML設定、obj2の追加、Freeze、保存復元、PNG連番はGUI受入試験として別に記録する。

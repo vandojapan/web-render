@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "ready": {
+    "project": "libprocessing-test",
+    "ready": 1
+  },
+  "reports": [
+    {
+      "version": 1,
+      "nonce": 1,
+      "width": 32,
+      "height": 8,
+      "bytes": 1024,
+      "render_ms": 219.3343,
+      "created_graphics": true,
+      "error": null
+    },
+    {
+      "version": 1,
+      "nonce": 2,
+      "width": 32,
+      "height": 8,
+      "bytes": 1024,
+      "render_ms": 3.4358,
+      "created_graphics": false,
+      "error": null
+    },
+    {
+      "version": 1,
+      "nonce": 3,
+      "width": 32,
+      "height": 8,
+      "bytes": 1024,
+      "render_ms": 15.5482,
+      "created_graphics": true,
+      "error": null
+    },
+    {
+      "version": 1,
+      "nonce": 4,
+      "width": 64,
+      "height": 16,
+      "bytes": 4096,
+      "render_ms": 17.9579,
+      "created_graphics": true,
+      "error": null
+    },
+    {
+      "version": 1,
+      "nonce": 5,
+      "width": 32,
+      "height": 8,
+      "bytes": 0,
+      "render_ms": 0.0107,
+      "created_graphics": false,
+      "error": "Unknown native object"
+    },
+    {
+      "version": 1,
+      "nonce": 6,
+      "width": 64,
+      "height": 16,
+      "bytes": 4096,
+      "render_ms": 4.0725,
+      "created_graphics": false,
+      "error": null
+    }
+  ],
+  "exit_code": 0
+}
